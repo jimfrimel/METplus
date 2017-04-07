@@ -7,7 +7,7 @@ Welcome to the documentation for METplus.  METplus is a set of Python wrapper sc
 
 
 ================================================================================
-Model Evaluation Tools (MET) TERMS OF USE - IMPORTANT!
+Model Evaluation Tools Plus (METplus) TERMS OF USE - IMPORTANT!
 ================================================================================
 
 USE OF THIS SOFTWARE IS SUBJECT TO THE FOLLOWING TERMS AND CONDITIONS:
@@ -113,7 +113,7 @@ Dependencies
 
 The MET verification tools package is required to be installed on your system prior to running the METplus wrapper scripts.
 
-METplus was developed using Python version 2.7.9.
+METplus was developed using Python version 2.7.9.  Python version 2.7 or greater is required.
 
 - METplus requires the following to be installed on your system:
   - ncdump utility
@@ -140,15 +140,15 @@ Getting the Code and Test Data
 
 Get the METplus package by running:
 
-  wget http://<path>/METplus_alpha.20170126.tar.gz
+  wget http://www.dtcenter.org/met/users/downloads/METplus/METplus_alpha.20170308.tar
 
 Get the METplus test data by running:
 
-  wget http://<path>/METplus_test_data.20170109.tar.gz
+  wget http://www.dtcenter.org/met/users/downloads/METplus//METplus_test_data.20170109.tar.gz
 
 Decide where you would like to put the code and copy the METplus Package to that location.  Unpack the gzipped tar file in that directory by running:
 
-  tar -zxf METplus_alpha.20170126.tar.gz
+  tar -xf METplus_alpha.20170308.tar
 
 Decide where you would like to put the test data and copy the METplus test data to that location.  Unpack the gzipped tar file in that directory by running:
 
