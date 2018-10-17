@@ -1,0 +1,39 @@
+
+# ------------------------------------
+[dir]
+
+# Your Top-Level METplus model data input directory 
+PROJ_DIR = /path/to/GSDENS_MET_test
+
+# Your METplus install
+METPLUS_BASE = /path/to/metplus/METplus
+
+# Your METplus output
+OUTPUT_BASE = /path/to/metplus/pytmp
+
+MET_INSTALL_DIR = /lfs1/projects/dtc-hurr/MET/MET_releases/7.1_beta6
+
+TMP_DIR = {OUTPUT_BASE}/tmp
+
+# -----------------------------------------
+[config]
+
+LOG_LEVEL = DEBUG ;; Levels: DEBUG, INFO, WARNING, ERROR, CRITICAL
+
+# -----------------------------------------
+[exe]
+# NCDUMP_EXE, DO NOT USE module load netcdf it will break
+# the tc_pairs binary ... ldd tc_pairs and it cant find lib.netcdf.so.6
+
+# Run which command to determine the paths
+WGRIB2 = wgrib2                   ;; MUST run module load wgrib2
+CUT_EXE = /bin/cut
+TR_EXE = /usr/bin/tr
+RM_EXE = /bin/rm
+NCAP2_EXE = ncap2                 ;; MUST run module load nco
+CONVERT_EXE = /usr/bin/convert
+# On Theia met 6.1 uses met 6.0 external_libs, ldd ncdump to see this.
+# NCDUMP_EXE = /contrib/met/6.0/external_libs/bin/ncdump  ;; DO NOT run module load netcdf
+NCDUMP_EXE = /lfs1/projects/dtc-hurr/MET/MET_releases/7.1_beta6/external_libs/bin/ncdump
+EGREP_EXE = /bin/egrep
+

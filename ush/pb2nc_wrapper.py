@@ -12,6 +12,7 @@ import config_metplus
 import met_util as util
 import produtil.setup
 from string_template_substitution import StringSub
+import pdb
 
 """
 Program Name: PB2NC_Wrapper.py
@@ -403,6 +404,9 @@ class PB2NCWrapper(CommandBuilder):
         # instead have the YMDh incorporated into their filenames.  Provide
         # support for both cases.
         files_within_time_criteria = []
+
+        #jtfd
+        #pdb.set_trace()
         if pb_subdirs_list:
             for pb_subdir in pb_subdirs_list:
                 # Retrieve the YMD from the subdirectory name
@@ -500,7 +504,6 @@ class PB2NCWrapper(CommandBuilder):
         # capitalizing the name of a named tuple, like a class name.
         PbFileTimeInfo = namedtuple('PbFileTimeInfo',
                                     'full_filepath, pb_unix_time')
-
         # Check if the filename has an offset
         match = re.match(r'.*tm([0-9]{2}).*', pb_file)
         if match:
@@ -513,7 +516,8 @@ class PB2NCWrapper(CommandBuilder):
                 # Files contain information to derive init and valid times
                 cycle = cycle_match.group(1)
                 cycle_in_secs = int(cycle) * self.HOURS_TO_SECONDS
-
+                #jtfd
+                #pdb.set_trace()
                 # Convert init time and valid time to Unix time
                 if len(date) == 8:
                     # ymd, cycle and offset
@@ -608,6 +612,9 @@ class PB2NCWrapper(CommandBuilder):
         else:
             overwrite_flag = False
 
+        #jtfd
+        #self.logger.info('BLAH\n%s'%relevant_pb_files )
+
         for relevant_pb_file in relevant_pb_files:
             pb_file = relevant_pb_file
 
@@ -644,6 +651,7 @@ class PB2NCWrapper(CommandBuilder):
                 cmd = self.get_command()
                 self.logger.debug('DEBUG|:' + cur_function + '|' +
                                   cur_filename + 'pb2nc called with: ' + cmd)
+                # jtfd
                 self.build()
                 self.logger.debug(
                     'DEBUG|:' + cur_function + '|' + cur_filename +
@@ -829,6 +837,8 @@ class PB2NCWrapper(CommandBuilder):
 
         # Get the cycle hour and offset hour from the prepbufr file info named
         # tuple
+        #jtfd
+        #if False:
         if prepbufr_file_info.cycle:
             # Get the cycle hour, offset hour and add the appropriate
             # prefix, validation ymd and .nc extension
