@@ -79,16 +79,20 @@ class EnsembleStatWrapper(CommandBuilder):
         time_offset = 0
         found = False
         #while lead_check <= max_forecast:
-        # jtfd it was this
-        # model_template = os.path.expandvars(self.p.getraw('filename_templates',
-        model_template = os.path.expandvars(util.getraw_interp(self.p, 'filename_templates',
-                                       'FCST_ENSEMBLE_STAT_INPUT_TEMPLATE'))
+        #model_template = os.path.expandvars(util.getraw_interp(self.p, 'filename_templates',
+        #                               'FCST_ENSEMBLE_STAT_INPUT_TEMPLATE'))
+        model_template = self.p.getraw('filename_templates','FCST_ENSEMBLE_STAT_INPUT_TEMPLATE')
         # split by - to handle a level that is a range, such as 0-10
         model_ss = sts.StringSub(self.logger, model_template,
                                  init=time_check,
                                  lead=str(lead_check).zfill(2),
                                  level=str(level.split('-')[0]).zfill(2))
         model_file = model_ss.doStringSub()
+        model_test= '2018070912/wrfprs_conus_mem{ens_num:0>5}_12.grib2'
+        model_test2 = '2018070912/wrfprs_conus_mem{ens_num:04d}_12.grib2'
+        model_test_expanded = self.p.strinterp('filename_templates',model_test)
+        model_test_expanded2 = self.p.strinterp('config',model_test)
+        model_test2_expanded = self.p.strinterp('filename_templates',model_test2,ens_num=self.p.getint('config','ens_num'))
         model_path = os.path.join(model_dir, model_file)
         model_path_list = glob.glob(model_path)
         if model_path_list:
@@ -96,42 +100,55 @@ class EnsembleStatWrapper(CommandBuilder):
             #break
 
         if found:
-            return model_path
+            return sorted(model_path_list)
         else:
             return ''
 
     def run_at_time(self, init_time, valid_time):
+        # task_info = TaskInfo()
+        # task_info.init_time = init_time
+        # task_info.valid_time = valid_time
+        # var_list = util.parse_var_list(self.p)
+        # max_forecast = self.p.getint('config', 'FCST_MAX_FORECAST')
+        # if self.p.has_option('config','FCST_MIN_FORECAST'):
+        #     min_forecast = self.p.getint('config','FCST_MIN_FORECAST')
+        # else:
+        #     min_forecast = 0
+        
+        #lead_seq = util.getlistint(self.p.getstr('config', 'LEAD_SEQ'))
+        # if init_time == -1:
+        #    #Create a list of files to loop over
+        #    gen_seq = util.getlistint(self.p.getstr('config','GEN_SEQ'))
+        #    init_interval = self.p.getint('config','FCST_INIT_INTERVAL')
+        #    valid_hr  = int(valid_time[8:10])
+        #    #Find lead times
+        #    lead_seq = []
+        #    for gs in gen_seq:
+        #        if valid_hr >= gs:
+        #            current_lead = valid_hr - gs
+        #        elif valid_hr < gs:
+        #            current_lead = valid_hr + gs
+        #        while current_lead <= max_forecast:
+        #            lead_seq.append(current_lead)
+        #            current_lead = current_lead + 24
+        #
+        # for lead in lead_seq:
+        #     if lead < min_forecast:
+        #        continue
+        #     task_info.lead = lead
+        #     for var_info in var_list:
+        #         self.run_at_time_once(task_info, var_info)
+
         task_info = TaskInfo()
         task_info.init_time = init_time
         task_info.valid_time = valid_time
         var_list = util.parse_var_list(self.p)
-        max_forecast = self.p.getint('config', 'FCST_MAX_FORECAST')
-        if self.p.has_option('config','FCST_MIN_FORECAST'):
-            min_forecast = self.p.getint('config','FCST_MIN_FORECAST')
-        else:
-            min_forecast = 0
-        
-        #lead_seq = util.getlistint(self.p.getstr('config', 'LEAD_SEQ'))
-        if init_time == -1:
-           #Create a list of files to loop over
-           gen_seq = util.getlistint(self.p.getstr('config','GEN_SEQ'))
-           init_interval = self.p.getint('config','FCST_INIT_INTERVAL')
-           valid_hr  = int(valid_time[8:10])
-           #Find lead times
-           lead_seq = []
-           for gs in gen_seq:
-               if valid_hr >= gs:
-                   current_lead = valid_hr - gs
-               elif valid_hr < gs:
-                   current_lead = valid_hr + gs
-               while current_lead <= max_forecast:
-                   lead_seq.append(current_lead)
-                   current_lead = current_lead + 24
 
+        #lead_seq = self.cg_dict['LEAD_SEQ']
+        lead_seq = util.getlistint(self.p.getstr('config', 'LEAD_SEQ'))
         for lead in lead_seq:
-            if lead < min_forecast:
-               continue
             task_info.lead = lead
+            #self.run_at_time_once(task_info, var_list[0])
             for var_info in var_list:
                 self.run_at_time_once(task_info, var_info)
 
@@ -139,7 +156,7 @@ class EnsembleStatWrapper(CommandBuilder):
     def run_at_time_once(self, ti, v):
         valid_time = ti.getValidTime()
         init_time = ti.getInitTime()
-        ensemble_stat_base_dir = self.p.getstr('config', 'ENSEMBLE_STAT_OUT_DIR')
+        ensemble_stat_base_dir = self.p.getdir('ENSEMBLE_STAT_OUT_DIR')
         #if self.p.getbool('config', 'LOOP_BY_INIT'):
         ensemble_stat_out_dir = os.path.join(ensemble_stat_base_dir,
                                  init_time, "ensemble_stat")
@@ -160,7 +177,7 @@ class EnsembleStatWrapper(CommandBuilder):
         #obs_dir = self.p.getstr('config', 'OBS_GRID_STAT_INPUT_DIR')
         #obs_template = os.path.expandvars(self.p.getraw('filename_templates',
         #                             'OBS_GRID_STAT_INPUT_TEMPLATE'))
-        model_dir = self.p.getstr('config', 'FCST_ENSEMBLE_STAT_INPUT_DIR')        
+        model_dir = self.p.getdir('FCST_ENSEMBLE_STAT_INPUT_DIR')
         config_dir = self.p.getstr('config', 'CONFIG_DIR')
 
         ymd_v = valid_time[0:8]
@@ -168,12 +185,16 @@ class EnsembleStatWrapper(CommandBuilder):
             os.makedirs(ensemble_stat_out_dir)
 
         # get model to compare
-        model_path = self.find_models(ti.lead, init_time, fcst_level)
+#        model_path = self.find_models(ti.lead, init_time, fcst_level)
+        model_members = self.find_models(ti.lead, init_time, fcst_level)
 
-        if model_path == "":
+        if model_members == "":
             print("ERROR: COULD NOT FIND FILE IN "+model_dir)
             return
-        self.add_input_file(model_path)
+#        self.add_input_file(model_members)
+
+        for member in model_members:
+            self.add_input_file(member)
         
         #if self.p.getbool('config','OBS_EXACT_VALID_TIME', True):
         #    obsSts = sts.StringSub(self.logger,
@@ -198,21 +219,21 @@ class EnsembleStatWrapper(CommandBuilder):
         # set up environment variables for each grid_stat run
         # get fcst and obs thresh parameters
         # verify they are the same size
-        mask_dir = self.p.getstr('config','MASK_DIR')
-        mask_name = self.p.getstr('config','MASK_FILE')
+#        mask_dir = self.p.getstr('config','MASK_DIR')
+#        mask_name = self.p.getstr('config','MASK_FILE')
         if float(valid_time[8:10]) < 12:
             #Use previous day's grid
             grid_date = datetime.datetime.strptime(util.shift_time(valid_time, -24),"%Y%m%d%H%M").strftime("%Y%m%d")
         else:
             grid_date = valid_time[0:8]
   
-        if os.path.isfile(mask_dir+"/"+grid_date+"_"+mask_name+".nc"):
-            verif_grid = mask_dir+"/"+grid_date+"_"+mask_name+".nc"
-        else:
-            from create_met_poly import create_mask
-            mfiles = glob.glob(model_path)
-            verif_grid = create_mask(grid_date,mfiles[0],mask_name)
-            os.environ["MASK_DIR_IN"] = "/raid/efp/se2018/ftp/dtc/mask"
+#        if os.path.isfile(mask_dir+"/"+grid_date+"_"+mask_name+".nc"):
+#            verif_grid = mask_dir+"/"+grid_date+"_"+mask_name+".nc"
+#        else:
+#            from create_met_poly import create_mask
+#            mfiles = glob.glob(model_path)
+#            verif_grid = create_mask(grid_date,mfiles[0],mask_name)
+#            os.environ["MASK_DIR_IN"] = "/raid/efp/se2018/ftp/dtc/mask"
             
         fcst_str = "FCST_"+v.fcst_name+"_"+fcst_level+"_THRESH"
         #obs_str = "OBS_"+v.obs_name+"_"+obs_level+"_THRESH"
@@ -247,20 +268,20 @@ class EnsembleStatWrapper(CommandBuilder):
         fcst_field = ""
         #obs_field = ""
 # TODO: change PROB mode to put all cat thresh values in 1 item        
-        if self.p.getbool('config', 'FCST_IS_PROB'):
-            for fcst_thresh in fcst_threshs:
-                fcst_field += "{ name=\"PROB\"; level=\""+fcst_level_type + \
-                              fcst_level.zfill(2) + "\"; prob={ name=\"" + \
-                              v.fcst_name + \
-                              "\"; thresh_lo="+str(fcst_thresh)+"; } },"
+#        if self.p.getbool('config', 'FCST_IS_PROB'):
+#            for fcst_thresh in fcst_threshs:
+#                fcst_field += "{ name=\"PROB\"; level=\""+fcst_level_type + \
+#                              fcst_level.zfill(2) + "\"; prob={ name=\"" + \
+#                              v.fcst_name + \
+#                              "\"; thresh_lo="+str(fcst_thresh)+"; } },"
             #for obs_thresh in obs_threshs:
             #    obs_field += "{ name=\""+v.obs_name+"_"+obs_level.zfill(2) + \
             #                 "\"; level=\"(*,*)\"; cat_thresh=[ gt" + \
             #                 str(obs_thresh)+" ]; },"
-        else:
+#        else:
 #            data_type = self.p.getstr('config', 'OBS_NATIVE_DATA_TYPE')
             #obs_data_type = util.get_filetype(obs_path)
-            model_data_type = util.get_filetype(model_path)
+#            model_data_type = util.get_filetype(model_path)
             #if obs_data_type == "NETCDF":
 
             #  obs_field += "{ name=\"" + v.obs_name+"_" + obs_level.zfill(2) + \
@@ -271,15 +292,15 @@ class EnsembleStatWrapper(CommandBuilder):
             #                "\"; level=\"["+obs_level_type + \
             #                obs_level.zfill(2)+"]\"; "
 
-            if model_data_type == "NETCDF":
-                fcst_field += "{ name=\""+v.fcst_name+"_"+fcst_level.zfill(2) + \
-                              "\"; level=\"(*,*)\"; "
-            else:
-                fcst_field += "{ name=\""+v.fcst_name + \
-                              "\"; level=\"["+fcst_level_type + \
-                              fcst_level.zfill(2)+"]\"; "
+#            if model_data_type == "NETCDF":
+#                fcst_field += "{ name=\""+v.fcst_name+"_"+fcst_level.zfill(2) + \
+#                              "\"; level=\"(*,*)\"; "
+#            else:
+#                fcst_field += "{ name=\""+v.fcst_name + \
+#                              "\"; level=\"["+fcst_level_type + \
+#                              fcst_level.zfill(2)+"]\"; "
 
-            fcst_field += fcst_cat_thresh+" },"
+#            fcst_field += fcst_cat_thresh+" },"
 
 #            obs_field += "{ name=\"" + v.obs_name+"_" + obs_level.zfill(2) + \
 #                         "\"; level=\"(*,*)\"; "
@@ -296,10 +317,10 @@ class EnsembleStatWrapper(CommandBuilder):
 
 
         # remove last comma and } to be added back after extra options
-        fcst_field = fcst_field[0:-2]
+#        fcst_field = fcst_field[0:-2]
         #obs_field = obs_field[0:-2]
 
-        fcst_field += v.fcst_extra+"}"
+#        fcst_field += v.fcst_extra+"}"
         #obs_field += v.obs_extra+"}"
 
         #ob_type = self.p.getstr('config', "OB_TYPE")
@@ -314,8 +335,8 @@ class EnsembleStatWrapper(CommandBuilder):
         self.add_env_var("FCST_FIELD", fcst_field)
         #self.add_env_var("OBS_FIELD", obs_field)
         self.add_env_var("MET_VALID_HHMM", valid_time[4:8])
-        self.add_env_var("VERIF_MASK",verif_grid)
-        cmd = self.get_command()
+#        self.add_env_var("VERIF_MASK",verif_grid)
+#        cmd = self.get_command()
 
         self.logger.debug("")
         self.logger.debug("ENVIRONMENT FOR NEXT COMMAND: ")
@@ -328,7 +349,7 @@ class EnsembleStatWrapper(CommandBuilder):
         self.print_env_item("FCST_FIELD")
         #self.print_env_item("OBS_FIELD")
         self.print_env_item("MET_VALID_HHMM")
-        self.print_env_item("VERIF_MASK")
+#        self.print_env_item("VERIF_MASK")
         self.logger.debug("")
         self.logger.debug("COPYABLE ENVIRONMENT FOR NEXT COMMAND: ")
         self.print_env_copy(["MODEL", "FCST_VAR", "ACCUM",
@@ -339,6 +360,7 @@ class EnsembleStatWrapper(CommandBuilder):
         if cmd is None:
             print("ERROR: ensemble_stat could not generate command")
             return
-        self.logger.info("")
-        self.build()
+        self.logger.info('=====================================================================')
+        self.logger.info("{:s}".format(cmd))
+#        self.build()
         self.clear()

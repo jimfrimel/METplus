@@ -18,6 +18,8 @@ import produtil.setup
 import met_util as util
 import config_metplus
 
+#from test_filetype import TestFileType
+from ensemble_stat_wrapper import EnsembleStatWrapper
 from pcp_combine_wrapper import PcpCombineWrapper
 from grid_stat_wrapper import GridStatWrapper
 from regrid_data_plane_wrapper import RegridDataPlaneWrapper
@@ -31,8 +33,9 @@ from make_plots_wrapper import MakePlotsWrapper
 from usage_wrapper import UsageWrapper
 from command_builder import CommandBuilder
 from tcmpr_plotter_wrapper import TCMPRPlotterWrapper
-# cyclone plotter should be commented out when committed
-# from cyclone_plotter_wrapper import CyclonePlotterWrapper
+# cyclone plotter should be commented out when committed,
+# it depends on Cartopy being available.
+#from cyclone_plotter_wrapper import CyclonePlotterWrapper
 from pb2nc_wrapper import PB2NCWrapper
 from point_stat_wrapper import PointStatWrapper
 from tc_stat_wrapper import TcStatWrapper
