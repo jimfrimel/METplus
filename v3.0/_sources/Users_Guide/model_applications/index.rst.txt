@@ -1,0 +1,543 @@
+:orphan:
+
+
+
+.. _sphx_glr_Users_Guide_model_applications:
+
+.. _model-applications-index:
+
+Model Applications
+==================
+
+
+.. raw:: html
+
+    <div class="sphx-glr-clear"></div>
+
+
+
+.. _sphx_glr_Users_Guide_model_applications_convection_allowing_models:
+
+Convection Allowing Models
+--------------------------
+
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="MTD_fcstHREF_FcstOnly _Gempak.conf">
+
+.. only:: html
+
+ .. figure:: /Users_Guide/model_applications/convection_allowing_models/images/thumb/sphx_glr_MTD_fcstHREF_FcstOnly_Gempak_thumb.png
+
+     :ref:`sphx_glr_Users_Guide_model_applications_convection_allowing_models_MTD_fcstHREF_FcstOnly_Gempak.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /Users_Guide/model_applications/convection_allowing_models/MTD_fcstHREF_FcstOnly_Gempak
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="EnsembleStat_fcstHRRRE _obsHRRRE_Sfc_MultiField.conf">
+
+.. only:: html
+
+ .. figure:: /Users_Guide/model_applications/convection_allowing_models/images/thumb/sphx_glr_EnsembleStat_fcstHRRRE_obsHRRRE_Sfc_MultiField_thumb.png
+
+     :ref:`sphx_glr_Users_Guide_model_applications_convection_allowing_models_EnsembleStat_fcstHRRRE_obsHRRRE_Sfc_MultiField.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /Users_Guide/model_applications/convection_allowing_models/EnsembleStat_fcstHRRRE_obsHRRRE_Sfc_MultiField
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="MODE_fcstHRRR_obsMRMS _Hail_GRIB2.conf">
+
+.. only:: html
+
+ .. figure:: /Users_Guide/model_applications/convection_allowing_models/images/thumb/sphx_glr_MODE_fcstHRRR_obsMRMS_Hail_GRIB2_thumb.png
+
+     :ref:`sphx_glr_Users_Guide_model_applications_convection_allowing_models_MODE_fcstHRRR_obsMRMS_Hail_GRIB2.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /Users_Guide/model_applications/convection_allowing_models/MODE_fcstHRRR_obsMRMS_Hail_GRIB2
+.. raw:: html
+
+    <div class="sphx-glr-clear"></div>
+
+
+
+.. _sphx_glr_Users_Guide_model_applications_cryosphere:
+
+Cryosphere
+----------
+
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="GridStat_MODE_fcstIMS _obsNCEP_sea_ice.conf">
+
+.. only:: html
+
+ .. figure:: /Users_Guide/model_applications/cryosphere/images/thumb/sphx_glr_GridStat_MODE_fcstIMS_obsNCEP_sea_ice_thumb.png
+
+     :ref:`sphx_glr_Users_Guide_model_applications_cryosphere_GridStat_MODE_fcstIMS_obsNCEP_sea_ice.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /Users_Guide/model_applications/cryosphere/GridStat_MODE_fcstIMS_obsNCEP_sea_ice
+.. raw:: html
+
+    <div class="sphx-glr-clear"></div>
+
+
+
+.. _sphx_glr_Users_Guide_model_applications_medium_range:
+
+Medium Range
+------------
+
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="PointStat_fcstGFS_obsGDAS _UpperAir_MultiField _PrepBufr.conf">
+
+.. only:: html
+
+ .. figure:: /Users_Guide/model_applications/medium_range/images/thumb/sphx_glr_PointStat_fcstGFS_obsGDAS_UpperAir_MultiField_PrepBufr_thumb.png
+
+     :ref:`sphx_glr_Users_Guide_model_applications_medium_range_PointStat_fcstGFS_obsGDAS_UpperAir_MultiField_PrepBufr.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /Users_Guide/model_applications/medium_range/PointStat_fcstGFS_obsGDAS_UpperAir_MultiField_PrepBufr
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="GridStat_fcstGFS_obsGFS _climoNCEP_MultiField.conf">
+
+.. only:: html
+
+ .. figure:: /Users_Guide/model_applications/medium_range/images/thumb/sphx_glr_GridStat_fcstGFS_obsGFS_climoNCEP_MultiField_thumb.png
+
+     :ref:`sphx_glr_Users_Guide_model_applications_medium_range_GridStat_fcstGFS_obsGFS_climoNCEP_MultiField.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /Users_Guide/model_applications/medium_range/GridStat_fcstGFS_obsGFS_climoNCEP_MultiField
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="TCStat_SeriesAnalysis_fcstGFS _obsGFS_FeatureRelative _SeriesByLead.conf">
+
+.. only:: html
+
+ .. figure:: /Users_Guide/model_applications/medium_range/images/thumb/sphx_glr_TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByLead_thumb.png
+
+     :ref:`sphx_glr_Users_Guide_model_applications_medium_range_TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByLead.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /Users_Guide/model_applications/medium_range/TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByLead
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="GridStat_fcstGFS_obsGFS _Sfc_MultiField.conf">
+
+.. only:: html
+
+ .. figure:: /Users_Guide/model_applications/medium_range/images/thumb/sphx_glr_GridStat_fcstGFS_obsGFS_Sfc_MultiField_thumb.png
+
+     :ref:`sphx_glr_Users_Guide_model_applications_medium_range_GridStat_fcstGFS_obsGFS_Sfc_MultiField.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /Users_Guide/model_applications/medium_range/GridStat_fcstGFS_obsGFS_Sfc_MultiField
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="TCStat_SeriesAnalysis_fcstGFS _obsGFS_FeatureRelative _SeriesByInit.conf">
+
+.. only:: html
+
+ .. figure:: /Users_Guide/model_applications/medium_range/images/thumb/sphx_glr_TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByInit_thumb.png
+
+     :ref:`sphx_glr_Users_Guide_model_applications_medium_range_TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByInit.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /Users_Guide/model_applications/medium_range/TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByInit
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="PointStat_fcstGFS_obsNAM_Sfc _MultiField_PrepBufr.conf">
+
+.. only:: html
+
+ .. figure:: /Users_Guide/model_applications/medium_range/images/thumb/sphx_glr_PointStat_fcstGFS_obsNAM_Sfc_MultiField_PrepBufr_thumb.png
+
+     :ref:`sphx_glr_Users_Guide_model_applications_medium_range_PointStat_fcstGFS_obsNAM_Sfc_MultiField_PrepBufr.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /Users_Guide/model_applications/medium_range/PointStat_fcstGFS_obsNAM_Sfc_MultiField_PrepBufr
+.. raw:: html
+
+    <div class="sphx-glr-clear"></div>
+
+
+
+.. _sphx_glr_Users_Guide_model_applications_precipitation:
+
+Precipitation
+-------------
+
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="MTD_fcstHRRR-TLE _obsMRMS.conf">
+
+.. only:: html
+
+ .. figure:: /Users_Guide/model_applications/precipitation/images/thumb/sphx_glr_MTD_fcstHRRR-TLE_obsMRMS_thumb.png
+
+     :ref:`sphx_glr_Users_Guide_model_applications_precipitation_MTD_fcstHRRR-TLE_obsMRMS.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /Users_Guide/model_applications/precipitation/MTD_fcstHRRR-TLE_obsMRMS
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="MTD_fcstHRRR-TLE_FcstOnly _RevisionSeries_GRIB.conf">
+
+.. only:: html
+
+ .. figure:: /Users_Guide/model_applications/precipitation/images/thumb/sphx_glr_MTD_fcstHRRR-TLE_FcstOnly_RevisionSeries_GRIB_thumb.png
+
+     :ref:`sphx_glr_Users_Guide_model_applications_precipitation_MTD_fcstHRRR-TLE_FcstOnly_RevisionSeries_GRIB.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /Users_Guide/model_applications/precipitation/MTD_fcstHRRR-TLE_FcstOnly_RevisionSeries_GRIB
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="GridStat_fcstHREFmean _obsStgIV_Netcdf.conf">
+
+.. only:: html
+
+ .. figure:: /Users_Guide/model_applications/precipitation/images/thumb/sphx_glr_GridStat_fcstHREFmean_obsStgIV_NetCDF_thumb.png
+
+     :ref:`sphx_glr_Users_Guide_model_applications_precipitation_GridStat_fcstHREFmean_obsStgIV_NetCDF.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /Users_Guide/model_applications/precipitation/GridStat_fcstHREFmean_obsStgIV_NetCDF
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="GridStat_fcstGFS _obsCCPA_Grib.conf">
+
+.. only:: html
+
+ .. figure:: /Users_Guide/model_applications/precipitation/images/thumb/sphx_glr_GridStat_fcstGFS_obsCCPA_GRIB_thumb.png
+
+     :ref:`sphx_glr_Users_Guide_model_applications_precipitation_GridStat_fcstGFS_obsCCPA_GRIB.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /Users_Guide/model_applications/precipitation/GridStat_fcstGFS_obsCCPA_GRIB
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="EnsembleStat_fcstHRRRE _FcstOnly_NetCDF.conf">
+
+.. only:: html
+
+ .. figure:: /Users_Guide/model_applications/precipitation/images/thumb/sphx_glr_EnsembleStat_fcstHRRRE_FcstOnly_NetCDF_thumb.png
+
+     :ref:`sphx_glr_Users_Guide_model_applications_precipitation_EnsembleStat_fcstHRRRE_FcstOnly_NetCDF.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /Users_Guide/model_applications/precipitation/EnsembleStat_fcstHRRRE_FcstOnly_NetCDF
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="GridStat_fcstHREFmean _obsStgIV_Gempak.conf">
+
+.. only:: html
+
+ .. figure:: /Users_Guide/model_applications/precipitation/images/thumb/sphx_glr_GridStat_fcstHREFmean_obsStgIV_Gempak_thumb.png
+
+     :ref:`sphx_glr_Users_Guide_model_applications_precipitation_GridStat_fcstHREFmean_obsStgIV_Gempak.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /Users_Guide/model_applications/precipitation/GridStat_fcstHREFmean_obsStgIV_Gempak
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="GridStat_fcstHRRR _obsStgIV_GRIB.conf">
+
+.. only:: html
+
+ .. figure:: /Users_Guide/model_applications/precipitation/images/thumb/sphx_glr_GridStat_fcstHRRR-TLE_obsStgIV_GRIB_thumb.png
+
+     :ref:`sphx_glr_Users_Guide_model_applications_precipitation_GridStat_fcstHRRR-TLE_obsStgIV_GRIB.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /Users_Guide/model_applications/precipitation/GridStat_fcstHRRR-TLE_obsStgIV_GRIB
+.. raw:: html
+
+    <div class="sphx-glr-clear"></div>
+
+
+
+.. _sphx_glr_Users_Guide_model_applications_s2s:
+
+Subseasonal to Seasonal
+-----------------------
+
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="GridStat_SeriesAnalysis _fcstNMME_obsCPC _seasonal_forecast.conf">
+
+.. only:: html
+
+ .. figure:: /Users_Guide/model_applications/s2s/images/thumb/sphx_glr_GridStat_SeriesAnalysis_fcstNMME_obsCPC_seasonal_forecast_thumb.png
+
+     :ref:`sphx_glr_Users_Guide_model_applications_s2s_GridStat_SeriesAnalysis_fcstNMME_obsCPC_seasonal_forecast.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /Users_Guide/model_applications/s2s/GridStat_SeriesAnalysis_fcstNMME_obsCPC_seasonal_forecast
+.. raw:: html
+
+    <div class="sphx-glr-clear"></div>
+
+
+
+.. _sphx_glr_Users_Guide_model_applications_space_weather:
+
+Space Weather
+-------------
+
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="GridStat_fcstGloTEC _obsGloTEC_vx7.conf">
+
+.. only:: html
+
+ .. figure:: /Users_Guide/model_applications/space_weather/images/thumb/sphx_glr_GridStat_fcstGloTEC_obsGloTEC_vx7_thumb.jpg
+
+     :ref:`sphx_glr_Users_Guide_model_applications_space_weather_GridStat_fcstGloTEC_obsGloTEC_vx7.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /Users_Guide/model_applications/space_weather/GridStat_fcstGloTEC_obsGloTEC_vx7
+.. raw:: html
+
+    <div class="sphx-glr-clear"></div>
+
+
+
+.. _sphx_glr_Users_Guide_model_applications_tc_and_extra_tc:
+
+Tropical Cyclone and Extra Tropical Cyclone
+-------------------------------------------
+
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Plotter_fcstGFS _obsGFS_ExtraTC.conf ">
+
+.. only:: html
+
+ .. figure:: /Users_Guide/model_applications/tc_and_extra_tc/images/thumb/sphx_glr_Plotter_fcstGFS_obsGFS_ExtraTC_thumb.png
+
+     :ref:`sphx_glr_Users_Guide_model_applications_tc_and_extra_tc_Plotter_fcstGFS_obsGFS_ExtraTC.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /Users_Guide/model_applications/tc_and_extra_tc/Plotter_fcstGFS_obsGFS_ExtraTC
+
+.. raw:: html
+
+    <div class="sphx-glr-thumbcontainer" tooltip="Plotter_fcstGFS _obsGFS_RPlotting.conf ">
+
+.. only:: html
+
+ .. figure:: /Users_Guide/model_applications/tc_and_extra_tc/images/thumb/sphx_glr_Plotter_fcstGFS_obsGFS_RPlotting_thumb.png
+
+     :ref:`sphx_glr_Users_Guide_model_applications_tc_and_extra_tc_Plotter_fcstGFS_obsGFS_RPlotting.py`
+
+.. raw:: html
+
+    </div>
+
+
+.. toctree::
+   :hidden:
+
+   /Users_Guide/model_applications/tc_and_extra_tc/Plotter_fcstGFS_obsGFS_RPlotting
+.. raw:: html
+
+    <div class="sphx-glr-clear"></div>
+
+
+
+.. only :: html
+
+ .. container:: sphx-glr-footer
+    :class: sphx-glr-footer-gallery
+
+
+  .. container:: sphx-glr-download
+
+    :download:`Download all examples in Python source code: model_applications_python.zip <//home/mccabe/metplus-doc/METplus/docs/Users_Guide/model_applications/model_applications_python.zip>`
+
+
+
+  .. container:: sphx-glr-download
+
+    :download:`Download all examples in Jupyter notebooks: model_applications_jupyter.zip <//home/mccabe/metplus-doc/METplus/docs/Users_Guide/model_applications/model_applications_jupyter.zip>`
+
+
+.. only:: html
+
+ .. rst-class:: sphx-glr-signature
+
+    `Gallery generated by Sphinx-Gallery <https://sphinx-gallery.github.io>`_
