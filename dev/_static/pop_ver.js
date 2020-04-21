@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    var proj_end = document.baseURI.indexOf("METplus") + 6;
+    var proj_end = document.baseURI.indexOf("METplus") + 8;
     var end = document.baseURI.indexOf("/", proj_end);
     var cur_ver = document.baseURI.substring(proj_end, end);
     var name = cur_ver.startsWith('v') ? cur_ver.substring(1) : cur_ver;
