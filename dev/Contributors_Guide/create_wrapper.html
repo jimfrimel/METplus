@@ -15,42 +15,51 @@
   
   
   
+    <link rel="canonical" href="https://unidata.github.io/MetPy/latest/Contributors_Guide/create_wrapper.html"/>
+  
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
+  
+  
     
 
   
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/theme_override.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/gallery-binder.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/gallery-dataframe.css" type="text/css" />
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="4. Instructions for the Conda Environment" href="conda_env.html" />
-    <link rel="prev" title="2. Basic Components of METplus Python Wrappers" href="basic_components.html" /> 
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../_static/theme_override.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="METplus 3.0 documentation" href="../index.html"/>
+        <link rel="up" title="Contributor’s Guide" href="index.html"/>
+        <link rel="next" title="4. Instructions for the Conda Environment" href="conda_env.html"/>
+        <link rel="prev" title="2. Basic Components of METplus Python Wrappers" href="basic_components.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
 </head>
 
-<body class="wy-body-for-nav">
+<body class="wy-body-for-nav" role="document">
 
    
   <div class="wy-grid-for-nav">
+
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+        <div class="wy-side-nav-search">
           
 
           
@@ -59,7 +68,7 @@
 
           
             
-            <img src="../_static/METplus_logo.png" class="logo" alt="Logo"/>
+            <img src="../_static/METplus_logo.png" class="logo" />
           
           </a>
 
@@ -114,7 +123,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" aria-label="top navigation">
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">METplus</a>
@@ -122,10 +131,9 @@
       </nav>
 
 
+      
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
           
 
 
@@ -150,7 +158,7 @@
         
           <li><a href="index.html">Contributor’s Guide</a> &raquo;</li>
         
-      <li><span class="section-number">3. </span>How to Create Your Own Wrapper</li>
+      <li>3. How to Create Your Own Wrapper</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -170,7 +178,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="how-to-create-your-own-wrapper">
-<h1><span class="section-number">3. </span>How to Create Your Own Wrapper<a class="headerlink" href="#how-to-create-your-own-wrapper" title="Permalink to this headline">¶</a></h1>
+<h1>3. How to Create Your Own Wrapper<a class="headerlink" href="#how-to-create-your-own-wrapper" title="Permalink to this headline">¶</a></h1>
 <ul>
 <li><p>Create the new wrapper in the METplus/ush directory and name it to reflect the wrapper’s function,
 e.g.: new_tool_wrapper.py
@@ -181,7 +189,7 @@ You can copy example_wrapper.py to start</p></li>
 </div>
 </li>
 <li><p>Modify the init function to initialize NewExample from its base class (CommandBuilder), and to set the name and path to the MET application you are wrapping:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">logger</span><span class="p">):</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">logger</span><span class="p">):</span>
     <span class="nb">super</span><span class="p">(</span><span class="n">NewToolWrapper</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">config</span><span class="p">,</span> <span class="n">logger</span><span class="p">)</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">app_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">p</span><span class="o">.</span><span class="n">getdir</span><span class="p">(</span><span class="s1">&#39;MET_INSTALL_DIR&#39;</span><span class="p">),</span> <span class="s1">&#39;bin/new_tool&#39;</span><span class="p">)</span>
     <span class="bp">self</span><span class="o">.</span><span class="n">app_name</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">app_path</span><span class="p">)</span>
@@ -212,7 +220,7 @@ You can copy example_wrapper.py to start</p></li>
 <p># Call self.clear() at the beginning of each loop iteration to prevent inadvertently reusing/re-running commands that were previously created.</p>
 <ul>
 <li><p>Update the METplus/ush/master_metplus.py file to recognize your wrapper by adding an import statement:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">new_tool_wrapper</span> <span class="kn">import</span> <span class="n">NewToolWrapper</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">new_tool_wrapper</span> <span class="k">import</span> <span class="n">NewToolWrapper</span>
 </pre></div>
 </div>
 </li>
@@ -233,7 +241,9 @@ The PROCESS_LIST is located under the [config] section header in your use case a
 
 
            </div>
-           
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
@@ -242,7 +252,7 @@ The PROCESS_LIST is located under the [config] section header in your use case a
         <a href="conda_env.html" class="btn btn-neutral float-right" title="4. Instructions for the Conda Environment" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="basic_components.html" class="btn btn-neutral float-left" title="2. Basic Components of METplus Python Wrappers" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="basic_components.html" class="btn btn-neutral" title="2. Basic Components of METplus Python Wrappers" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -251,11 +261,14 @@ The PROCESS_LIST is located under the [config] section header in your use case a
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019, NCAR
+        &copy; Copyright 2019, NCAR.
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+     
+<script>var version_json_loc = "../../versions.json";</script>
+
 
 </footer>
 
@@ -268,15 +281,39 @@ The PROCESS_LIST is located under the [config] section header in your use case a
   
 
 
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script>
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'3.0',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/language_data.js"></script>
+      <script type="text/javascript" src="../_static/pop_ver.js"></script>
+
+  
 
   
   
-    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
    
 
 </body>

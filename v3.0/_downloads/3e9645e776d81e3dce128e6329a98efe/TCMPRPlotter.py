@@ -1,15 +1,16 @@
 """
-TCMPRPlotter: Basic Use Case
-=======================================================
+TCMPRPlotter
+============
 
-TCMPRPlotter.conf
+This use case will run the MET R script tcmpr_plotter.R to generate various statistical
+plots of tropical cyclone tracks.
 
 """
 ##############################################################################
 # Scientific Objective
 # --------------------
 #
-# Generate plots of tropical cyclone tracks.
+# Generate statistical plots of tropical cyclone tracks.
 
 ##############################################################################
 # Datasets
@@ -19,7 +20,7 @@ TCMPRPlotter.conf
 # is used as input.
 #
 #
-# | **Location:** All of the input data required for this use case can be found in the met_test sample data tarball. Click here to the METplus releases page and download sample data for the appropriate release: https://github.com/NCAR/METplus/releases
+# | **Location:** All of the input data required for this use case can be found in the sample data tarball. Click here to the METplus releases page and download sample data for the appropriate release: https://github.com/NCAR/METplus/releases
 # | This tarball should be unpacked into the directory that you will set the value of INPUT_BASE. See 'Running METplus' section for more information.
 #
 #
@@ -107,5 +108,4 @@ TCMPRPlotter.conf
 # Keywords
 # --------
 #
-# .. note::
-#  `TCMPRPlotterUseCase <https://ncar.github.io/METplus/search.html?q=TCMPRPlotterUseCase&check_keywords=yes&area=default>`_
+# .. note:: `TCMPRPlotterUseCase <https://ncar.github.io/METplus/search.html?q=TCMPRPlotterUseCase&check_keywords=yes&area=default>`_

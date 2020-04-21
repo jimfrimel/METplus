@@ -1,8 +1,8 @@
 """
-GempakToCF: Basic Use Case
-=============================================================================
+GempakToCF
+==========
 
-GempakToCF.conf
+This use case will run the GempakToCF (external) tool to convert Gempak data to NetCDF format.
 
 """
 ##############################################################################
@@ -18,7 +18,7 @@ GempakToCF.conf
 #
 # | **Observations:** MRMS QPE
 #
-# | **Location:** All of the input data required for this use case can be found in the met_test sample data tarball. Click here to the METplus releases page and download sample data for the appropriate release: https://github.com/NCAR/METplus/releases
+# | **Location:** All of the input data required for this use case can be found in the sample data tarball. Click here to download: https://github.com/NCAR/METplus/releases/download/v3.0/sample_data-met_test-9.0.tgz
 # | This tarball should be unpacked into the directory that you will set the value of INPUT_BASE. See 'Running METplus' section for more information.
 #
 # | **Data Source:** Unknown
@@ -124,10 +124,4 @@ GempakToCF.conf
 # Keywords
 # --------
 #
-# .. note::
-#  `GempakToCFToolUseCase <https://ncar.github.io/METplus/search.html?q=GempakToCFToolUseCase&check_keywords=yes&area=default>`_,
-#  `GEMPAKFileUseCase <https://ncar.github.io/METplus/search.html?q=GEMPAKFileUseCase&check_keywords=yes&area=default>`_,
-#  `NOAAHMTOrgUseCase <https://ncar.github.io/METplus/search.html?q=NOAAHMTOrgUseCase&check_keywords=yes&area=default>`_,
-#  `NOAAWPCOrgUseCase <https://ncar.github.io/METplus/search.html?q=NOAAWPCOrgUseCase&check_keywords=yes&area=default>`_
-#
-# sphinx_gallery_thumbnail_path = '_static/met_tool_wrapper-GempakToCF.png'
+# .. note:: `GempakToCFToolUseCase <https://ncar.github.io/METplus/search.html?q=GempakToCFToolUseCase&check_keywords=yes&area=default>`_, `GEMPAKFileUseCase <https://ncar.github.io/METplus/search.html?q=GEMPAKFileUseCase&check_keywords=yes&area=default>`_

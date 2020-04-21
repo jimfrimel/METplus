@@ -1,18 +1,16 @@
-.. only:: html
+.. note::
+    :class: sphx-glr-download-link-note
 
-    .. note::
-        :class: sphx-glr-download-link-note
+    Click :ref:`here <sphx_glr_download_Users_Guide_met_tool_wrapper_MTD_MTD_python_embedding.py>` to download the full example code
+.. rst-class:: sphx-glr-example-title
 
-        Click :ref:`here <sphx_glr_download_Users_Guide_met_tool_wrapper_MTD_MTD_python_embedding.py>`     to download the full example code
-    .. rst-class:: sphx-glr-example-title
-
-    .. _sphx_glr_Users_Guide_met_tool_wrapper_MTD_MTD_python_embedding.py:
+.. _sphx_glr_Users_Guide_met_tool_wrapper_MTD_MTD_python_embedding.py:
 
 
 MTD using Python Embedding
 ==========================
 
-MTD_python_embedding.conf
+This use case will run the MET MTD (MODE Time Domain) tool to compare gridded forecast data to gridded observation data over time. The input data is read in via Python Embedding.
 
 
 Scientific Objective
@@ -120,27 +118,27 @@ Refer to the value set for **OUTPUT_BASE** to find where the output data was gen
 Output for this use case will be found in met_tool_wrapper/MTD/mtd_python_embedding (relative to **OUTPUT_BASE**)
 and will contain the following files:
 
-* mtd_PYTHON_20050807_120000V_2d.txt
-* mtd_PYTHON_20050807_120000V_3d_pair_cluster.txt
-* mtd_PYTHON_20050807_120000V_3d_pair_simple.txt
-* mtd_PYTHON_20050807_120000V_3d_single_cluster.txt
-* mtd_PYTHON_20050807_120000V_3d_single_simple.txt
-* mtd_PYTHON_20050807_120000V_obj.nc
+
+.. code-block:: default
+
+
+    # * out.nc
+
+
+
+
+
+
 
 Keywords
 --------
 
-.. note::
- `MTDToolUseCase <https://ncar.github.io/METplus/search.html?q=MTDToolUseCase&check_keywords=yes&area=default>`_,
- `PythonEmbeddingFileUseCase <https://ncar.github.io/METplus/search.html?q=PythonEmbeddingFileUseCase&check_keywords=yes&area=default>`_
- `DiagnosticsUseCase <https://ncar.github.io/METplus/search.html?q=DiagnosticsUseCase&check_keywords=yes&area=default>`_
-
-sphinx_gallery_thumbnail_path = '_static/met_tool_wrapper-MTD.png'
+.. note:: `MTDToolUseCase <https://ncar.github.io/METplus/search.html?q=MTDToolUseCase&check_keywords=yes&area=default>`_, `PythonEmbeddingFileUseCase <https://ncar.github.io/METplus/search.html?q=PythonEmbeddingFileUseCase&check_keywords=yes&area=default>`_
 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.000 seconds)
+   **Total running time of the script:** ( 0 minutes  0.026 seconds)
 
 
 .. _sphx_glr_download_Users_Guide_met_tool_wrapper_MTD_MTD_python_embedding.py:

@@ -1,18 +1,16 @@
-.. only:: html
+.. note::
+    :class: sphx-glr-download-link-note
 
-    .. note::
-        :class: sphx-glr-download-link-note
+    Click :ref:`here <sphx_glr_download_Users_Guide_met_tool_wrapper_Example_Example.py>` to download the full example code
+.. rst-class:: sphx-glr-example-title
 
-        Click :ref:`here <sphx_glr_download_Users_Guide_met_tool_wrapper_Example_Example.py>`     to download the full example code
-    .. rst-class:: sphx-glr-example-title
-
-    .. _sphx_glr_Users_Guide_met_tool_wrapper_Example_Example.py:
+.. _sphx_glr_Users_Guide_met_tool_wrapper_Example_Example.py:
 
 
-Example: Introductory Use Case
-==================================
+Example
+========
 
-Example.conf
+This use case will loop over run times and output information for each run regarding filename templates. This case does not run any MET tool. It is designed to help familiarize a new user with how the METplus time looping variables and filename template variables behave.
 
 
 Scientific Objective
@@ -209,7 +207,7 @@ Keywords
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.000 seconds)
+   **Total running time of the script:** ( 0 minutes  0.026 seconds)
 
 
 .. _sphx_glr_download_Users_Guide_met_tool_wrapper_Example_Example.py:

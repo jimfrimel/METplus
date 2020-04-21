@@ -1,23 +1,23 @@
-.. only:: html
+.. note::
+    :class: sphx-glr-download-link-note
 
-    .. note::
-        :class: sphx-glr-download-link-note
+    Click :ref:`here <sphx_glr_download_Users_Guide_model_applications_space_weather_GridStat_fcstGloTEC_obsGloTEC_vx7.py>` to download the full example code
+.. rst-class:: sphx-glr-example-title
 
-        Click :ref:`here <sphx_glr_download_Users_Guide_model_applications_space_weather_GridStat_fcstGloTEC_obsGloTEC_vx7.py>`     to download the full example code
-    .. rst-class:: sphx-glr-example-title
-
-    .. _sphx_glr_Users_Guide_model_applications_space_weather_GridStat_fcstGloTEC_obsGloTEC_vx7.py:
+.. _sphx_glr_Users_Guide_model_applications_space_weather_GridStat_fcstGloTEC_obsGloTEC_vx7.py:
 
 
-Grid-Stat: Analysis validation 
-==============================================================================
+Glotec vs. Glotec
+=================
 
-GridStat_fcstGloTEC
-_obsGloTEC_vx7.conf
+This use case runs the MET GridStat tool to compare gridded forecast data 
+from two runs of the GloTEC model. 
 
 
 Overview
 --------
+
+.. image:: ../../../../docs/_static/space_weather-GridStat_fcstGloTEC_obsGloTEC_vx7.jpg
 
 This use case illustrates the use of grid_stat tool for the space weather domain.
 It compares Total Electron Content for a GloTEC model run initialized with COSMIC-1
@@ -165,25 +165,15 @@ and will contain the following files:
 Keywords
 --------
 
-.. note::
+.. note:: GridStatToolUseCase SpaceWeatherAppUseCase NOAASWPCOrgUseCase GloTECModelUseCase
 
- `GridStatToolUseCase <https://ncar.github.io/METplus/search.html?q=GridStatToolUseCase&check_keywords=yes&area=default>`_,
- `SpaceWeatherAppUseCase <https://ncar.github.io/METplus/search.html?q=SpaceWeatherAppUseCase&check_keywords=yes&area=default>`_,
- `NOAASWPCOrgUseCase  <https://ncar.github.io/METplus/search.html?q=NOAASWPCOrgUseCase&check_keywords=yes&area=default>`_,
- `CustomStringLoopingUseCase <https://ncar.github.io/METplus/search.html?q=CustomStringLoopingUseCase&check_keywords=yes&area=default>`_,
- `MaskingFeatureUseCase  <https://ncar.github.io/METplus/search.html?q=MaskingFeatureUseCase&check_keywords=yes&area=default>`_,
- `ValidationUseCase  <https://ncar.github.io/METplus/search.html?q=ValidationUseCase&check_keywords=yes&area=default>`_
+sphinx_gallery_thumbnail_path = '_static/space_weather-GridStat_fcstGloTEC_obsGloTEC_vx7.jpg'
 
-
-.. code-block:: default
-
-    
-    # sphinx_gallery_thumbnail_path = '_static/space_weather-GridStat_fcstGloTEC_obsGloTEC_vx7.jpg'
 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.000 seconds)
+   **Total running time of the script:** ( 0 minutes  0.025 seconds)
 
 
 .. _sphx_glr_download_Users_Guide_model_applications_space_weather_GridStat_fcstGloTEC_obsGloTEC_vx7.py:

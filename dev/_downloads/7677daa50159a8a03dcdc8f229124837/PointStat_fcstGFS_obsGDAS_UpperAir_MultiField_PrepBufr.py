@@ -1,10 +1,10 @@
 """
-Point-Stat: Standard Verification of Global Upper Air  
-=============================================================================
+Upper Air Grid to Point Observation
+===================================
 
-PointStat_fcstGFS_obsGDAS
-_UpperAir_MultiField
-_PrepBufr.conf
+This use case will change the point observation format to NetCDF and then 
+compare the GFS forecast for several upper air fields on a grid to the point observations,
+putting statistics into the output file.
 
 """
 ##############################################################################
@@ -12,9 +12,8 @@ _PrepBufr.conf
 # --------------------
 #
 # To provide useful statistical information on the relationship between observation
-# data in point format to a gridded forecast. These values can be used to assess  
-# the skill of the prediction.  Statistics are stored as partial sumes to save
-# space and Stat-Analysis must be used to compute the Continuous Statistics.
+# data in point format to a gridded forecast. These values can be used to help correct
+# model deviations from observed values.
 
 
 ##############################################################################
@@ -155,4 +154,4 @@ _PrepBufr.conf
 #
 # sphinx_gallery_thumbnail_path = '_static/medium_range-PointStat_fcstGFS_obsGDAS_UpperAir_MultiField_PrepBufr.png'
 #
-# .. note:: `PB2NCToolUseCase <https://ncar.github.io/METplus/search.html?q=PB2NCToolUseCase&check_keywords=yes&area=default>`_, `PointStatToolUseCase <https://ncar.github.io/METplus/search.html?q=PointStatToolUseCase&check_keywords=yes&area=default>`_, `MediumRangeAppUseCase <https://ncar.github.io/METplus/search.html?q=MediumRangeAppUseCase&check_keywords=yes&area=default>`_, `GRIBFileUseCase <https://ncar.github.io/METplus/search.html?q=GRIBFileUseCase&check_keywords=yes&area=default>`_, `prepBUFRFileUseCase <https://ncar.github.io/METplus/search.html?q=prepBUFRFileUseCase&check_keywords=yes&area=default>`_, `NOAAEMCOrgUseCase <https://ncar.github.io/METplus/search.html?q=NOAAEMCOrgUseCase&check_keywords=yes&area=default>`_, `RegriddinginToolUseCase <https://ncar.github.io/METplus/search.html?q=RegriddingInToolUseCase&check_keywords=yes&area=default>`_, `ObsTimeSummaryUseCase <https://ncar.github.io/METplus/search.html?q=ObsTimeSummaryUseCase&check_keywords=yes&area=default>`_
+# .. note:: `PB2NCToolUseCase <https://ncar.github.io/METplus/search.html?q=PB2NCToolUseCase&check_keywords=yes&area=default>`_, `PointStatToolUseCase <https://ncar.github.io/METplus/search.html?q=PointStatToolUseCase&check_keywords=yes&area=default>`_, `MediumRangeAppUseCase <https://ncar.github.io/METplus/search.html?q=MediumRangeAppUseCase&check_keywords=yes&area=default>`_, `GRIBFileUseCase <https://ncar.github.io/METplus/search.html?q=GRIBFileUseCase&check_keywords=yes&area=default>`_, `prepBUFRFileUseCase <https://ncar.github.io/METplus/search.html?q=prepBUFRFileUseCase&check_keywords=yes&area=default>`_

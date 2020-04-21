@@ -1,0 +1,16 @@
+
+:orphan:
+
+.. _sphx_glr_Users_Guide_model_applications_precipitation_sg_execution_times:
+
+Computation times
+=================
+**00:00.179** total execution time for **Users_Guide_model_applications_precipitation** files:
+
+- **00:00.026**: :ref:`sphx_glr_Users_Guide_model_applications_precipitation_GridStat_fcstHREFmean_obsStgIV_NetCDF.py` (``GridStat_fcstHREFmean_obsStgIV_NetCDF.py``)
+- **00:00.026**: :ref:`sphx_glr_Users_Guide_model_applications_precipitation_EnsembleStat_fcstHRRRE_APCP3_GRIB.py` (``EnsembleStat_fcstHRRRE_APCP3_GRIB.py``)
+- **00:00.026**: :ref:`sphx_glr_Users_Guide_model_applications_precipitation_MTD_fcstHRRR-TLE_obsMRMS.py` (``MTD_fcstHRRR-TLE_obsMRMS.py``)
+- **00:00.025**: :ref:`sphx_glr_Users_Guide_model_applications_precipitation_GridStat_fcstHREFmean_obsStgIV_Gempak.py` (``GridStat_fcstHREFmean_obsStgIV_Gempak.py``)
+- **00:00.025**: :ref:`sphx_glr_Users_Guide_model_applications_precipitation_GridStat_fcstHRRR-TLE_obsStgIV_GRIB.py` (``GridStat_fcstHRRR-TLE_obsStgIV_GRIB.py``)
+- **00:00.025**: :ref:`sphx_glr_Users_Guide_model_applications_precipitation_MTD_fcstHRRR-TLE_FcstOnly_RevisionSeries_GRIB.py` (``MTD_fcstHRRR-TLE_FcstOnly_RevisionSeries_GRIB.py``)
+- **00:00.025**: :ref:`sphx_glr_Users_Guide_model_applications_precipitation_GridStat_fcstGFS_obsCCPA_GRIB.py` (``GridStat_fcstGFS_obsCCPA_GRIB.py``)

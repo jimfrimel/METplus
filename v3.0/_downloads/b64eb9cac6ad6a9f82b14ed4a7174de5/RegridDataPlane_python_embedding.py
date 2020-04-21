@@ -1,9 +1,8 @@
 """
-RegridDataPlane: Using Python Embedding
-=============================================================================
+RegridDataPlane with Python Embedding
+=====================================
 
-RegridDataPlane_python
-_embedding.conf
+This use case will run the MET RegridDataPlane tool to regrid data using a python embedding script to read the input data.
 
 """
 ##############################################################################
@@ -18,7 +17,7 @@ _embedding.conf
 #
 # | **Forecast:** ASCII sample file
 #
-# | **Location:** All of the input data required for this use case can be found in the met_test sample data tarball. Click here to the METplus releases page and download sample data for the appropriate release: https://github.com/NCAR/METplus/releases
+# | **Location:** All of the input data required for this use case can be found in the sample data tarball. Click here to the METplus releases page and download sample data for the appropriate release: https://github.com/NCAR/METplus/releases
 # | This tarball should be unpacked into the directory that you will set the value of INPUT_BASE. See 'Running METplus' section for more information.
 
 ##############################################################################
@@ -104,8 +103,4 @@ _embedding.conf
 # Keywords
 # --------
 #
-# .. note::
-#  `RegridDataPlaneToolUseCase <https://ncar.github.io/METplus/search.html?q=RegridDataPlaneToolUseCase&check_keywords=yes&area=default>`_,
-#  `PythonEmbeddingFileUseCase <https://ncar.github.io/METplus/search.html?q=PythonEmbeddingFileUseCase&check_keywords=yes&area=default>`_
-#
-# sphinx_gallery_thumbnail_path = '_static/met_tool_wrapper-RegridDataPlane.png'
+# .. note:: `RegridDataPlaneToolUseCase <https://ncar.github.io/METplus/search.html?q=RegridDataPlaneToolUseCase&check_keywords=yes&area=default>`_, `PythonEmbeddingFileUseCase <https://ncar.github.io/METplus/search.html?q=PythonEmbeddingFileUseCase&check_keywords=yes&area=default>`_

@@ -8,49 +8,58 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>5.1.15.1. StatAnalysis: Basic Use Case &mdash; METplus 3.0 documentation</title>
+  <title>5.1.16.1. StatAnalysis &mdash; METplus 3.0 documentation</title>
   
 
   
   
   
   
+    <link rel="canonical" href="https://unidata.github.io/MetPy/latest/Users_Guide/met_tool_wrapper/StatAnalysis/StatAnalysis.html"/>
+  
 
   
-  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/underscore.js"></script>
-        <script src="../../../_static/doctools.js"></script>
-        <script src="../../../_static/language_data.js"></script>
-    
-    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
 
+  
+  
     
 
   
-  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/theme_override.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/gallery.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/gallery-binder.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/gallery-dataframe.css" type="text/css" />
-    <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="5.1.16.1. TCMPRPlotter: Basic Use Case" href="../TCMPRPlotter/TCMPRPlotter.html" />
-    <link rel="prev" title="5.1.14.2. SeriesAnalysis: Basic Use Case" href="../SeriesAnalysis/SeriesAnalysis.html" /> 
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/gallery.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../../../_static/theme_override.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../../genindex.html"/>
+        <link rel="search" title="Search" href="../../../search.html"/>
+    <link rel="top" title="METplus 3.0 documentation" href="../../../index.html"/>
+        <link rel="up" title="5.1. MET tools" href="../index.html"/>
+        <link rel="next" title="5.1.17.1. TCMPRPlotter" href="../TCMPRPlotter/TCMPRPlotter.html"/>
+        <link rel="prev" title="5.1.15.1. SeriesByLead" href="../SeriesByLead/SeriesByLead.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
 </head>
 
-<body class="wy-body-for-nav">
+<body class="wy-body-for-nav" role="document">
 
    
   <div class="wy-grid-for-nav">
+
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+        <div class="wy-side-nav-search">
           
 
           
@@ -59,7 +68,7 @@
 
           
             
-            <img src="../../../_static/METplus_logo.png" class="logo" alt="Logo"/>
+            <img src="../../../_static/METplus_logo.png" class="logo" />
           
           </a>
 
@@ -97,23 +106,24 @@
 <li class="toctree-l2 current"><a class="reference internal" href="../../usecases.html">5. METplus Use Cases</a><ul class="current">
 <li class="toctree-l3 current"><a class="reference internal" href="../index.html">5.1. MET tools</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="../index.html#ascii2nc">5.1.1. ASCII2NC</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#cyclone-plotter">5.1.2. Cyclone Plotter</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#ensemblestat">5.1.3. EnsembleStat</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#example">5.1.4. Example</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#gempaktocf">5.1.5. GempakToCF</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#gridstat">5.1.6. GridStat</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#mode">5.1.7. MODE</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#mtd">5.1.8. MTD</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#pb2nc">5.1.9. PB2NC</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#pcpcombine">5.1.10. PCPCombine</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#pointstat">5.1.11. PointStat</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#pyembedingest">5.1.12. PyEmbedIngest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#custom-ingest">5.1.2. Custom Ingest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#cyclone-plotter">5.1.3. Cyclone Plotter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#ensemblestat">5.1.4. EnsembleStat</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#example">5.1.5. Example</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#gempaktocf">5.1.6. GempakToCF</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#gridstat">5.1.7. GridStat</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#mode">5.1.8. MODE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#mtd">5.1.9. MTD</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#pb2nc">5.1.10. PB2NC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#pcpcombine">5.1.11. PCPCombine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#pointstat">5.1.12. PointStat</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../index.html#regriddataplane">5.1.13. RegridDataPlane</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#seriesanalysis">5.1.14. SeriesAnalysis</a></li>
-<li class="toctree-l4 current"><a class="reference internal" href="../index.html#statanalysis">5.1.15. StatAnalysis</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#tcmprplotter">5.1.16. TCMPRPlotter</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#tcpairs">5.1.17. TCPairs</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#tcstat">5.1.18. TCStat</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#seriesbyinit">5.1.14. SeriesByInit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#seriesbylead">5.1.15. SeriesByLead</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../index.html#statanalysis">5.1.16. StatAnalysis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#tcmprplotter">5.1.17. TCMPRPlotter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#tcpairs">5.1.18. TCPairs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#tcstat">5.1.19. TCStat</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../model_applications/index.html">5.2. Model Applications</a></li>
@@ -137,7 +147,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" aria-label="top navigation">
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../../../index.html">METplus</a>
@@ -145,10 +155,9 @@
       </nav>
 
 
+      
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
           
 
 
@@ -173,11 +182,11 @@
         
           <li><a href="../../index.html">User’s Guide</a> &raquo;</li>
         
-          <li><a href="../../usecases.html"><span class="section-number">5. </span>METplus Use Cases</a> &raquo;</li>
+          <li><a href="../../usecases.html">5. METplus Use Cases</a> &raquo;</li>
         
-          <li><a href="../index.html"><span class="section-number">5.1. </span>MET tools</a> &raquo;</li>
+          <li><a href="../index.html">5.1. MET tools</a> &raquo;</li>
         
-      <li><span class="section-number">5.1.15.1. </span>StatAnalysis: Basic Use Case</li>
+      <li>5.1.16.1. StatAnalysis</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -198,19 +207,21 @@
             
   <div class="sphx-glr-download-link-note admonition note">
 <p class="admonition-title">Note</p>
-<p>Click <a class="reference internal" href="#sphx-glr-download-users-guide-met-tool-wrapper-statanalysis-statanalysis-py"><span class="std std-ref">here</span></a>     to download the full example code</p>
+<p>Click <a class="reference internal" href="#sphx-glr-download-users-guide-met-tool-wrapper-statanalysis-statanalysis-py"><span class="std std-ref">here</span></a> to download the full example code</p>
 </div>
-<div class="sphx-glr-example-title section" id="statanalysis-basic-use-case">
-<span id="sphx-glr-users-guide-met-tool-wrapper-statanalysis-statanalysis-py"></span><h1><span class="section-number">5.1.15.1. </span>StatAnalysis: Basic Use Case<a class="headerlink" href="#statanalysis-basic-use-case" title="Permalink to this headline">¶</a></h1>
-<p>StatAnalysis.conf</p>
+<div class="sphx-glr-example-title section" id="statanalysis">
+<span id="sphx-glr-users-guide-met-tool-wrapper-statanalysis-statanalysis-py"></span><h1>5.1.16.1. StatAnalysis<a class="headerlink" href="#statanalysis" title="Permalink to this headline">¶</a></h1>
+<p>This use case will run the MET StatAnalysis tool providing
+summary statistical information and a way to filter STAT
+output files.</p>
 <div class="section" id="scientific-objective">
-<h2>Scientific Objective<a class="headerlink" href="#scientific-objective" title="Permalink to this headline">¶</a></h2>
-<p>This demonstrates how the Stat-Analysis tool can tie together results from other
+<h2>5.1.16.1.1. Scientific Objective<a class="headerlink" href="#scientific-objective" title="Permalink to this headline">¶</a></h2>
+<p>This demonstrates how the StatAnalysis tool can tie together results from other
 MET tools (including PointStat, GridStat, EnsembleStat, and WaveletStat)
 and provide summary statistical information.</p>
 </div>
 <div class="section" id="datasets">
-<h2>Datasets<a class="headerlink" href="#datasets" title="Permalink to this headline">¶</a></h2>
+<h2>5.1.16.1.2. Datasets<a class="headerlink" href="#datasets" title="Permalink to this headline">¶</a></h2>
 <div class="line-block">
 <div class="line"><strong>WRF ARW grid_stat output STAT files:</strong></div>
 <div class="line-block">
@@ -224,19 +235,19 @@ and provide summary statistical information.</p>
 </div>
 </div>
 <div class="line-block">
-<div class="line"><strong>Location:</strong> All of the input data required for this use case can be found in the met_test sample data tarball. Click here to the METplus releases page and download sample data for the appropriate release: <a class="reference external" href="https://github.com/NCAR/METplus/releases">https://github.com/NCAR/METplus/releases</a></div>
+<div class="line"><strong>Location:</strong> All of the input data required for this use case can be found in the sample data tarball. Click here to the METplus releases page and download sample data for the appropriate release: <a class="reference external" href="https://github.com/NCAR/METplus/releases">https://github.com/NCAR/METplus/releases</a></div>
 <div class="line">The tarball should be unpacked into the directory that you will set the value of INPUT_BASE. See ‘Running METplus’ section for more information.</div>
 <div class="line"><strong>Data Source:</strong> WRF</div>
 </div>
 </div>
 <div class="section" id="metplus-components">
-<h2>METplus Components<a class="headerlink" href="#metplus-components" title="Permalink to this headline">¶</a></h2>
+<h2>5.1.16.1.3. METplus Components<a class="headerlink" href="#metplus-components" title="Permalink to this headline">¶</a></h2>
 <p>This use case utilizes the METplus StatAnalysis wrapper to search for
 files that are valid at a given run time and generate a command to run
 the MET tool stat_analysis.</p>
 </div>
 <div class="section" id="metplus-workflow">
-<h2>METplus Workflow<a class="headerlink" href="#metplus-workflow" title="Permalink to this headline">¶</a></h2>
+<h2>5.1.16.1.4. METplus Workflow<a class="headerlink" href="#metplus-workflow" title="Permalink to this headline">¶</a></h2>
 <p>StatAnalysis is the only tool called in this example. It processes the following
 run times:</p>
 <div class="line-block">
@@ -245,7 +256,7 @@ run times:</p>
 </div>
 </div>
 <div class="section" id="metplus-configuration">
-<h2>METplus Configuration<a class="headerlink" href="#metplus-configuration" title="Permalink to this headline">¶</a></h2>
+<h2>5.1.16.1.5. METplus Configuration<a class="headerlink" href="#metplus-configuration" title="Permalink to this headline">¶</a></h2>
 <p>METplus first loads all of the configuration files found in parm/metplus_config,
 then it loads any configuration files passed to METplus via the command line
 with the -c option, i.e. -c parm/use_cases/met_tool_wrapper/StatAnalysis/StatAnalysis.conf</p>
@@ -396,7 +407,7 @@ with the -c option, i.e. -c parm/use_cases/met_tool_wrapper/StatAnalysis/StatAna
 </div>
 </div>
 <div class="section" id="met-configuration">
-<h2>MET Configuration<a class="headerlink" href="#met-configuration" title="Permalink to this headline">¶</a></h2>
+<h2>5.1.16.1.6. MET Configuration<a class="headerlink" href="#met-configuration" title="Permalink to this headline">¶</a></h2>
 <p>METplus sets environment variables based on the values in the METplus configuration file.
 These variables are referenced in the MET configuration file. <strong>YOU SHOULD NOT SET ANY OF THESE ENVIRONMENT VARIABLES YOURSELF! THEY WILL BE OVERWRITTEN BY METPLUS WHEN IT CALLS THE MET TOOLS!</strong> If there is a setting in the MET configuration file that is not controlled by an environment variable, you can add additional environment variables to be set only within the METplus environment using the [user_env_vars] section of the METplus configuration files. See the ‘User Defined Config’ section on the ‘System Configuration’ page of the METplus User’s Guide for more information.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>////////////////////////////////////////////////////////////////////////////////
@@ -545,7 +556,7 @@ these MET configuration file settings.</p>
 </ul>
 </div>
 <div class="section" id="running-metplus">
-<h2>Running METplus<a class="headerlink" href="#running-metplus" title="Permalink to this headline">¶</a></h2>
+<h2>5.1.16.1.7. Running METplus<a class="headerlink" href="#running-metplus" title="Permalink to this headline">¶</a></h2>
 <p>It is recommended to run this use case by:</p>
 <p>Passing in StatAnalysis.conf then a user-specific system configuration file:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>master_metplus.py -c /path/to/StatAnalysis.conf -c /path/to/user_system.conf
@@ -567,7 +578,7 @@ these MET configuration file settings.</p>
 <p><strong>NOTE:</strong> All of these items must be found under the [dir] section.</p>
 </div>
 <div class="section" id="expected-output">
-<h2>Expected Output<a class="headerlink" href="#expected-output" title="Permalink to this headline">¶</a></h2>
+<h2>5.1.16.1.8. Expected Output<a class="headerlink" href="#expected-output" title="Permalink to this headline">¶</a></h2>
 <p>A successful run will output the following both to the screen and to the logfile:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>INFO: METplus has successfully finished running.
 </pre></div>
@@ -580,13 +591,12 @@ and will contain the following file:</p>
 </ul>
 </div>
 <div class="section" id="keywords">
-<h2>Keywords<a class="headerlink" href="#keywords" title="Permalink to this headline">¶</a></h2>
+<h2>5.1.16.1.9. Keywords<a class="headerlink" href="#keywords" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><a class="reference external" href="https://ncar.github.io/METplus/search.html?q=StatAnalysisToolUseCase&amp;check_keywords=yes&amp;area=default">StatAnalysisToolUseCase</a></p>
 </div>
-<p>sphinx_gallery_thumbnail_path = ‘_static/met_tool_wrapper-StatAnalysis.png’</p>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.000 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.026 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-users-guide-met-tool-wrapper-statanalysis-statanalysis-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/de12c85aad665d509532b2b550bb501f/StatAnalysis.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">StatAnalysis.py</span></code></a></p>
@@ -601,16 +611,18 @@ and will contain the following file:</p>
 
 
            </div>
-           
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../TCMPRPlotter/TCMPRPlotter.html" class="btn btn-neutral float-right" title="5.1.16.1. TCMPRPlotter: Basic Use Case" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../TCMPRPlotter/TCMPRPlotter.html" class="btn btn-neutral float-right" title="5.1.17.1. TCMPRPlotter" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../SeriesAnalysis/SeriesAnalysis.html" class="btn btn-neutral float-left" title="5.1.14.2. SeriesAnalysis: Basic Use Case" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../SeriesByLead/SeriesByLead.html" class="btn btn-neutral" title="5.1.15.1. SeriesByLead" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -619,11 +631,14 @@ and will contain the following file:</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019, NCAR
+        &copy; Copyright 2019, NCAR.
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+     
+<script>var version_json_loc = "../../../../versions.json";</script>
+
 
 </footer>
 
@@ -636,15 +651,39 @@ and will contain the following file:</p>
   
 
 
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script>
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'3.0',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../../_static/pop_ver.js"></script>
+
+  
 
   
   
-    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
    
 
 </body>

@@ -15,42 +15,50 @@
   
   
   
+    <link rel="canonical" href="https://unidata.github.io/MetPy/latest/Users_Guide/index.html"/>
+  
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
+  
+  
     
 
   
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/theme_override.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/gallery-binder.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/gallery-dataframe.css" type="text/css" />
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="1. Overview" href="overview.html" />
-    <link rel="prev" title="METplus" href="../index.html" /> 
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../_static/theme_override.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="METplus 3.0 documentation" href="../index.html"/>
+        <link rel="next" title="1. Overview" href="overview.html"/>
+        <link rel="prev" title="METplus" href="../index.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
 </head>
 
-<body class="wy-body-for-nav">
+<body class="wy-body-for-nav" role="document">
 
    
   <div class="wy-grid-for-nav">
+
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+        <div class="wy-side-nav-search">
           
 
           
@@ -59,7 +67,7 @@
 
           
             
-            <img src="../_static/METplus_logo.png" class="logo" alt="Logo"/>
+            <img src="../_static/METplus_logo.png" class="logo" />
           
           </a>
 
@@ -113,7 +121,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" aria-label="top navigation">
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">METplus</a>
@@ -121,10 +129,9 @@
       </nav>
 
 
+      
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
           
 
 
@@ -182,17 +189,11 @@ Forecast System.</p>
 software package. The first release of METplus Wrappers have occurred
 in 2017. This documentation describes the 3.0 release in February 2020.
 Intermediate releases may include bug fixes. METplus Wrappers is also be
-able to accept new modules contributed by the community. While we are
-setting up our community contribution protocol, please send email
-to: <a class="reference external" href="mailto:">met_help<span>&#64;</span>ucar<span>&#46;</span>edu</a> and inform us of your desired
-contribution. We will then determine the
+able to accept new modules contributed by the community. While we are setting up our community contribution protocol, please send email to: <a class="reference external" href="mailto:">met_help<span>&#64;</span>ucar<span>&#46;</span>edu</a> and inform us of your desired contribution. We will then determine the
 maturity of any new verification method and coordinate the inclusion of
 the new module in a future version.</p>
 <p>This User’s Guide was prepared by the developers of the METplus
-Wrappers, including Dan Adriaansen, Minna Win-Gildenmeister, George McCabe,
-Julie Prestopnik, Jim Frimel, John Opatz, John Halley Gotway,
-Tara Jensen, Jonathan Vigh, Mallory Row, Christana Kalb, Hank Fisher,
-Lisa Goodrich, Lindsay Blank, and Todd Arbetter.</p>
+Wrappers, including Dan Adriaansen, Minna Win-Gildenmeister, George McCabe, Julie Prestopnik, Jim Frimel, John Opatz, John Halley Gotway, Tara Jensen, Jonathan Vigh, Mallory Row, Christana Kalb, Hank Fisher, Lisa Goodrich, and Lindsay Blank.</p>
 <p><strong>New for METplus Wrappers v3.0</strong></p>
 <ul class="simple">
 <li><p>Moved to using Python 3.6.3</p></li>
@@ -200,7 +201,7 @@ Lisa Goodrich, Lindsay Blank, and Todd Arbetter.</p>
 <li><p>Added support for python embedding to supply gridded input data to MET tools (PcpCombine, GridStat, PointStat (gridded data only), RegridDataPlane…</p></li>
 <li><p>PcpCombine now supports custom user-defined commands to build atypical use case calls</p></li>
 <li><p>Improved logging to help debugging by listing expected file path</p></li>
-<li><p>PyEmbedIngester wrapper added to allow python embedding for multiple data sources</p></li>
+<li><p>CustomIngester wrapper added to allow python embedding for multiple data sources (in progress)</p></li>
 <li><p>Added support for month and year intervals for [INIT/VALID]_INCREMENT and LEAD_SEQ</p></li>
 <li><p>Addition of contributor/developer guide as part of documentation</p></li>
 <li><p>Documentation moved online using GitHub Pages and completely renamed, PDF option TBD.</p></li>
@@ -214,26 +215,12 @@ Licensed under the Apache License, Version 2.0 (the “License”);
 You may not use this file except in compliance with the License.
 You may obtain a copy of the License at</p>
 <p><a class="reference external" href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></p>
-<p>Unless required by applicable law or agreed to in writing, software distributed under
-the License is distributed on an “AS IS” BASIS, WITHOUT WARRANTIES OR CONDITIONS OF
-ANY KIND, either express or implied.  See the License for the specific language
-governing permissions and limitations under the License.</p>
+<p>Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an “AS IS” BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the License for the specific language governing permissions and limitations under the License.</p>
 <p><strong>Citations</strong></p>
 <p>The citation for this User’s Guide should be:</p>
-<p>Adriaansen, D., M. Win-Gildenmeister, G. McCabe, J. Prestopnik, J. Frimel, J. Opatz,
-J. Halley Gotway, T. Jensen, J. Vigh, M. Row, C. Kalb, H. Fisher, L. Goodrich,
-L. Blank, and T. Arbetter, 2020: The METplus Version 3.0 User’s Guide.
-Developmental Testbed Center.  Available at: <a class="reference external" href="https://github.com/NCAR/METplus/releases">https://github.com/NCAR/METplus/releases</a>.</p>
+<p>Adriaansen, D., M. Win-Gildenmeister, G. McCabe, J. Prestopnik, J. Frimel, J. Opatz, J. Halley Gotway, T. Jensen, J. Vigh, M. Row, C. Kalb, H. Fisher, L. Goodrich, and L. Blank, 2020: The METplus Wrappers Version 3.0 User’s Guide. Developmental Testbed Center.  Available at: <a class="reference external" href="https://github.com/NCAR/METplus/releases">https://github.com/NCAR/METplus/releases</a>.</p>
 <p><strong>Acknowledgments</strong></p>
-<p>We thank all the METplus sponsors including: DTC partners (NOAA, NCAR, USAF, and NSF),
-along with NOAA/Office of Atmospheric Research (OAR), NOAA/Office of Science and
-Technology Integration, NOAA/Weather Program Office (WPO, formerly Office of Weather
-and Air Quality), and the Naval Research Laboratory (NRL). Thanks also go to the
-staff at the Developmental Testbed Center for their help, advice,and many types of support.
-We released METplus Alpha in February 2017 and would not have made a decade of
-cutting-edge verification support without those who participated in DTC planning
-workshops and the NGGPS United Forecast System Strategic Implementation Plan Working
-Groups (UFS SIP WGs).</p>
+<p>We thank all the METplus sponsors including: DTC partners (NOAA, NCAR, USAF, and NSF), along with NOAA/Office of Atmospheric Research (OAR), NOAA/Office of Science and Technology Integration, NOAA/Weather Program Office (WPO, formerly Office of Weather and Air Quality), and the Naval Research Laboratory (NRL). Thanks also go to the staff at the Developmental Testbed Center for their help, advice,and many types of support. We released METplus Alpha in February 2017 and would not have made a decade of cutting-edge verification support without those who participated in DTC planning workshops and the NGGPS United Forecast System Strategic Implementation Plan Working Groups (UFS SIP WGs).</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="overview.html">1. Overview</a></li>
@@ -266,7 +253,9 @@ Groups (UFS SIP WGs).</p>
 
 
            </div>
-           
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
@@ -275,7 +264,7 @@ Groups (UFS SIP WGs).</p>
         <a href="overview.html" class="btn btn-neutral float-right" title="1. Overview" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../index.html" class="btn btn-neutral float-left" title="METplus" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../index.html" class="btn btn-neutral" title="METplus" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -284,11 +273,14 @@ Groups (UFS SIP WGs).</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019, NCAR
+        &copy; Copyright 2019, NCAR.
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+     
+<script>var version_json_loc = "../../versions.json";</script>
+
 
 </footer>
 
@@ -301,15 +293,39 @@ Groups (UFS SIP WGs).</p>
   
 
 
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script>
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'3.0',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/language_data.js"></script>
+      <script type="text/javascript" src="../_static/pop_ver.js"></script>
+
+  
 
   
   
-    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
    
 
 </body>

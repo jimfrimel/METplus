@@ -1,9 +1,8 @@
 """
-Grid-Stat: Compute Anomaly Correlation using Climatology  
-============================================================================
+Anomaly Grid Comparison
+=======================
 
-GridStat_fcstGFS_obsGFS
-_climoNCEP_MultiField.conf
+This use case will run the MET GridStat and StatAnalysis tools to compare gridded forecast data to gridded observation data over a few valid times and generate statistics over time.
 
 """
 ##############################################################################
@@ -11,7 +10,7 @@ _climoNCEP_MultiField.conf
 # --------------------
 # To provide useful statistical information on the relationship between observation
 # data in gridded format to a gridded forecast. These values can be used to help
-# correct model deviations from observed values. 
+# correct model deviations from observed values.
 
 ##############################################################################
 # Datasets
@@ -141,4 +140,4 @@ _climoNCEP_MultiField.conf
 #
 # sphinx_gallery_thumbnail_path = '_static/medium_range-GridStat_fcstGFS_obsGFS_climoNCEP_MultiField.png'
 #
-# .. note:: `GridStatToolUseCase <https://ncar.github.io/METplus/search.html?q=GridStatToolUseCase&check_keywords=yes&area=default>`_, `MediumRangeAppUseCase <https://ncar.github.io/METplus/search.html?q=MediumRangeAppUseCase&check_keywords=yes&area=default>`_, `StatAnalysisToolUseCase <https://ncar.github.io/METplus/search.html?q=StatAnalysisToolUseCase&check_keywords=yes&area=default>`_, `GRIBFileUseCase <https://ncar.github.io/METplus/search.html?q=GRIBFileUseCase&check_keywords=yes&area=default>`_, `NOAAEMCOrgUseCase <https://ncar.github.io/METplus/search.html?q=NOAAEMCOrgUseCase&check_keywords=yes&area=default>`_, `RegriddinginTool <https://ncar.github.io/METplus/search.html?q=RegriddingInToolUseCase&check_keywords=yes&area=default>`_     
+# .. note:: `GridStatToolUseCase <https://ncar.github.io/METplus/search.html?q=GridStatToolUseCase&check_keywords=yes&area=default>`_, `MediumRangeAppUseCase <https://ncar.github.io/METplus/search.html?q=MediumRangeAppUseCase&check_keywords=yes&area=default>`_, `StatAnalysisToolUseCase <https://ncar.github.io/METplus/search.html?q=StatAnalysisToolUseCase&check_keywords=yes&area=default>`_, `GRIBFileUseCase <https://ncar.github.io/METplus/search.html?q=GRIBFileUseCase&check_keywords=yes&area=default>`_, `NOAAEMCOrgUseCase <https://ncar.github.io/METplus/search.html?q=NOAAEMCOrgUseCase&check_keywords=yes&area=default>`_

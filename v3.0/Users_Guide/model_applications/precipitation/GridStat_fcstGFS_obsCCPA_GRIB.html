@@ -8,49 +8,58 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>5.2.4.4. Grid-Stat: 24-hour QPF Use Case &mdash; METplus 3.0 documentation</title>
+  <title>5.2.3.6. GFS to CCPA GRIB Use Case &mdash; METplus 3.0 documentation</title>
   
 
   
   
   
   
+    <link rel="canonical" href="https://unidata.github.io/MetPy/latest/Users_Guide/model_applications/precipitation/GridStat_fcstGFS_obsCCPA_GRIB.html"/>
+  
 
   
-  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/underscore.js"></script>
-        <script src="../../../_static/doctools.js"></script>
-        <script src="../../../_static/language_data.js"></script>
-    
-    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
 
+  
+  
     
 
   
-  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/theme_override.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/gallery.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/gallery-binder.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/gallery-dataframe.css" type="text/css" />
-    <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="5.2.4.5. Ensemble-Stat: Basic Post-Processing only" href="EnsembleStat_fcstHRRRE_FcstOnly_NetCDF.html" />
-    <link rel="prev" title="5.2.4.3. Grid-Stat: 6hr QPF in NetCDF format" href="GridStat_fcstHREFmean_obsStgIV_NetCDF.html" /> 
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/gallery.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../../../_static/theme_override.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../../genindex.html"/>
+        <link rel="search" title="Search" href="../../../search.html"/>
+    <link rel="top" title="METplus 3.0 documentation" href="../../../index.html"/>
+        <link rel="up" title="5.2. Model Applications" href="../index.html"/>
+        <link rel="next" title="5.2.3.7. HRRR-TLE MODE Time Domain Use Case" href="MTD_fcstHRRR-TLE_obsMRMS.html"/>
+        <link rel="prev" title="5.2.3.5. HRRR-TLE MODE Time Domain Use Case" href="MTD_fcstHRRR-TLE_FcstOnly_RevisionSeries_GRIB.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
 </head>
 
-<body class="wy-body-for-nav">
+<body class="wy-body-for-nav" role="document">
 
    
   <div class="wy-grid-for-nav">
+
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+        <div class="wy-side-nav-search">
           
 
           
@@ -59,7 +68,7 @@
 
           
             
-            <img src="../../../_static/METplus_logo.png" class="logo" alt="Logo"/>
+            <img src="../../../_static/METplus_logo.png" class="logo" />
           
           </a>
 
@@ -98,12 +107,11 @@
 <li class="toctree-l3"><a class="reference internal" href="../../met_tool_wrapper/index.html">5.1. MET tools</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="../index.html">5.2. Model Applications</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="../index.html#convection-allowing-models">5.2.1. Convection Allowing Models</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#cryosphere">5.2.2. Cryosphere</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#medium-range">5.2.3. Medium Range</a></li>
-<li class="toctree-l4 current"><a class="reference internal" href="../index.html#precipitation">5.2.4. Precipitation</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#subseasonal-to-seasonal">5.2.5. Subseasonal to Seasonal</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#space-weather">5.2.6. Space Weather</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#tropical-cyclone-and-extra-tropical-cyclone">5.2.7. Tropical Cyclone and Extra Tropical Cyclone</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#medium-range">5.2.2. Medium Range</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../index.html#precipitation">5.2.3. Precipitation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#subseasonal-to-seasonal">5.2.4. Subseasonal to Seasonal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#space-weather">5.2.5. Space Weather</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#tropical-cyclone-and-extra-tropical-cyclone">5.2.6. Tropical Cyclone and Extra Tropical Cyclone</a></li>
 </ul>
 </li>
 </ul>
@@ -126,7 +134,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" aria-label="top navigation">
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../../../index.html">METplus</a>
@@ -134,10 +142,9 @@
       </nav>
 
 
+      
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
           
 
 
@@ -162,11 +169,11 @@
         
           <li><a href="../../index.html">User’s Guide</a> &raquo;</li>
         
-          <li><a href="../../usecases.html"><span class="section-number">5. </span>METplus Use Cases</a> &raquo;</li>
+          <li><a href="../../usecases.html">5. METplus Use Cases</a> &raquo;</li>
         
-          <li><a href="../index.html"><span class="section-number">5.2. </span>Model Applications</a> &raquo;</li>
+          <li><a href="../index.html">5.2. Model Applications</a> &raquo;</li>
         
-      <li><span class="section-number">5.2.4.4. </span>Grid-Stat: 24-hour QPF Use Case</li>
+      <li>5.2.3.6. GFS to CCPA GRIB Use Case</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -187,20 +194,20 @@
             
   <div class="sphx-glr-download-link-note admonition note">
 <p class="admonition-title">Note</p>
-<p>Click <a class="reference internal" href="#sphx-glr-download-users-guide-model-applications-precipitation-gridstat-fcstgfs-obsccpa-grib-py"><span class="std std-ref">here</span></a>     to download the full example code</p>
+<p>Click <a class="reference internal" href="#sphx-glr-download-users-guide-model-applications-precipitation-gridstat-fcstgfs-obsccpa-grib-py"><span class="std std-ref">here</span></a> to download the full example code</p>
 </div>
-<div class="sphx-glr-example-title section" id="grid-stat-24-hour-qpf-use-case">
-<span id="sphx-glr-users-guide-model-applications-precipitation-gridstat-fcstgfs-obsccpa-grib-py"></span><h1><span class="section-number">5.2.4.4. </span>Grid-Stat: 24-hour QPF Use Case<a class="headerlink" href="#grid-stat-24-hour-qpf-use-case" title="Permalink to this headline">¶</a></h1>
-<p>GridStat_fcstGFS
-_obsCCPA_Grib.conf</p>
+<div class="sphx-glr-example-title section" id="gfs-to-ccpa-grib-use-case">
+<span id="sphx-glr-users-guide-model-applications-precipitation-gridstat-fcstgfs-obsccpa-grib-py"></span><h1>5.2.3.6. GFS to CCPA GRIB Use Case<a class="headerlink" href="#gfs-to-ccpa-grib-use-case" title="Permalink to this headline">¶</a></h1>
+<p>This use case compares gridded forecast precipitation accumulation data to
+gridded 24 hour observation precipitation accumulation data.</p>
 <div class="section" id="scientific-objective">
-<h2>Scientific Objective<a class="headerlink" href="#scientific-objective" title="Permalink to this headline">¶</a></h2>
-<p>To evaluate 24 hour precipitation over the United States using the NCEP
-Climatology Calibrated Precipitation Analysis (CCPA) generated by a global
-weather model.</p>
+<h2>5.2.3.6.1. Scientific Objective<a class="headerlink" href="#scientific-objective" title="Permalink to this headline">¶</a></h2>
+<p>To provide useful statistical information on the relationship between observation
+data in gridded format to a gridded forecast. These values can be used to help correct
+model deviations from observed values.</p>
 </div>
 <div class="section" id="datasets">
-<h2>Datasets<a class="headerlink" href="#datasets" title="Permalink to this headline">¶</a></h2>
+<h2>5.2.3.6.2. Datasets<a class="headerlink" href="#datasets" title="Permalink to this headline">¶</a></h2>
 <p>Relevant information about the datasets that would be beneficial include:</p>
 <blockquote>
 <div><ul class="simple">
@@ -211,13 +218,13 @@ weather model.</p>
 </div></blockquote>
 </div>
 <div class="section" id="metplus-components">
-<h2>METplus Components<a class="headerlink" href="#metplus-components" title="Permalink to this headline">¶</a></h2>
+<h2>5.2.3.6.3. METplus Components<a class="headerlink" href="#metplus-components" title="Permalink to this headline">¶</a></h2>
 <p>This use case first runs PCPCombine on the observation data to build a 24
 hour precipitation accumulation file.
 Then the observation data are compared to the forecast data using GridStat.</p>
 </div>
 <div class="section" id="metplus-workflow">
-<h2>METplus Workflow<a class="headerlink" href="#metplus-workflow" title="Permalink to this headline">¶</a></h2>
+<h2>5.2.3.6.4. METplus Workflow<a class="headerlink" href="#metplus-workflow" title="Permalink to this headline">¶</a></h2>
 <p>The following tools are used for each run time:</p>
 <p>PCPCombine (observation) &gt; GridStat</p>
 <p>This example loops by valid time. There is only one
@@ -229,7 +236,7 @@ initialization time in this example, so the following will be run:</p>
 </div>
 </div>
 <div class="section" id="metplus-configuration">
-<h2>METplus Configuration<a class="headerlink" href="#metplus-configuration" title="Permalink to this headline">¶</a></h2>
+<h2>5.2.3.6.5. METplus Configuration<a class="headerlink" href="#metplus-configuration" title="Permalink to this headline">¶</a></h2>
 <p>METplus first loads all of the configuration files found in parm/metplus_config,
 then it loads any configuration files passed to METplus via the command line
 with the -c option, i.e. -c parm/use_cases/model_applications/precipitation/GridStat_fcstGFS_obsCCPA_GRIB.conf</p>
@@ -320,7 +327,7 @@ with the -c option, i.e. -c parm/use_cases/model_applications/precipitation/Grid
 </div>
 </div>
 <div class="section" id="met-configuration">
-<h2>MET Configuration<a class="headerlink" href="#met-configuration" title="Permalink to this headline">¶</a></h2>
+<h2>5.2.3.6.6. MET Configuration<a class="headerlink" href="#met-configuration" title="Permalink to this headline">¶</a></h2>
 <p>METplus sets environment variables based on the values in the METplus configuration file.
 These variables are referenced in the MET configuration file. <strong>YOU SHOULD NOT SET ANY OF THESE ENVIRONMENT VARIABLES YOURSELF! THEY WILL BE OVERWRITTEN BY METPLUS WHEN IT CALLS THE MET TOOLS!</strong> If there is a setting in the MET configuration file that is not controlled by an environment variable, you can add additional environment variables to be set only within the METplus environment using the [user_env_vars] section of the METplus configuration files. See the ‘User Defined Config’ section on the ‘System Configuration’ page of the METplus User’s Guide for more information.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>////////////////////////////////////////////////////////////////////////////////
@@ -553,7 +560,7 @@ These variables are referenced in the MET configuration file. <strong>YOU SHOULD
 <p>parm/use_cases/met_tool_wrapper/GridStat/GridStat.py</p>
 </div>
 <div class="section" id="running-metplus">
-<h2>Running METplus<a class="headerlink" href="#running-metplus" title="Permalink to this headline">¶</a></h2>
+<h2>5.2.3.6.7. Running METplus<a class="headerlink" href="#running-metplus" title="Permalink to this headline">¶</a></h2>
 <p>This use case can be run two ways:</p>
 <ol class="arabic">
 <li><p>Passing in GridStat_fcstGFS_obsCCPA_GRIB.conf then a user-specific system configuration file:</p>
@@ -583,7 +590,7 @@ These variables are referenced in the MET configuration file. <strong>YOU SHOULD
 <p><strong>NOTE:</strong> All of these items must be found under the [dir] section.</p>
 </div>
 <div class="section" id="expected-output">
-<h2>Expected Output<a class="headerlink" href="#expected-output" title="Permalink to this headline">¶</a></h2>
+<h2>5.2.3.6.8. Expected Output<a class="headerlink" href="#expected-output" title="Permalink to this headline">¶</a></h2>
 <p>A successful run will output the following both to the screen and to the logfile:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>INFO: METplus has successfully finished running.
 </pre></div>
@@ -596,20 +603,13 @@ and will contain the following files:</p>
 </ul>
 </div>
 <div class="section" id="keywords">
-<h2>Keywords<a class="headerlink" href="#keywords" title="Permalink to this headline">¶</a></h2>
+<h2>5.2.3.6.9. Keywords<a class="headerlink" href="#keywords" title="Permalink to this headline">¶</a></h2>
 <p>sphinx_gallery_thumbnail_path = ‘_static/precipitation-GridStat_fcstGFS_obsCCPA_GRIB.png’</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><a class="reference external" href="https://ncar.github.io/METplus/search.html?q=GridStatToolUseCase&amp;check_keywords=yes&amp;area=default">GridStatToolUseCase</a>,
-<a class="reference external" href="https://ncar.github.io/METplus/search.html?q=PrecipitationAppUseCase&amp;check_keywords=yes&amp;area=default">PrecipitationAppUseCase</a>,
-<a class="reference external" href="https://ncar.github.io/METplus/search.html?q=PCPCombineToolUseCase&amp;check_keywords=yes&amp;area=default">PCPCombineToolUseCase</a>,
-<a class="reference external" href="https://ncar.github.io/METplus/search.html?q=GRIBFileUseCase&amp;check_keywords=yes&amp;area=default">GRIBFileUseCase</a>,
-<a class="reference external" href="https://ncar.github.io/METplus/search.html?q=NOAAEMCOrgUseCase&amp;check_keywords=yes&amp;area=default">NOAAEMCOrgUseCase</a>,
-<a class="reference external" href="https://ncar.github.io/METplus/search.html?q=MediumRangeAppUseCase&amp;check_keywords=yes&amp;area=default">MediumRangeAppUseCase</a>,
-<a class="reference external" href="https://ncar.github.io/METplus/search.html?q=MaskingFeatureUseCase&amp;check_keywords=yes&amp;area=default">MaskingFeatureUseCase</a>,
-<a class="reference external" href="https://ncar.github.io/METplus/search.html?q=RegriddingInToolUseCase&amp;check_keywords=yes&amp;area=default">RegriddingInToolUseCase</a></p>
+<p><a class="reference external" href="https://ncar.github.io/METplus/search.html?q=GridStatToolUseCase&amp;check_keywords=yes&amp;area=default">GridStatToolUseCase</a>, <a class="reference external" href="https://ncar.github.io/METplus/search.html?q=PrecipitationAppUseCase&amp;check_keywords=yes&amp;area=default">PrecipitationAppUseCase</a>, <a class="reference external" href="https://ncar.github.io/METplus/search.html?q=PCPCombineToolUseCase&amp;check_keywords=yes&amp;area=default">PCPCombineToolUseCase</a>, <a class="reference external" href="https://ncar.github.io/METplus/search.html?q=GRIBFileUseCase&amp;check_keywords=yes&amp;area=default">GRIBFileUseCase</a></p>
 </div>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.000 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.025 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-users-guide-model-applications-precipitation-gridstat-fcstgfs-obsccpa-grib-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/f62d6ea666e14a2fa2ed9aa2a7538bb0/GridStat_fcstGFS_obsCCPA_GRIB.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">GridStat_fcstGFS_obsCCPA_GRIB.py</span></code></a></p>
@@ -624,16 +624,18 @@ and will contain the following files:</p>
 
 
            </div>
-           
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="EnsembleStat_fcstHRRRE_FcstOnly_NetCDF.html" class="btn btn-neutral float-right" title="5.2.4.5. Ensemble-Stat: Basic Post-Processing only" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="MTD_fcstHRRR-TLE_obsMRMS.html" class="btn btn-neutral float-right" title="5.2.3.7. HRRR-TLE MODE Time Domain Use Case" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="GridStat_fcstHREFmean_obsStgIV_NetCDF.html" class="btn btn-neutral float-left" title="5.2.4.3. Grid-Stat: 6hr QPF in NetCDF format" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="MTD_fcstHRRR-TLE_FcstOnly_RevisionSeries_GRIB.html" class="btn btn-neutral" title="5.2.3.5. HRRR-TLE MODE Time Domain Use Case" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -642,11 +644,14 @@ and will contain the following files:</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019, NCAR
+        &copy; Copyright 2019, NCAR.
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+     
+<script>var version_json_loc = "../../../../versions.json";</script>
+
 
 </footer>
 
@@ -659,15 +664,39 @@ and will contain the following files:</p>
   
 
 
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script>
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'3.0',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../../_static/pop_ver.js"></script>
+
+  
 
   
   
-    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
    
 
 </body>

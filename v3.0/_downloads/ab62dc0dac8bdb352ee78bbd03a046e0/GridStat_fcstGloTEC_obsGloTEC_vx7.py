@@ -1,14 +1,17 @@
 """
-Grid-Stat: Analysis validation 
-==============================================================================
+Glotec vs. Glotec
+=================
 
-GridStat_fcstGloTEC
-_obsGloTEC_vx7.conf
+This use case runs the MET GridStat tool to compare gridded forecast data 
+from two runs of the GloTEC model. 
 
 """
+
 ##############################################################################
 # Overview
 # --------
+#
+# .. image:: ../../../../docs/_static/space_weather-GridStat_fcstGloTEC_obsGloTEC_vx7.jpg
 #
 # This use case illustrates the use of grid_stat tool for the space weather domain.
 # It compares Total Electron Content for a GloTEC model run initialized with COSMIC-1
@@ -167,13 +170,7 @@ _obsGloTEC_vx7.conf
 # Keywords
 # --------
 #
-# .. note::
+# .. note:: GridStatToolUseCase SpaceWeatherAppUseCase NOAASWPCOrgUseCase GloTECModelUseCase
 #
-#  `GridStatToolUseCase <https://ncar.github.io/METplus/search.html?q=GridStatToolUseCase&check_keywords=yes&area=default>`_,
-#  `SpaceWeatherAppUseCase <https://ncar.github.io/METplus/search.html?q=SpaceWeatherAppUseCase&check_keywords=yes&area=default>`_,
-#  `NOAASWPCOrgUseCase  <https://ncar.github.io/METplus/search.html?q=NOAASWPCOrgUseCase&check_keywords=yes&area=default>`_,
-#  `CustomStringLoopingUseCase <https://ncar.github.io/METplus/search.html?q=CustomStringLoopingUseCase&check_keywords=yes&area=default>`_,
-#  `MaskingFeatureUseCase  <https://ncar.github.io/METplus/search.html?q=MaskingFeatureUseCase&check_keywords=yes&area=default>`_,
-#  `ValidationUseCase  <https://ncar.github.io/METplus/search.html?q=ValidationUseCase&check_keywords=yes&area=default>`_
-    
 # sphinx_gallery_thumbnail_path = '_static/space_weather-GridStat_fcstGloTEC_obsGloTEC_vx7.jpg'
+#

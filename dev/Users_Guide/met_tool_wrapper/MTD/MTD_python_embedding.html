@@ -8,49 +8,58 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>5.1.8.1. MTD using Python Embedding &mdash; METplus 3.0 documentation</title>
+  <title>5.1.9.1. MTD using Python Embedding &mdash; METplus 3.0 documentation</title>
   
 
   
   
   
   
+    <link rel="canonical" href="https://unidata.github.io/MetPy/latest/Users_Guide/met_tool_wrapper/MTD/MTD_python_embedding.html"/>
+  
 
   
-  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/underscore.js"></script>
-        <script src="../../../_static/doctools.js"></script>
-        <script src="../../../_static/language_data.js"></script>
-    
-    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
 
+  
+  
     
 
   
-  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/theme_override.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/gallery.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/gallery-binder.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/gallery-dataframe.css" type="text/css" />
-    <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="5.1.8.2. Basic MTD Use Case" href="MTD.html" />
-    <link rel="prev" title="5.1.7.1. MODE: Basic Use Case" href="../MODE/MODE.html" /> 
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../../_static/gallery.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../../../_static/theme_override.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../../genindex.html"/>
+        <link rel="search" title="Search" href="../../../search.html"/>
+    <link rel="top" title="METplus 3.0 documentation" href="../../../index.html"/>
+        <link rel="up" title="5.1. MET tools" href="../index.html"/>
+        <link rel="next" title="5.1.9.2. MTD" href="MTD.html"/>
+        <link rel="prev" title="5.1.8.1. MODE" href="../MODE/MODE.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
 </head>
 
-<body class="wy-body-for-nav">
+<body class="wy-body-for-nav" role="document">
 
    
   <div class="wy-grid-for-nav">
+
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+        <div class="wy-side-nav-search">
           
 
           
@@ -59,7 +68,7 @@
 
           
             
-            <img src="../../../_static/METplus_logo.png" class="logo" alt="Logo"/>
+            <img src="../../../_static/METplus_logo.png" class="logo" />
           
           </a>
 
@@ -97,23 +106,24 @@
 <li class="toctree-l2 current"><a class="reference internal" href="../../usecases.html">5. METplus Use Cases</a><ul class="current">
 <li class="toctree-l3 current"><a class="reference internal" href="../index.html">5.1. MET tools</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="../index.html#ascii2nc">5.1.1. ASCII2NC</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#cyclone-plotter">5.1.2. Cyclone Plotter</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#ensemblestat">5.1.3. EnsembleStat</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#example">5.1.4. Example</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#gempaktocf">5.1.5. GempakToCF</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#gridstat">5.1.6. GridStat</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#mode">5.1.7. MODE</a></li>
-<li class="toctree-l4 current"><a class="reference internal" href="../index.html#mtd">5.1.8. MTD</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#pb2nc">5.1.9. PB2NC</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#pcpcombine">5.1.10. PCPCombine</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#pointstat">5.1.11. PointStat</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#pyembedingest">5.1.12. PyEmbedIngest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#custom-ingest">5.1.2. Custom Ingest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#cyclone-plotter">5.1.3. Cyclone Plotter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#ensemblestat">5.1.4. EnsembleStat</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#example">5.1.5. Example</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#gempaktocf">5.1.6. GempakToCF</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#gridstat">5.1.7. GridStat</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#mode">5.1.8. MODE</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../index.html#mtd">5.1.9. MTD</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#pb2nc">5.1.10. PB2NC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#pcpcombine">5.1.11. PCPCombine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#pointstat">5.1.12. PointStat</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../index.html#regriddataplane">5.1.13. RegridDataPlane</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#seriesanalysis">5.1.14. SeriesAnalysis</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#statanalysis">5.1.15. StatAnalysis</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#tcmprplotter">5.1.16. TCMPRPlotter</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#tcpairs">5.1.17. TCPairs</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../index.html#tcstat">5.1.18. TCStat</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#seriesbyinit">5.1.14. SeriesByInit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#seriesbylead">5.1.15. SeriesByLead</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#statanalysis">5.1.16. StatAnalysis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#tcmprplotter">5.1.17. TCMPRPlotter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#tcpairs">5.1.18. TCPairs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../index.html#tcstat">5.1.19. TCStat</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../model_applications/index.html">5.2. Model Applications</a></li>
@@ -137,7 +147,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" aria-label="top navigation">
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../../../index.html">METplus</a>
@@ -145,10 +155,9 @@
       </nav>
 
 
+      
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
           
 
 
@@ -173,11 +182,11 @@
         
           <li><a href="../../index.html">User’s Guide</a> &raquo;</li>
         
-          <li><a href="../../usecases.html"><span class="section-number">5. </span>METplus Use Cases</a> &raquo;</li>
+          <li><a href="../../usecases.html">5. METplus Use Cases</a> &raquo;</li>
         
-          <li><a href="../index.html"><span class="section-number">5.1. </span>MET tools</a> &raquo;</li>
+          <li><a href="../index.html">5.1. MET tools</a> &raquo;</li>
         
-      <li><span class="section-number">5.1.8.1. </span>MTD using Python Embedding</li>
+      <li>5.1.9.1. MTD using Python Embedding</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -198,17 +207,17 @@
             
   <div class="sphx-glr-download-link-note admonition note">
 <p class="admonition-title">Note</p>
-<p>Click <a class="reference internal" href="#sphx-glr-download-users-guide-met-tool-wrapper-mtd-mtd-python-embedding-py"><span class="std std-ref">here</span></a>     to download the full example code</p>
+<p>Click <a class="reference internal" href="#sphx-glr-download-users-guide-met-tool-wrapper-mtd-mtd-python-embedding-py"><span class="std std-ref">here</span></a> to download the full example code</p>
 </div>
 <div class="sphx-glr-example-title section" id="mtd-using-python-embedding">
-<span id="sphx-glr-users-guide-met-tool-wrapper-mtd-mtd-python-embedding-py"></span><h1><span class="section-number">5.1.8.1. </span>MTD using Python Embedding<a class="headerlink" href="#mtd-using-python-embedding" title="Permalink to this headline">¶</a></h1>
-<p>MTD_python_embedding.conf</p>
+<span id="sphx-glr-users-guide-met-tool-wrapper-mtd-mtd-python-embedding-py"></span><h1>5.1.9.1. MTD using Python Embedding<a class="headerlink" href="#mtd-using-python-embedding" title="Permalink to this headline">¶</a></h1>
+<p>This use case will run the MET MTD (MODE Time Domain) tool to compare gridded forecast data to gridded observation data over time. The input data is read in via Python Embedding.</p>
 <div class="section" id="scientific-objective">
-<h2>Scientific Objective<a class="headerlink" href="#scientific-objective" title="Permalink to this headline">¶</a></h2>
+<h2>5.1.9.1.1. Scientific Objective<a class="headerlink" href="#scientific-objective" title="Permalink to this headline">¶</a></h2>
 <p>Compare forecast and observation 3 hour precipitation accumulation spatially and temporally over the 6 hour, 9 hour, and 12 hour forecast leads.</p>
 </div>
 <div class="section" id="datasets">
-<h2>Datasets<a class="headerlink" href="#datasets" title="Permalink to this headline">¶</a></h2>
+<h2>5.1.9.1.2. Datasets<a class="headerlink" href="#datasets" title="Permalink to this headline">¶</a></h2>
 <div class="line-block">
 <div class="line"><strong>Forecast:</strong> Dummy text files found in the MET shared directory</div>
 <div class="line"><strong>Observation:</strong> Dummy text files found in the MET shared directory</div>
@@ -219,15 +228,15 @@
 </div>
 </div>
 <div class="section" id="metplus-components">
-<h2>METplus Components<a class="headerlink" href="#metplus-components" title="Permalink to this headline">¶</a></h2>
+<h2>5.1.9.1.3. METplus Components<a class="headerlink" href="#metplus-components" title="Permalink to this headline">¶</a></h2>
 <p>This use case utilizes the METplus MTD wrapper to read in files using Python Embedding to demonstrate how to read in data this way.</p>
 </div>
 <div class="section" id="metplus-workflow">
-<h2>METplus Workflow<a class="headerlink" href="#metplus-workflow" title="Permalink to this headline">¶</a></h2>
+<h2>5.1.9.1.4. METplus Workflow<a class="headerlink" href="#metplus-workflow" title="Permalink to this headline">¶</a></h2>
 <p>MTD is the only tool called in this example. It processes a single run time with three forecast leads. The input data are simple text files with no timing information, so the list of forecast leads simply duplicates the same file multiple times to demonstrate how data is read in via Python Embedding.</p>
 </div>
 <div class="section" id="metplus-configuration">
-<h2>METplus Configuration<a class="headerlink" href="#metplus-configuration" title="Permalink to this headline">¶</a></h2>
+<h2>5.1.9.1.5. METplus Configuration<a class="headerlink" href="#metplus-configuration" title="Permalink to this headline">¶</a></h2>
 <p>METplus first loads all of the configuration files found in parm/metplus_config,
 then it loads any configuration files passed to METplus via the command line
 with the -c option, i.e. -c parm/use_cases/met_tool_wrapper/MTD/MTD_python_embedding.conf</p>
@@ -357,12 +366,12 @@ with the -c option, i.e. -c parm/use_cases/met_tool_wrapper/MTD/MTD_python_embed
 
 <span class="nv">OBS_MTD_INPUT_TEMPLATE</span> <span class="o">=</span> obs.txt
 
-<span class="nv">MTD_OUTPUT_TEMPLATE</span> <span class="o">=</span>
+<span class="nv">MTD_OUTPUT_TEMPLATE</span> <span class="o">=</span> out.nc
 </pre></div>
 </div>
 </div>
 <div class="section" id="met-configuration">
-<h2>MET Configuration<a class="headerlink" href="#met-configuration" title="Permalink to this headline">¶</a></h2>
+<h2>5.1.9.1.6. MET Configuration<a class="headerlink" href="#met-configuration" title="Permalink to this headline">¶</a></h2>
 <p>METplus sets environment variables based on the values in the METplus configuration file.
 These variables are referenced in the MET configuration file.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>////////////////////////////////////////////////////////////////////////////////
@@ -636,7 +645,7 @@ These variables are referenced in the MET configuration file.</p>
 </ul>
 </div>
 <div class="section" id="running-metplus">
-<h2>Running METplus<a class="headerlink" href="#running-metplus" title="Permalink to this headline">¶</a></h2>
+<h2>5.1.9.1.7. Running METplus<a class="headerlink" href="#running-metplus" title="Permalink to this headline">¶</a></h2>
 <p>This use case can be run two ways:</p>
 <ol class="arabic">
 <li><p>Passing in MTD_python_embedding.conf then a user-specific system configuration file:</p>
@@ -666,7 +675,7 @@ These variables are referenced in the MET configuration file.</p>
 <p><strong>NOTE:</strong> All of these items must be found under the [dir] section.</p>
 </div>
 <div class="section" id="expected-output">
-<h2>Expected Output<a class="headerlink" href="#expected-output" title="Permalink to this headline">¶</a></h2>
+<h2>5.1.9.1.8. Expected Output<a class="headerlink" href="#expected-output" title="Permalink to this headline">¶</a></h2>
 <p>A successful run will output the following both to the screen and to the logfile:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>INFO: METplus has successfully finished running.
 </pre></div>
@@ -674,25 +683,17 @@ These variables are referenced in the MET configuration file.</p>
 <p>Refer to the value set for <strong>OUTPUT_BASE</strong> to find where the output data was generated.
 Output for this use case will be found in met_tool_wrapper/MTD/mtd_python_embedding (relative to <strong>OUTPUT_BASE</strong>)
 and will contain the following files:</p>
-<ul class="simple">
-<li><p>mtd_PYTHON_20050807_120000V_2d.txt</p></li>
-<li><p>mtd_PYTHON_20050807_120000V_3d_pair_cluster.txt</p></li>
-<li><p>mtd_PYTHON_20050807_120000V_3d_pair_simple.txt</p></li>
-<li><p>mtd_PYTHON_20050807_120000V_3d_single_cluster.txt</p></li>
-<li><p>mtd_PYTHON_20050807_120000V_3d_single_simple.txt</p></li>
-<li><p>mtd_PYTHON_20050807_120000V_obj.nc</p></li>
-</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># * out.nc</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="keywords">
-<h2>Keywords<a class="headerlink" href="#keywords" title="Permalink to this headline">¶</a></h2>
+<h2>5.1.9.1.9. Keywords<a class="headerlink" href="#keywords" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><a class="reference external" href="https://ncar.github.io/METplus/search.html?q=MTDToolUseCase&amp;check_keywords=yes&amp;area=default">MTDToolUseCase</a>,
-<a class="reference external" href="https://ncar.github.io/METplus/search.html?q=PythonEmbeddingFileUseCase&amp;check_keywords=yes&amp;area=default">PythonEmbeddingFileUseCase</a>
-<a class="reference external" href="https://ncar.github.io/METplus/search.html?q=DiagnosticsUseCase&amp;check_keywords=yes&amp;area=default">DiagnosticsUseCase</a></p>
+<p><a class="reference external" href="https://ncar.github.io/METplus/search.html?q=MTDToolUseCase&amp;check_keywords=yes&amp;area=default">MTDToolUseCase</a>, <a class="reference external" href="https://ncar.github.io/METplus/search.html?q=PythonEmbeddingFileUseCase&amp;check_keywords=yes&amp;area=default">PythonEmbeddingFileUseCase</a></p>
 </div>
-<p>sphinx_gallery_thumbnail_path = ‘_static/met_tool_wrapper-MTD.png’</p>
-<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.000 seconds)</p>
+<p class="sphx-glr-timing"><strong>Total running time of the script:</strong> ( 0 minutes  0.026 seconds)</p>
 <div class="sphx-glr-footer class sphx-glr-footer-example docutils container" id="sphx-glr-download-users-guide-met-tool-wrapper-mtd-mtd-python-embedding-py">
 <div class="sphx-glr-download docutils container">
 <p><a class="reference download internal" download="" href="../../../_downloads/24eaab28eb5c75de8b30b71a8600003e/MTD_python_embedding.py"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">MTD_python_embedding.py</span></code></a></p>
@@ -707,16 +708,18 @@ and will contain the following files:</p>
 
 
            </div>
-           
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="MTD.html" class="btn btn-neutral float-right" title="5.1.8.2. Basic MTD Use Case" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="MTD.html" class="btn btn-neutral float-right" title="5.1.9.2. MTD" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../MODE/MODE.html" class="btn btn-neutral float-left" title="5.1.7.1. MODE: Basic Use Case" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../MODE/MODE.html" class="btn btn-neutral" title="5.1.8.1. MODE" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -725,11 +728,14 @@ and will contain the following files:</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019, NCAR
+        &copy; Copyright 2019, NCAR.
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+     
+<script>var version_json_loc = "../../../../versions.json";</script>
+
 
 </footer>
 
@@ -742,15 +748,39 @@ and will contain the following files:</p>
   
 
 
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script>
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'3.0',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../../_static/pop_ver.js"></script>
+
+  
 
   
   
-    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
    
 
 </body>

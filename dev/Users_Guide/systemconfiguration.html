@@ -15,42 +15,51 @@
   
   
   
+    <link rel="canonical" href="https://unidata.github.io/MetPy/latest/Users_Guide/systemconfiguration.html"/>
+  
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
+  
+  
     
 
   
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/theme_override.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/gallery-binder.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/gallery-dataframe.css" type="text/css" />
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="4. Python Wrappers" href="wrappers.html" />
-    <link rel="prev" title="2. Software Installation/Getting Started" href="installation.html" /> 
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../_static/theme_override.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="METplus 3.0 documentation" href="../index.html"/>
+        <link rel="up" title="User’s Guide" href="index.html"/>
+        <link rel="next" title="4. Python Wrappers" href="wrappers.html"/>
+        <link rel="prev" title="2. Software Installation/Getting Started" href="installation.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
 </head>
 
-<body class="wy-body-for-nav">
+<body class="wy-body-for-nav" role="document">
 
    
   <div class="wy-grid-for-nav">
+
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+        <div class="wy-side-nav-search">
           
 
           
@@ -59,7 +68,7 @@
 
           
             
-            <img src="../_static/METplus_logo.png" class="logo" alt="Logo"/>
+            <img src="../_static/METplus_logo.png" class="logo" />
           
           </a>
 
@@ -127,7 +136,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" aria-label="top navigation">
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">METplus</a>
@@ -135,10 +144,9 @@
       </nav>
 
 
+      
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
           
 
 
@@ -163,7 +171,7 @@
         
           <li><a href="index.html">User’s Guide</a> &raquo;</li>
         
-      <li><span class="section-number">3. </span>System Configuration</li>
+      <li>3. System Configuration</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -183,10 +191,10 @@
            <div itemprop="articleBody">
             
   <div class="section" id="system-configuration">
-<span id="sysconf"></span><h1><span class="section-number">3. </span>System Configuration<a class="headerlink" href="#system-configuration" title="Permalink to this headline">¶</a></h1>
+<span id="sysconf"></span><h1>3. System Configuration<a class="headerlink" href="#system-configuration" title="Permalink to this headline">¶</a></h1>
 <p>This chapter is a guide on configuring METplus Wrappers.</p>
 <div class="section" id="config-best-practices">
-<h2><span class="section-number">3.1. </span>Config Best Practices<a class="headerlink" href="#config-best-practices" title="Permalink to this headline">¶</a></h2>
+<h2>3.1. Config Best Practices<a class="headerlink" href="#config-best-practices" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
 <li><p>Set your log level to an appropriate level:</p></li>
 </ol>
@@ -206,7 +214,7 @@
 </ol>
 </div>
 <div class="section" id="config-file-structure">
-<h2><span class="section-number">3.2. </span>Config File Structure<a class="headerlink" href="#config-file-structure" title="Permalink to this headline">¶</a></h2>
+<h2>3.2. Config File Structure<a class="headerlink" href="#config-file-structure" title="Permalink to this headline">¶</a></h2>
 <p>METplus Wrappers employs a hierarchy of configuration files employed in METplus Wrappers. At the lowest level are the “set-and-forget” type configuration files that reside in the <em>&lt;METplus_installation_dir&gt;/parm/metplus_config</em>. At the next level are the configuration files that pertain to a user’s specific needs in the <em>&lt;METplus_installation_dir&gt;/parm/use_cases/&lt;specific_use_case&gt;</em>.</p>
 <p>Four configuration files are required for METplus Wrappers to be fully configured (i.e. all keywords are defined by either whitespace or a valid value):</p>
 <blockquote>
@@ -221,16 +229,16 @@
 <p>Additional configuration files are optional and the key-values defined there will override any values defined in the four mandatory METplus Wrappers configuration files. These additional configuration files enable users to use a common set of configuration files and to create customized environments for their verification tasks.</p>
 </div>
 <div class="section" id="common-config-variables">
-<h2><span class="section-number">3.3. </span>Common Config Variables<a class="headerlink" href="#common-config-variables" title="Permalink to this headline">¶</a></h2>
+<h2>3.3. Common Config Variables<a class="headerlink" href="#common-config-variables" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="timing-control">
-<h3><span class="section-number">3.3.1. </span>Timing Control<a class="headerlink" href="#timing-control" title="Permalink to this headline">¶</a></h3>
+<h3>3.3.1. Timing Control<a class="headerlink" href="#timing-control" title="Permalink to this headline">¶</a></h3>
 <p>This section describes the METplus wrapper configuration variables that are used to control which times are processed. It also covers functionality that is useful for processing data in realtime by setting run times based on the clock time when the METplus wrappers are run.</p>
 <div class="section" id="loop-by">
-<span id="loop-by-ref"></span><h4><span class="section-number">3.3.1.1. </span><a class="reference internal" href="glossary.html#term-loop-by"><span class="xref std std-term">LOOP_BY</span></a><a class="headerlink" href="#loop-by" title="Permalink to this headline">¶</a></h4>
+<span id="loop-by-ref"></span><h4>3.3.1.1. <a class="reference internal" href="glossary.html#term-loop-by"><span class="xref std std-term">LOOP_BY</span></a><a class="headerlink" href="#loop-by" title="Permalink to this headline">¶</a></h4>
 <p>The METplus wrappers can be configured to loop over a set of valid times or a set of initialization times. This is controlled by the configuration variable called <a class="reference internal" href="glossary.html#term-loop-by"><span class="xref std std-term">LOOP_BY</span></a>. If the value of this variable is set to INIT or RETRO, looping will be relative to initialization time. If the value is set to VALID or REALTIME, looping will be relative to valid time.</p>
 </div>
 <div class="section" id="looping-by-valid-time">
-<span id="id1"></span><h4><span class="section-number">3.3.1.2. </span>Looping by Valid Time<a class="headerlink" href="#looping-by-valid-time" title="Permalink to this headline">¶</a></h4>
+<span id="id1"></span><h4>3.3.1.2. Looping by Valid Time<a class="headerlink" href="#looping-by-valid-time" title="Permalink to this headline">¶</a></h4>
 <p>When looping over valid time (<cite>LOOP_BY</cite> = VALID or REALTIME), the following variables must be set:</p>
 <p><a class="reference internal" href="glossary.html#term-valid-time-fmt"><span class="xref std std-term">VALID_TIME_FMT</span></a>:
 This is the format of the valid times the user can configure in the METplus Wrappers. The value of <cite>VALID_BEG</cite> and <cite>VALID_END</cite> must correspond to this format.</p>
@@ -262,7 +270,7 @@ This is the time interval to add to each run time to determine the next run time
 <p>This will process data valid on 2019-02-01 at 00Z, 06Z, 12Z, and 18Z as well as 2019-02-02 at 00Z. For each of these valid times, the METplus wrappers can also loop over a set of forecast leads that are all valid at the current run time. See <a class="reference internal" href="#looping-over-forecast-leads"><span class="std std-ref">Looping over Forecast Leads</span></a> for more information.</p>
 </div>
 <div class="section" id="looping-by-initialization-time">
-<span id="id2"></span><h4><span class="section-number">3.3.1.3. </span>Looping by Initialization Time<a class="headerlink" href="#looping-by-initialization-time" title="Permalink to this headline">¶</a></h4>
+<span id="id2"></span><h4>3.3.1.3. Looping by Initialization Time<a class="headerlink" href="#looping-by-initialization-time" title="Permalink to this headline">¶</a></h4>
 <p>When looping over initialization time (<a class="reference internal" href="glossary.html#term-loop-by"><span class="xref std std-term">LOOP_BY</span></a> = INIT or LOOP_BY = RETRO), the following variables must be set:</p>
 <p><a class="reference internal" href="glossary.html#term-init-time-fmt"><span class="xref std std-term">INIT_TIME_FMT</span></a>:
 This is the format of the initialization times the user can configure in METplus Wrappers. The value of <a class="reference internal" href="glossary.html#term-init-beg"><span class="xref std std-term">INIT_BEG</span></a> and <a class="reference internal" href="glossary.html#term-init-end"><span class="xref std std-term">INIT_END</span></a> must correspond to this format. Example: INIT_TIME_FMT = %Y%m%d%H. Using this format, the initialization time range values specified must be defined as YYYYMMDDHH, i.e. 2019020112.</p>
@@ -292,10 +300,10 @@ This is the time interval to add to each run time to determine the next run time
 <p>This will process data initialized on 2019-02-01 at 00Z, 06Z, 12Z, and 18Z as well as 2019-02-02 at 00Z. For each of these initialization times, METplus Wrappers can also loop over a set of forecast leads that are all initialized at the current run time. See <a class="reference internal" href="#looping-over-forecast-leads"><span class="std std-ref">Looping over Forecast Leads</span></a> for more information.</p>
 </div>
 <div class="section" id="looping-over-forecast-leads">
-<span id="id3"></span><h4><span class="section-number">3.3.1.4. </span>Looping over Forecast Leads<a class="headerlink" href="#looping-over-forecast-leads" title="Permalink to this headline">¶</a></h4>
+<span id="id3"></span><h4>3.3.1.4. Looping over Forecast Leads<a class="headerlink" href="#looping-over-forecast-leads" title="Permalink to this headline">¶</a></h4>
 <p>Many of the wrappers will also loop over a list of forecast leads relative to the current valid/initialization time that is being processed.</p>
 <div class="section" id="lead-seq">
-<h5><a class="reference internal" href="glossary.html#term-lead-seq"><span class="xref std std-term">LEAD_SEQ</span></a><a class="headerlink" href="#lead-seq" title="Permalink to this headline">¶</a></h5>
+<h5>3.3.1.4.1. <a class="reference internal" href="glossary.html#term-lead-seq"><span class="xref std std-term">LEAD_SEQ</span></a><a class="headerlink" href="#lead-seq" title="Permalink to this headline">¶</a></h5>
 <p>This variable can be set to a comma-separated list of integer values (with optional units) to define the forecast leads that will be processed relative to the initialization/valid time. See <a class="reference internal" href="#time-interval-units"><span class="std std-ref">Time Interval Units</span></a> for information on time interval formatting. Units of hours are assumed if no units are specified. For example:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">config</span><span class="p">]</span>
 <span class="n">LEAD_SEQ</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">9</span>
@@ -339,7 +347,7 @@ above. Each <a class="reference internal" href="glossary.html#term-lead-seq-n"><
 </div>
 </div>
 <div class="section" id="init-seq">
-<h5><a class="reference internal" href="glossary.html#term-init-seq"><span class="xref std std-term">INIT_SEQ</span></a><a class="headerlink" href="#init-seq" title="Permalink to this headline">¶</a></h5>
+<h5>3.3.1.4.2. <a class="reference internal" href="glossary.html#term-init-seq"><span class="xref std std-term">INIT_SEQ</span></a><a class="headerlink" href="#init-seq" title="Permalink to this headline">¶</a></h5>
 <p>If METplus Wrappers is configured to loop by valid time (<a class="reference internal" href="glossary.html#term-loop-by"><span class="xref std std-term">LOOP_BY</span></a> = VALID), you can use INIT_SEQ instead of <a class="reference internal" href="glossary.html#term-lead-seq"><span class="xref std std-term">LEAD_SEQ</span></a>. This is a list of initialization hours that are available in the data. This is useful if you know when the data is initialized and you need to use a different list of forecast leads depending on the valid time being evaluated. For example:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">config</span><span class="p">]</span>
 <span class="n">LOOP_BY</span> <span class="o">=</span> <span class="n">VALID</span>
@@ -358,7 +366,7 @@ above. Each <a class="reference internal" href="glossary.html#term-lead-seq-n"><
 </div>
 </div>
 <div class="section" id="time-interval-units">
-<span id="id4"></span><h4><span class="section-number">3.3.1.5. </span>Time Interval Units<a class="headerlink" href="#time-interval-units" title="Permalink to this headline">¶</a></h4>
+<span id="id4"></span><h4>3.3.1.5. Time Interval Units<a class="headerlink" href="#time-interval-units" title="Permalink to this headline">¶</a></h4>
 <p>Time intervals defined in configuration variables each have default values: <a class="reference internal" href="glossary.html#term-lead-seq"><span class="xref std std-term">LEAD_SEQ</span></a> and <a class="reference internal" href="glossary.html#term-init-seq"><span class="xref std std-term">INIT_SEQ</span></a> default to hours, <a class="reference internal" href="glossary.html#term-valid-increment"><span class="xref std std-term">VALID_INCREMENT</span></a> and <a class="reference internal" href="glossary.html#term-init-increment"><span class="xref std std-term">INIT_INCREMENT</span></a> default to seconds.
 Units of years, months, days, hours, minutes, or seconds can also be specified by adding a letter (Y, m, d, H, M, or S respectively) to the end of the number.
 If no units are specified, seconds are assumed.</p>
@@ -376,9 +384,9 @@ If no units are specified, seconds are assumed.</p>
 Therefore these intervals are calculated based on the current run time and cannot be expressed in seconds unless the run time value is available.</p>
 </div>
 <div class="section" id="realtime-looping">
-<h4><span class="section-number">3.3.1.6. </span>Realtime Looping<a class="headerlink" href="#realtime-looping" title="Permalink to this headline">¶</a></h4>
+<h4>3.3.1.6. Realtime Looping<a class="headerlink" href="#realtime-looping" title="Permalink to this headline">¶</a></h4>
 <div class="section" id="now-and-today">
-<h5>Now and Today<a class="headerlink" href="#now-and-today" title="Permalink to this headline">¶</a></h5>
+<h5>3.3.1.6.1. Now and Today<a class="headerlink" href="#now-and-today" title="Permalink to this headline">¶</a></h5>
 <p>To make running in realtime easier, the METplus Wrappers support defining the begin and end times relative to
 the current clock time. For example, if the current time is 2019-04-26 08:17 and you start the METplus Wrappers
 with:</p>
@@ -390,7 +398,7 @@ VALID_END = {now?fmt=%Y%m%d%H}
 current YYYYMMDD, i.e. 20190426. You cannot change the formatting for the ‘today’ keyword.</p>
 </div>
 <div class="section" id="shift-keyword">
-<h5>Shift Keyword<a class="headerlink" href="#shift-keyword" title="Permalink to this headline">¶</a></h5>
+<h5>3.3.1.6.2. Shift Keyword<a class="headerlink" href="#shift-keyword" title="Permalink to this headline">¶</a></h5>
 <p>You can use the ‘shift’ keyword to shift the current time by any number of seconds. For example, if you start
 the METplus Wrappers at the same clock time with:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[config]
@@ -409,7 +417,7 @@ VALID_BEG = {now?fmt=%Y%m%d%H?shift=-86400}
 </div>
 </div>
 <div class="section" id="truncate-keyword">
-<h5>Truncate Keyword<a class="headerlink" href="#truncate-keyword" title="Permalink to this headline">¶</a></h5>
+<h5>3.3.1.6.3. Truncate Keyword<a class="headerlink" href="#truncate-keyword" title="Permalink to this headline">¶</a></h5>
 <p>You may want to configure the METplus Wrappers to process at 00Z, 06Z, 12Z, and 18Z of a given day instead of 02Z, 08Z, 14Z, and 20Z. Having to adjust the shift amount differently if you are running at 08Z or 09Z to get the times to line up would be tedious. Instead, use the ‘truncate’ keyword. The value set here is the number of seconds that is used to determine the interval of time to round down. If you want to process every 6 hours, set ‘truncate’ to 21600 seconds:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[config]
 VALID_BEG = {now?fmt=%Y%m%d%H?shift=-86400?truncate=21600}
@@ -441,7 +449,7 @@ VALID_INCREMENT = 21600
 </div>
 </div>
 <div class="section" id="loop-order">
-<span id="id5"></span><h3><span class="section-number">3.3.2. </span>Loop Order<a class="headerlink" href="#loop-order" title="Permalink to this headline">¶</a></h3>
+<span id="id5"></span><h3>3.3.2. Loop Order<a class="headerlink" href="#loop-order" title="Permalink to this headline">¶</a></h3>
 <p>The METplus wrappers can be configured to loop first by times then processes or vice-versa. Looping by times first will run each process in the process list for a given run time, increment to the next run time, run each process in the process list, and so on. Looping by processes first will run all times for the first process, then run all times for the second process, and so on.</p>
 <p>Example 1 Configuration:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">config</span><span class="p">]</span>
@@ -489,7 +497,7 @@ VALID_INCREMENT = 21600
 </div>
 </div>
 <div class="section" id="custom-looping">
-<span id="id6"></span><h3><span class="section-number">3.3.3. </span>Custom Looping<a class="headerlink" href="#custom-looping" title="Permalink to this headline">¶</a></h3>
+<span id="id6"></span><h3>3.3.3. Custom Looping<a class="headerlink" href="#custom-looping" title="Permalink to this headline">¶</a></h3>
 <p>A list of text strings can be defined in the METplus wrappers configuration files to allow each wrapper to process data multiple times for each run time. The strings can be referenced in various places in the METplus configuration files to change input/output file paths, configuration file paths, and more. The value of each list item can be referenced in the METplus configuration variables by using {custom?fmt=%s}. The variable CUSTOM_LOOP_LIST will apply the values to each wrapper in the PROCESS_LIST unless the wrapper does not support this functionality. CyclonePlotter, MakePlots, SeriesByInit, SeriesByLead, StatAnalysis, TCStat, and TCMPRPlotter wrappers are not supported. If the variable is not set or set to an empty string, the wrapper will execute as normal without additional runs. The name of the wrapper-specific variables contain the name of the wrapper, i.e. SERIES_ANALYSIS_CUSTOM_LOOP_LIST, PCP_COMBINE_CUSTOM_LOOP_LIST, GRID_STAT_CUSTOM_LOOP_LIST, etc. Setting these variables will override the value set for CUSTOM_LOOP_LIST for that wrapper only.</p>
 <p><strong>Example 1 Configuration</strong> (Reading different input files):</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[config]
@@ -544,10 +552,10 @@ SERIES_ANALYSIS_OUTPUT_DIR = {OUTPUT_BASE}/SA/{custom?fmt=%s}
 </ul>
 </div>
 <div class="section" id="field-info">
-<span id="id7"></span><h3><span class="section-number">3.3.4. </span>Field Info<a class="headerlink" href="#field-info" title="Permalink to this headline">¶</a></h3>
+<span id="id7"></span><h3>3.3.4. Field Info<a class="headerlink" href="#field-info" title="Permalink to this headline">¶</a></h3>
 <p>This section describes how METplus Wrappers configuration variables can be used to define field information that is sent to the MET applications to read forecast and observation fields.</p>
 <div class="section" id="fcst-var-n-name">
-<h4><span class="section-number">3.3.4.1. </span><a class="reference internal" href="glossary.html#term-fcst-var-n-name"><span class="xref std std-term">FCST_VAR&lt;n&gt;_NAME</span></a><a class="headerlink" href="#fcst-var-n-name" title="Permalink to this headline">¶</a></h4>
+<h4>3.3.4.1. <a class="reference internal" href="glossary.html#term-fcst-var-n-name"><span class="xref std std-term">FCST_VAR&lt;n&gt;_NAME</span></a><a class="headerlink" href="#fcst-var-n-name" title="Permalink to this headline">¶</a></h4>
 <p>Set this to the name of a forecast variable that you want to evaluate. &lt;n&gt; is any integer greater than or equal to 1, i.e.:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">config</span><span class="p">]</span>
 <span class="n">FCST_VAR1_NAME</span> <span class="o">=</span> <span class="n">TMP</span>
@@ -557,7 +565,7 @@ SERIES_ANALYSIS_OUTPUT_DIR = {OUTPUT_BASE}/SA/{custom?fmt=%s}
 <p>If this value is set for a given &lt;n&gt; value, then the corresponding OBS_VAR&lt;n&gt;_NAME must be set. If the value for forecast and observation data are the same, BOTH_VAR&lt;n&gt;_NAME can be used instead.</p>
 </div>
 <div class="section" id="fcst-var-n-levels">
-<h4><span class="section-number">3.3.4.2. </span><a class="reference internal" href="glossary.html#term-fcst-var-n-levels"><span class="xref std std-term">FCST_VAR&lt;n&gt;_LEVELS</span></a><a class="headerlink" href="#fcst-var-n-levels" title="Permalink to this headline">¶</a></h4>
+<h4>3.3.4.2. <a class="reference internal" href="glossary.html#term-fcst-var-n-levels"><span class="xref std std-term">FCST_VAR&lt;n&gt;_LEVELS</span></a><a class="headerlink" href="#fcst-var-n-levels" title="Permalink to this headline">¶</a></h4>
 <p>Set this to a comma-separated list of levels or a single value. FCST_VAR1_LEVELS corresponds to FCST_VAR1_NAME, FCST_VAR2_LEVELS corresponds to FCST_VAR2_NAME, etc. For example:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">config</span><span class="p">]</span>
 <span class="n">FCST_VAR1_NAME</span> <span class="o">=</span> <span class="n">TMP</span>
@@ -567,11 +575,11 @@ SERIES_ANALYSIS_OUTPUT_DIR = {OUTPUT_BASE}/SA/{custom?fmt=%s}
 <p>will process TMP at P500 and TMP at P750. If FCST_VAR&lt;n&gt;_LEVELS and FCST_VAR&lt;n&gt;_NAME are set, then the corresponding OBS_VAR&lt;n&gt;_LEVELS and OBS_VAR&lt;n&gt;_NAME must be set. If the value for forecast and observation data are the same, BOTH_VAR&lt;n&gt;_NAME and BOTH_VAR&lt;n&gt;_LEVELS can be used instead.</p>
 </div>
 <div class="section" id="obs-var-n-name">
-<h4><span class="section-number">3.3.4.3. </span><a class="reference internal" href="glossary.html#term-obs-var-n-name"><span class="xref std std-term">OBS_VAR&lt;n&gt;_NAME</span></a><a class="headerlink" href="#obs-var-n-name" title="Permalink to this headline">¶</a></h4>
+<h4>3.3.4.3. <a class="reference internal" href="glossary.html#term-obs-var-n-name"><span class="xref std std-term">OBS_VAR&lt;n&gt;_NAME</span></a><a class="headerlink" href="#obs-var-n-name" title="Permalink to this headline">¶</a></h4>
 <p>Set this to the corresponding observation variable that you want to evaluate with FCST_VAR&lt;n&gt;_NAME. If this value is set for a given &lt;n&gt; value, then the corresponding FCST_VAR&lt;n&gt;_NAME must be set. If the value for forecast and observation data are the same, BOTH_VAR&lt;n&gt;_NAME can be used instead.</p>
 </div>
 <div class="section" id="obs-var-n-levels">
-<h4><span class="section-number">3.3.4.4. </span><a class="reference internal" href="glossary.html#term-obs-var-n-levels"><span class="xref std std-term">OBS_VAR&lt;n&gt;_LEVELS</span></a><a class="headerlink" href="#obs-var-n-levels" title="Permalink to this headline">¶</a></h4>
+<h4>3.3.4.4. <a class="reference internal" href="glossary.html#term-obs-var-n-levels"><span class="xref std std-term">OBS_VAR&lt;n&gt;_LEVELS</span></a><a class="headerlink" href="#obs-var-n-levels" title="Permalink to this headline">¶</a></h4>
 <p>Set this to a comma-separated list of levels or a single value. If OBS_VAR&lt;n&gt;_LEVELS and OBS_VAR&lt;n&gt;_NAME are set, then the corresponding FCST_VAR&lt;n&gt;_LEVELS and FCST_VAR&lt;n&gt;_NAME must be set. If the value for forecast and observation data are the same, BOTH_VAR&lt;n&gt;_NAME and BOTH_VAR&lt;n&gt;_LEVELS can be used instead. For example, setting:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">config</span><span class="p">]</span>
 <span class="n">BOTH_VAR1_NAME</span> <span class="o">=</span> <span class="n">TMP</span>
@@ -629,7 +637,7 @@ SERIES_ANALYSIS_OUTPUT_DIR = {OUTPUT_BASE}/SA/{custom?fmt=%s}
 <p>Note that some MET applications allow multiple fields to be specified for a single run. If the MET tool allows it and METplus Wrappers is configured accordingly, these two comparisons would be configured in a single run.</p>
 </div>
 <div class="section" id="fcst-var-n-thresh-obs-var-n-thresh">
-<h4><span class="section-number">3.3.4.5. </span><a class="reference internal" href="glossary.html#term-fcst-var-n-thresh"><span class="xref std std-term">FCST_VAR&lt;n&gt;_THRESH</span></a> / <a class="reference internal" href="glossary.html#term-obs-var-n-thresh"><span class="xref std std-term">OBS_VAR&lt;n&gt;_THRESH</span></a><a class="headerlink" href="#fcst-var-n-thresh-obs-var-n-thresh" title="Permalink to this headline">¶</a></h4>
+<h4>3.3.4.5. <a class="reference internal" href="glossary.html#term-fcst-var-n-thresh"><span class="xref std std-term">FCST_VAR&lt;n&gt;_THRESH</span></a> / <a class="reference internal" href="glossary.html#term-obs-var-n-thresh"><span class="xref std std-term">OBS_VAR&lt;n&gt;_THRESH</span></a><a class="headerlink" href="#fcst-var-n-thresh-obs-var-n-thresh" title="Permalink to this headline">¶</a></h4>
 <p>Set this to a comma-separated list of threshold values to use in the comparison. Each of these values must begin with a comparison operator (&gt;, &gt;=, =, ==, !=, &lt;, &lt;=, gt, ge, eq, ne, lt, or le). For example, setting:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">config</span><span class="p">]</span>
 <span class="n">FCST_VAR1_NAME</span> <span class="o">=</span> <span class="n">TMP</span>
@@ -644,7 +652,7 @@ SERIES_ANALYSIS_OUTPUT_DIR = {OUTPUT_BASE}/SA/{custom?fmt=%s}
 <p>If FCST_VAR&lt;n&gt;_THRESH is set, then OBS_VAR&lt;n&gt;_THRESH must be set. If the threshold list is the same for both forecast and observation data, BOTH_VAR&lt;n&gt;_THRESH can be used instead.</p>
 </div>
 <div class="section" id="fcst-var-n-options-obs-var-n-options">
-<h4><span class="section-number">3.3.4.6. </span><a class="reference internal" href="glossary.html#term-fcst-var-n-options"><span class="xref std std-term">FCST_VAR&lt;n&gt;_OPTIONS</span></a> /  <a class="reference internal" href="glossary.html#term-obs-var-n-options"><span class="xref std std-term">OBS_VAR&lt;n&gt;_OPTIONS</span></a><a class="headerlink" href="#fcst-var-n-options-obs-var-n-options" title="Permalink to this headline">¶</a></h4>
+<h4>3.3.4.6. <a class="reference internal" href="glossary.html#term-fcst-var-n-options"><span class="xref std std-term">FCST_VAR&lt;n&gt;_OPTIONS</span></a> /  <a class="reference internal" href="glossary.html#term-obs-var-n-options"><span class="xref std std-term">OBS_VAR&lt;n&gt;_OPTIONS</span></a><a class="headerlink" href="#fcst-var-n-options-obs-var-n-options" title="Permalink to this headline">¶</a></h4>
 <p>Set this to add additional information to the field dictionary in the MET config file. The item must end with a semi-colon. For example:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">config</span><span class="p">]</span>
 <span class="n">FCST_VAR1_NAME</span> <span class="o">=</span> <span class="n">TMP</span>
@@ -661,7 +669,7 @@ SERIES_ANALYSIS_OUTPUT_DIR = {OUTPUT_BASE}/SA/{custom?fmt=%s}
 <strong>Used with EnsembleStat Wrapper only.</strong> Users may want to define the ens dictionary item in the MET EnsembleStat config file differently than the fcst dictionary item. If this is the case, you can use these variables. If it is not set, the values in the corresponding FCST_VAR&lt;n&gt;_[NAME/LEVELS/THRESH/OPTIONS] will be used in the ens dictionary.</p>
 </div>
 <div class="section" id="wrapper-specific-field-info">
-<h4><span class="section-number">3.3.4.7. </span>Wrapper Specific Field Info<a class="headerlink" href="#wrapper-specific-field-info" title="Permalink to this headline">¶</a></h4>
+<h4>3.3.4.7. Wrapper Specific Field Info<a class="headerlink" href="#wrapper-specific-field-info" title="Permalink to this headline">¶</a></h4>
 <p>New to METplus 3.0 is the ability to specify VAR&lt;n&gt; items differently across comparison wrappers. In previous versions, it was assumed that the list of forecast and observation files that were processed would be applied to any MET Stat tool used, such as GridStat, PointStat, EnsembleStat, MODE, or MTD. This prevented the ability to run, for example, EnsembleStat, then pass the output into GridStat.</p>
 <p>Example 1:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">config</span><span class="p">]</span>
@@ -693,10 +701,10 @@ SERIES_ANALYSIS_OUTPUT_DIR = {OUTPUT_BASE}/SA/{custom?fmt=%s}
 </div>
 </div>
 <div class="section" id="directory-and-filename-template-info">
-<span id="id8"></span><h3><span class="section-number">3.3.5. </span>Directory and Filename Template Info<a class="headerlink" href="#directory-and-filename-template-info" title="Permalink to this headline">¶</a></h3>
+<span id="id8"></span><h3>3.3.5. Directory and Filename Template Info<a class="headerlink" href="#directory-and-filename-template-info" title="Permalink to this headline">¶</a></h3>
 <p>The METplus Wrappers use directory and filename template configuration variables to find the desired files for a given run.</p>
 <div class="section" id="using-templates-to-find-observation-data">
-<h4><span class="section-number">3.3.5.1. </span>Using Templates to find Observation Data<a class="headerlink" href="#using-templates-to-find-observation-data" title="Permalink to this headline">¶</a></h4>
+<h4>3.3.5.1. Using Templates to find Observation Data<a class="headerlink" href="#using-templates-to-find-observation-data" title="Permalink to this headline">¶</a></h4>
 <p>The following configuration variables describe input observation data:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[dir]
 OBS_GRID_STAT_INPUT_DIR = /my/path/to/grid_stat/input/obs
@@ -721,7 +729,7 @@ OBS_GRID_STAT_INPUT_TEMPLATE = {valid?fmt=%Y%m%d}/prefix.{valid?fmt=%Y%m%d%H}.ex
 <p>The ‘init’ and ‘valid’ are keywords used to denote initialization and valid times respectively. Other keywords that are supported include ‘lead’, ‘offset’, ‘da_init’, and ‘cycle’ which can all be used to find forecast data and data assimilation data depending on the task.</p>
 </div>
 <div class="section" id="using-templates-to-find-forecast-data">
-<h4><span class="section-number">3.3.5.2. </span>Using Templates to find Forecast Data<a class="headerlink" href="#using-templates-to-find-forecast-data" title="Permalink to this headline">¶</a></h4>
+<h4>3.3.5.2. Using Templates to find Forecast Data<a class="headerlink" href="#using-templates-to-find-forecast-data" title="Permalink to this headline">¶</a></h4>
 <p>Most forecast files contain the initialization time and the forecast lead in the filename. The keywords ‘init’ and ‘lead’ can be used to describe the template of these files:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[dir]
 FCST_GRID_STAT_INPUT_DIR = /my/path/to/grid_stat/input/fcst
@@ -738,7 +746,7 @@ FCST_GRID_STAT_INPUT_TEMPLATE = prefix.{init?fmt=%Y%m%d%H}_f{lead?fmt=%3H}.ext
 </div>
 </div>
 <div class="section" id="using-templates-to-find-data-assimilation-data">
-<h4><span class="section-number">3.3.5.3. </span>Using Templates to find Data Assimilation Data<a class="headerlink" href="#using-templates-to-find-data-assimilation-data" title="Permalink to this headline">¶</a></h4>
+<h4>3.3.5.3. Using Templates to find Data Assimilation Data<a class="headerlink" href="#using-templates-to-find-data-assimilation-data" title="Permalink to this headline">¶</a></h4>
 <p>Some data assimilation files contain offset and da_init (data assimilation initialization) values in the filename. These values are used to determine the valid time of the data. Consider the following configuration:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[config]
 PB2NC_OFFSETS = 6, 3
@@ -764,7 +772,7 @@ PB2NC_INPUT_TEMPLATE = prefix.{da_init?fmt=%Y%m%d}_{cycle?fmt=%H}_off{offset?fmt
 </div>
 </div>
 <div class="section" id="shifting-times-in-filename-templates">
-<h4><span class="section-number">3.3.5.4. </span>Shifting Times in Filename Templates<a class="headerlink" href="#shifting-times-in-filename-templates" title="Permalink to this headline">¶</a></h4>
+<h4>3.3.5.4. Shifting Times in Filename Templates<a class="headerlink" href="#shifting-times-in-filename-templates" title="Permalink to this headline">¶</a></h4>
 <p>Users can use the ‘shift’ keyword to adjust the time referenced in the filename template relative to the run time. For example, if the input files used contained data from 01Z on the date specified in the filename to 01Z on the following day. In this example, for a run at 00Z you want to use the file from the previous day and for the 01Z to 23Z runs you want to use the file that corresponds to the current day. Here is an example:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[filename_templates]
 OBS_POINT_STAT_INPUT_TEMPLATE = {valid?fmt=%Y%m%d?shift=-3600}.ext
@@ -773,7 +781,7 @@ OBS_POINT_STAT_INPUT_TEMPLATE = {valid?fmt=%Y%m%d?shift=-3600}.ext
 <p>Running the above configuration at a valid time of 20190201_12Z will shift the valid time backwards by 1 hour (3600 seconds) resulting in 20190201_11Z and will substitute the current day into the template, giving a filename of 20190201.ext. Running at valid time 20190201_00Z, the shift will result in a file time of 20190131_23Z, so the filename will be 20190131.ext that is generated by the template.</p>
 </div>
 <div class="section" id="using-windows-to-find-valid-files">
-<h4><span class="section-number">3.3.5.5. </span>Using Windows to find Valid Files<a class="headerlink" href="#using-windows-to-find-valid-files" title="Permalink to this headline">¶</a></h4>
+<h4>3.3.5.5. Using Windows to find Valid Files<a class="headerlink" href="#using-windows-to-find-valid-files" title="Permalink to this headline">¶</a></h4>
 <p>The [FCST/OBS]_FILE_WINDOW_[BEGIN/END] configuration variables can be used if the time information in the input data does not exactly line up with the run time but you still want to process the data. The default value of the file window begin and end variables are both 0 seconds. If both values are set to 0, METplus Wrappers will require that a file matching the template with the exact time requested exists. If either value is non-zero, METplus Wrappers will examine all of the files under the input directory that match the template, pull out the time information from the files, and use the file with the time closest to the run_time. For example, consider the following configuration:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[config]
 OBS_FILE_WINDOW_BEGIN = -7200
@@ -809,7 +817,7 @@ OBS_GRID_STAT_INPUT_TEMPLATE = {valid?fmt=%Y%m%d}/pre.{valid?fmt=%Y%m%d}_{valid?
 <p>Therefore, METplus Wrappers will use /my/grid_stat/input/obs/20190131/pre.20190131_23.ext as the input to grid_stat in this example.</p>
 </div>
 <div class="section" id="wrapper-specific-windows">
-<h4><span class="section-number">3.3.5.6. </span>Wrapper Specific Windows<a class="headerlink" href="#wrapper-specific-windows" title="Permalink to this headline">¶</a></h4>
+<h4>3.3.5.6. Wrapper Specific Windows<a class="headerlink" href="#wrapper-specific-windows" title="Permalink to this headline">¶</a></h4>
 <p>A user may need to specify a different window on a wrapper-by-wrapper basis. If this is the case, you can override the file window values for each wrapper. Consider the following configuration:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">config</span><span class="p">]</span>
 <span class="n">PROCESS_LIST</span> <span class="o">=</span> <span class="n">PcpCombine</span><span class="p">,</span> <span class="n">GridStat</span><span class="p">,</span> <span class="n">EnsembleStat</span>
@@ -825,7 +833,7 @@ OBS_GRID_STAT_INPUT_TEMPLATE = {valid?fmt=%Y%m%d}/pre.{valid?fmt=%Y%m%d}_{valid?
 </div>
 </div>
 <div class="section" id="config-quick-start-example">
-<h2><span class="section-number">3.4. </span>Config Quick Start Example<a class="headerlink" href="#config-quick-start-example" title="Permalink to this headline">¶</a></h2>
+<h2>3.4. Config Quick Start Example<a class="headerlink" href="#config-quick-start-example" title="Permalink to this headline">¶</a></h2>
 <p><strong>Simple Example Use Case</strong></p>
 <ol class="arabic">
 <li><p>Set up the configuration file:</p>
@@ -948,7 +956,7 @@ METplus configuration files, including those from the METplus_INSTALL/parm/metpl
 </div></blockquote>
 </div>
 <div class="section" id="user-defined-config">
-<h2><span class="section-number">3.5. </span>User Defined Config<a class="headerlink" href="#user-defined-config" title="Permalink to this headline">¶</a></h2>
+<h2>3.5. User Defined Config<a class="headerlink" href="#user-defined-config" title="Permalink to this headline">¶</a></h2>
 <p>You can define your own custom config variables that will be set as environment variables when METplus is run. MET config files can read environment variables, so this is a good way to customize information that is read by those files. To create add a custom config variable, add a section to one of your METplus config files called [user_env_vars]. Under this header, add as many variables as you’d like. For example, if you added the following to your METplus config file:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">user_env_vars</span><span class="p">]</span>
 <span class="n">VAR_NAME</span> <span class="o">=</span> <span class="n">some_text_for_feb_1_1987_run</span>
@@ -981,7 +989,9 @@ METplus configuration files, including those from the METplus_INSTALL/parm/metpl
 
 
            </div>
-           
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
@@ -990,7 +1000,7 @@ METplus configuration files, including those from the METplus_INSTALL/parm/metpl
         <a href="wrappers.html" class="btn btn-neutral float-right" title="4. Python Wrappers" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="installation.html" class="btn btn-neutral float-left" title="2. Software Installation/Getting Started" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="installation.html" class="btn btn-neutral" title="2. Software Installation/Getting Started" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -999,11 +1009,14 @@ METplus configuration files, including those from the METplus_INSTALL/parm/metpl
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019, NCAR
+        &copy; Copyright 2019, NCAR.
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+     
+<script>var version_json_loc = "../../versions.json";</script>
+
 
 </footer>
 
@@ -1016,15 +1029,39 @@ METplus configuration files, including those from the METplus_INSTALL/parm/metpl
   
 
 
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script>
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'3.0',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/language_data.js"></script>
+      <script type="text/javascript" src="../_static/pop_ver.js"></script>
+
+  
 
   
   
-    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
    
 
 </body>

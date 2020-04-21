@@ -1,8 +1,9 @@
 """
-EnsembleStat: Basic Use Case
-=============================
+EnsembleStat
+============
 
-EnsembleStat.conf
+This use case will run the MET EnsembleStat tool to compare gridded ensemble
+forecast data to gridded AND point observation data.
 
 """
 
@@ -33,7 +34,7 @@ EnsembleStat.conf
 # | **Point Observation:** 
 # |         met_test/out/ascii2nc/precip24_2010010112.nc 
 #
-# | **Location:** All of the input data required for this use case can be found in the met_test sample data tarball. Click here to the METplus releases page and download sample data for the appropriate release: https://github.com/NCAR/METplus/releases
+# | **Location:** All of the input data required for this use case can be found in the sample data tarball. Click here to the METplus releases page and download sample data for the appropriate release: https://github.com/NCAR/METplus/releases
 # | The tarball should be unpacked into the directory that you will set the value of INPUT_BASE. See 'Running METplus' section for more information.
 # | **Data Source:** Unknown
 
@@ -148,10 +149,6 @@ EnsembleStat.conf
 # --------
 #
 # .. note::
-#  `EnsembleStatToolUseCase <https://ncar.github.io/METplus/search.html?q=EnsembleStatToolUseCase&check_keywords=yes&area=default>`_,
-#  `PythonEmbeddingFileUseCase <https://ncar.github.io/METplus/search.html?q=PythonEmbeddingFileUseCase&check_keywords=yes&area=default>`_,
-#  `EnsembleAppUseCase <https://ncar.github.io/METplus/search.html?q=EnsembleAppUseCase&check_keywords=yes&area=default>`_,
-#  `ProbabilityGenerationAppUseCase <https://ncar.github.io/METplus/search.html?q=ProbabilityGenerationAppUseCase&check_keywords=yes&area=default>`_
-#  `GRIBFileUseCase <https://ncar.github.io/METplus/search.html?q=GRIBFileUseCase&check_keywords=yes&area=default>`_,
-#
-# sphinx_gallery_thumbnail_path = '_static/met_tool_wrapper-EnsembleStat.png'
+#    EnsembleStat Tool (`EnsembleStatToolUseCase <https://ncar.github.io/METplus/search.html?q=EnsembleStatToolUseCase&check_keywords=yes&area=default>`_),
+#    GRIB File (`GRIBFileUseCase <https://ncar.github.io/METplus/search.html?q=GRIBFileUseCase&check_keywords=yes&area=default>`_)
+

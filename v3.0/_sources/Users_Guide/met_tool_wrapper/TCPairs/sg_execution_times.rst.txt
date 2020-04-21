@@ -1,0 +1,11 @@
+
+:orphan:
+
+.. _sphx_glr_Users_Guide_met_tool_wrapper_TCPairs_sg_execution_times:
+
+Computation times
+=================
+**00:00.051** total execution time for **Users_Guide_met_tool_wrapper_TCPairs** files:
+
+- **00:00.026**: :ref:`sphx_glr_Users_Guide_met_tool_wrapper_TCPairs_TCPairs_ETC.py` (``TCPairs_ETC.py``)
+- **00:00.025**: :ref:`sphx_glr_Users_Guide_met_tool_wrapper_TCPairs_TCPairs_HWRF.py` (``TCPairs_HWRF.py``)

@@ -1,19 +1,18 @@
 """
-Ensemble-Stat: Ensemble Statistics using Obs Uncertainty 
-=============================================================================
+HRRR Ensemble Use Case
+======================
 
-EnsembleStat_fcstHRRRE
-_obsHRRRE_Sfc_MultiField.conf
+This use case builds hourly gridded fields for multiple variables,
+comparing the resulting data to forecast data
 
 """
 ##############################################################################
 # Scientific Objective
 # --------------------
 #
-# To provide useful statistical information about the ensemble characteristics
-# such as how dispersive it is and the relationship between spread and skill.
-# This example also shows how to compute simple probability fields called
-# ensemble relative frequency.
+# To provide useful statistical information on the relationship between observation
+# data (in both grid and point formats) to an ensemble forecast. These values
+# can be used to help correct ensemble member deviations from observed values.
 
 ##############################################################################
 # Datasets
@@ -155,18 +154,6 @@ _obsHRRRE_Sfc_MultiField.conf
 # Keywords
 # --------
 #
-# .. note::
-#  `EnsembleStatToolUseCase <https://ncar.github.io/METplus/search.html?q=EnsembleStatToolUseCase&check_keywords=yes&area=default>`_,
-#  `ConvectionAllowingModelsAppUseCase <https://ncar.github.io/METplus/search.html?q=ConvectionAllowingModelsAppUseCase&check_keywords=yes&area=default>`_,
-#  `PB2NCToolUseCase <https://ncar.github.io/METplus/search.html?q=PB2NCToolUseCase&check_keywords=yes&area=default>`_,
-#  `prepBUFRFileUseCase <https://ncar.github.io/METplus/search.html?q=prepBUFRFileUseCase&check_keywords=yes&area=default>`_,
-#  `GRIB2FileUseCase <https://ncar.github.io/METplus/search.html?q=GRIB2FileUseCase&check_keywords=yes&area=default>`_,
-#  `NCAROrgUseCase <https://ncar.github.io/METplus/search.html?q=NCAROrgUseCase&check_keywords=yes&area=default>`_,
-#  `EnsembleAppUseCase <https://ncar.github.io/METplus/search.html?q=EnsembleAppUseCase&check_keywords=yes&area=default>`_,
-#  `ProbabilityGenerationUseCase <https://ncar.github.io/METplus/search.html?q=ProbabilityGenerationUseCase&check_keywords=yes&area=default>`_,
-#  `NOAAGSLOrgUseCase <https://ncar.github.io/METplus/search.html?q=NOAAGSLOrgUseCase&check_keywords=yes&area=default>`_,
-#  `DTCOrgUseCase <https://ncar.github.io/METplus/search.html?q=DTCOrgUseCase&check_keywords=yes&area=default>`_,
-#  `ObsUncertaintyUseCase <https://ncar.github.io/METplus/search.html?q=ObsUncertaintyUseCase&check_keywords=yes&area=default>`_,
-#  `MaskingFeatureUseCase <https://ncar.github.io/METplus/search.html?q=MaskingFeatureUseCase&check_keywords=yes&area=default>`_ 
-#
 # sphinx_gallery_thumbnail_path = '_static/convection_allowing_models-EnsembleStat_fcstHRRRE_obsHRRRE_Sfc_MultiField.png'
+#
+# .. note:: `EnsembleStatToolUseCase <https://ncar.github.io/METplus/search.html?q=EnsembleStatToolUseCase&check_keywords=yes&area=default>`_, `ConvectionAllowingModelsAppUseCase <https://ncar.github.io/METplus/search.html?q=ConvectionAllowingModelsAppUseCase&check_keywords=yes&area=default>`_, `PB2NCToolUseCase <https://ncar.github.io/METplus/search.html?q=PB2NCToolUseCase&check_keywords=yes&area=default>`_, `prepBUFRFileUseCase <https://ncar.github.io/METplus/search.html?q=prepBUFRFileUseCase&check_keywords=yes&area=default>`_, `GRIB2FileUseCase <https://ncar.github.io/METplus/search.html?q=GRIB2FileUseCase&check_keywords=yes&area=default>`_

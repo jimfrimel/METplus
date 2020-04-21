@@ -1,8 +1,8 @@
 """
-CyclonePlotter: Basic Use Case
-============================================================================
+CyclonePlotter
+==============
 
-CyclonePlotter.conf
+Generates a plot of cyclone tracks.  No MET tool is invoked for this example.
 
 """
 

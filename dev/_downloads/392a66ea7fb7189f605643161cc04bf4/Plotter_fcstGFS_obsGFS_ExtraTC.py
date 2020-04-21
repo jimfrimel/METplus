@@ -1,14 +1,15 @@
 """
-Cyclone Plotter: From TC-Pairs Output 
-===========================================================================
+Cyclone Plotter Use case
+==================================================================
+This use case generates a plot of tropical cyclone tracks using output from
+the MET tc-pairs tool.  The CyclonePlotter wrapper does not directly wrap a
+specific MET tool.  This is a data visualization written entirely in Python.
 
-Plotter_fcstGFS
-_obsGFS_ExtraTC.conf
 """
 ##############################################################################
 # Scientific Objective
 # --------------------
-# Provide visualization of storm tracks using output from the MET TC-Pairs tool.
+# Provide visualization of storm tracks using output from the MET tc-pairs tool.
 # The date and hour associated with each storm track indicates the first time
 # the storm was tracked in the model.
 
@@ -17,8 +18,8 @@ _obsGFS_ExtraTC.conf
 # --------
 #
 #
-#  * Forecast dataset: ADeck modified-ATCF tropical cyclone data
-#  * Observation dataset: BDeck modified-ATCF "best-track" tropical cyclone data
+#  * Forecast dataset: ADeck non-ATCF tropical cyclone data
+#  * Observation dataset: non-ATCF tropical cyclone "best track"(BDeck) cyclone data
 #
 
 ##############################################################################
@@ -26,7 +27,7 @@ _obsGFS_ExtraTC.conf
 # ------------------
 #
 # This use case first runs TcPairs and then generates the storm track plot
-# for all storm tracks found in the .tcst output file created by the MET TC-Pairs tool.
+# for all storm tracks found in the .tcst output file created by the MET tc-pairs tool.
 #
 
 ##############################################################################
@@ -132,4 +133,4 @@ _obsGFS_ExtraTC.conf
 #
 # sphinx_gallery_thumbnail_path = '_static/tc_and_extra_tc-Plotter_fcstGFS_obsGFS_ExtraTC.png'
 #
-# .. note:: `TCPairsToolUseCase <https://ncar.github.io/METplus/search.html?q=TCPairsToolUseCase&check_keywords=yes&area=default>`_, `CyclonePlotterUseCase <https://ncar.github.io/METplus/search.html?q=CyclonePlotterUseCase&check_keywords=yes&area=default>`_, `FeatureRelativeUseCase  <https://ncar.github.io/METplus/search.html?q=FeatureRelativeUseCase&check_keywords=yes&area=default>`_, `MediumRangeAppUseCase <https://ncar.github.io/METplus/search.html?q=MediumRangeAppUseCase&check_keywords=yes&area=default>`_, `NOAAEMCOrgUseCase <https://ncar.github.io/METplus/search.html?q=NOAAEMCOrgUseCase&check_keywords=yes&area=default>`_, `SBUOrgUseCase <https://ncar.github.io/METplus/search.html?q=SBUOrgUseCase&check_keywords=yes&area=default>`_, `DTCOrgUseCase <https://ncar.github.io/METplus/search.html?q=DTCOrgUseCase&check_keywords=yes&area=default>`_
+# .. note:: `TCPairsToolUseCase <https://ncar.github.io/METplus/search.html?q=TCPairsToolUseCase&check_keywords=yes&area=default>`_, `CyclonePlotterUseCase <https://ncar.github.io/METplus/search.html?q=CyclonePlotterUseCase&check_keywords=yes&area=default>`_

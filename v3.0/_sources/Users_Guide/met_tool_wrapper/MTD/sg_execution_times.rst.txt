@@ -1,0 +1,11 @@
+
+:orphan:
+
+.. _sphx_glr_Users_Guide_met_tool_wrapper_MTD_sg_execution_times:
+
+Computation times
+=================
+**00:00.052** total execution time for **Users_Guide_met_tool_wrapper_MTD** files:
+
+- **00:00.026**: :ref:`sphx_glr_Users_Guide_met_tool_wrapper_MTD_MTD.py` (``MTD.py``)
+- **00:00.026**: :ref:`sphx_glr_Users_Guide_met_tool_wrapper_MTD_MTD_python_embedding.py` (``MTD_python_embedding.py``)

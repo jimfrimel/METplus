@@ -1,12 +1,10 @@
-.. only:: html
+.. note::
+    :class: sphx-glr-download-link-note
 
-    .. note::
-        :class: sphx-glr-download-link-note
+    Click :ref:`here <sphx_glr_download_Users_Guide_template_use-case-application.py>` to download the full example code
+.. rst-class:: sphx-glr-example-title
 
-        Click :ref:`here <sphx_glr_download_Users_Guide_template_use-case-application.py>`     to download the full example code
-    .. rst-class:: sphx-glr-example-title
-
-    .. _sphx_glr_Users_Guide_template_use-case-application.py:
+.. _sphx_glr_Users_Guide_template_use-case-application.py:
 
 
 Template
@@ -50,6 +48,19 @@ be beneficial include:
 
 
     print("Hello World")
+
+
+
+
+
+.. rst-class:: sphx-glr-script-out
+
+ Out:
+
+ .. code-block:: none
+
+    Hello World
+
 
 
 METplus Components
@@ -125,7 +136,7 @@ Now include them like this:
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.000 seconds)
+   **Total running time of the script:** ( 0 minutes  0.033 seconds)
 
 
 .. _sphx_glr_download_Users_Guide_template_use-case-application.py:

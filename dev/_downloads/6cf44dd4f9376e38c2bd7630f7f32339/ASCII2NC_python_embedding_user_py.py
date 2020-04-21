@@ -1,19 +1,15 @@
 """
-ASCII2NC: Using Python Embedding with MET_PYTHON_EXE 
-==============================================================================
+ASCII2NC using Python Embedding with User Python
+================================================
 
-ASCII2NC_python_embedding
-_user_py.conf
+This use case will run the MET ASCII2NC tool to convert point observation data in ASCII text format to NetCDF format using Python Embedding functionality and specifying a different user-defined version of Python to run the script.
 
 """
 ##############################################################################
 # Scientific Objective
 # --------------------
 #
-# Simply converting file formats so point observations can be read by the MET tools through the use of a user-defined
-# Python script and running in either a different environment that the MET build or using a package not currently a
-# METplus dependency.
-
+# None. Simply converting file formats so point observations can be read by the MET tools.
 
 ##############################################################################
 # Datasets
@@ -21,7 +17,7 @@ _user_py.conf
 #
 # | **Observations:** Precipitation accumulation observations in ASCII text files
 #
-# | **Location:** All of the input data required for this use case can be found in the met_test sample data tarball. Click here to the METplus releases page and download smaple data fore the appropriate release: https://github.com/NCAR/METplus/releases
+# | **Location:** All of the input data required for this use case can be found in the sample data tarball. Click here to the METplus releases page and download smaple data fore the appropriate release: https://github.com/NCAR/METplus/releases
 # | This tarball should be unpacked into the directory that you will set the value of INPUT_BASE. See 'Running METplus' section for more information.
 #
 # | **Data Source:** Unknown
@@ -105,9 +101,4 @@ _user_py.conf
 # Keywords
 # --------
 #
-# sphinx_gallery_thumbnail_path = '_static/met_tool_wrapper-ASCII2NC.png'
-#
-# .. note::
-#  `ASCII2NCToolUseCase <https://ncar.github.io/METplus/search.html?q=ASCII2NCToolUseCase&check_keywords=yes&area=default>`_,
-#  `PythonEmbeddingFileUseCase <https://ncar.github.io/METplus/search.html?q=PythonEmbeddingFileUseCase&check_keywords=yes&area=default>`_,
-#  `MET_PYTHON_EXEUseCase <https://ncar.github.io/METplus/search.html?q=MET_PYTHON_EXEUseCase&check_keywords=yes&area=default>`_
+# .. note:: `ASCII2NCToolUseCase <https://ncar.github.io/METplus/search.html?q=ASCII2NCToolUseCase&check_keywords=yes&area=default>`_, `Python Embedding File <https://ncar.github.io/METplus/search.html?q=PythonEmbeddingFileUseCase&check_keywords=yes&area=default>`_, `MET_PYTHON_EXE environment variable <https://ncar.github.io/METplus/search.html?q=MET_PYTHON_EXEUseCase&check_keywords=yes&area=default>`_

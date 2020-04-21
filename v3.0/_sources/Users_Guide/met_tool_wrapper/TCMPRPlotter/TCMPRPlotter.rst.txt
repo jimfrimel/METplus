@@ -1,24 +1,23 @@
-.. only:: html
+.. note::
+    :class: sphx-glr-download-link-note
 
-    .. note::
-        :class: sphx-glr-download-link-note
+    Click :ref:`here <sphx_glr_download_Users_Guide_met_tool_wrapper_TCMPRPlotter_TCMPRPlotter.py>` to download the full example code
+.. rst-class:: sphx-glr-example-title
 
-        Click :ref:`here <sphx_glr_download_Users_Guide_met_tool_wrapper_TCMPRPlotter_TCMPRPlotter.py>`     to download the full example code
-    .. rst-class:: sphx-glr-example-title
-
-    .. _sphx_glr_Users_Guide_met_tool_wrapper_TCMPRPlotter_TCMPRPlotter.py:
+.. _sphx_glr_Users_Guide_met_tool_wrapper_TCMPRPlotter_TCMPRPlotter.py:
 
 
-TCMPRPlotter: Basic Use Case
-=======================================================
+TCMPRPlotter
+============
 
-TCMPRPlotter.conf
+This use case will run the MET R script tcmpr_plotter.R to generate various statistical
+plots of tropical cyclone tracks.
 
 
 Scientific Objective
 --------------------
 
-Generate plots of tropical cyclone tracks.
+Generate statistical plots of tropical cyclone tracks.
 
 Datasets
 --------
@@ -27,7 +26,7 @@ No datasets are used in this use case, the tc-pairs output from the MET tc-pairs
 is used as input.
 
 
-| **Location:** All of the input data required for this use case can be found in the met_test sample data tarball. Click here to the METplus releases page and download sample data for the appropriate release: https://github.com/NCAR/METplus/releases
+| **Location:** All of the input data required for this use case can be found in the sample data tarball. Click here to the METplus releases page and download sample data for the appropriate release: https://github.com/NCAR/METplus/releases
 | This tarball should be unpacked into the directory that you will set the value of INPUT_BASE. See 'Running METplus' section for more information.
 
 
@@ -108,13 +107,12 @@ and will contain the following files:
 Keywords
 --------
 
-.. note::
- `TCMPRPlotterUseCase <https://ncar.github.io/METplus/search.html?q=TCMPRPlotterUseCase&check_keywords=yes&area=default>`_
+.. note:: `TCMPRPlotterUseCase <https://ncar.github.io/METplus/search.html?q=TCMPRPlotterUseCase&check_keywords=yes&area=default>`_
 
 
 .. rst-class:: sphx-glr-timing
 
-   **Total running time of the script:** ( 0 minutes  0.000 seconds)
+   **Total running time of the script:** ( 0 minutes  0.025 seconds)
 
 
 .. _sphx_glr_download_Users_Guide_met_tool_wrapper_TCMPRPlotter_TCMPRPlotter.py:

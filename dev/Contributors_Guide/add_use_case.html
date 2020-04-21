@@ -15,42 +15,51 @@
   
   
   
+    <link rel="canonical" href="https://unidata.github.io/MetPy/latest/Contributors_Guide/add_use_case.html"/>
+  
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
 
+  
+  
     
 
   
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/theme_override.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/gallery-binder.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/gallery-dataframe.css" type="text/css" />
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="9. Documentation" href="documentation.html" />
-    <link rel="prev" title="7. Testing" href="testing.html" /> 
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../_static/theme_override.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="METplus 3.0 documentation" href="../index.html"/>
+        <link rel="up" title="Contributor’s Guide" href="index.html"/>
+        <link rel="next" title="9. Documentation" href="documentation.html"/>
+        <link rel="prev" title="7. Testing" href="testing.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
 </head>
 
-<body class="wy-body-for-nav">
+<body class="wy-body-for-nav" role="document">
 
    
   <div class="wy-grid-for-nav">
+
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+        <div class="wy-side-nav-search">
           
 
           
@@ -59,7 +68,7 @@
 
           
             
-            <img src="../_static/METplus_logo.png" class="logo" alt="Logo"/>
+            <img src="../_static/METplus_logo.png" class="logo" />
           
           </a>
 
@@ -120,7 +129,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" aria-label="top navigation">
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">METplus</a>
@@ -128,10 +137,9 @@
       </nav>
 
 
+      
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
           
 
 
@@ -156,7 +164,7 @@
         
           <li><a href="index.html">Contributor’s Guide</a> &raquo;</li>
         
-      <li><span class="section-number">8. </span>Adding Use Cases</li>
+      <li>8. Adding Use Cases</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -176,9 +184,9 @@
            <div itemprop="articleBody">
             
   <div class="section" id="adding-use-cases">
-<h1><span class="section-number">8. </span>Adding Use Cases<a class="headerlink" href="#adding-use-cases" title="Permalink to this headline">¶</a></h1>
+<h1>8. Adding Use Cases<a class="headerlink" href="#adding-use-cases" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="use-case-category-directories">
-<h2><span class="section-number">8.1. </span>Use Case Category Directories<a class="headerlink" href="#use-case-category-directories" title="Permalink to this headline">¶</a></h2>
+<h2>8.1. Use Case Category Directories<a class="headerlink" href="#use-case-category-directories" title="Permalink to this headline">¶</a></h2>
 <p>New use cases will be put in the repository under parm/use_cases/model_applications/&lt;CATEGORY&gt; where &lt;CATEGORY&gt; is one of the following:</p>
 <ul class="simple">
 <li><p>medium_range</p></li>
@@ -199,7 +207,7 @@
 </ul>
 </div>
 <div class="section" id="use-case-content">
-<h2><span class="section-number">8.2. </span>Use Case Content<a class="headerlink" href="#use-case-content" title="Permalink to this headline">¶</a></h2>
+<h2>8.2. Use Case Content<a class="headerlink" href="#use-case-content" title="Permalink to this headline">¶</a></h2>
 <p>In the category sub-directory, each use case should have the following:</p>
 <ul class="simple">
 <li><dl class="simple">
@@ -217,11 +225,11 @@
 </ul>
 </div>
 <div class="section" id="input-data">
-<h2><span class="section-number">8.3. </span>Input Data<a class="headerlink" href="#input-data" title="Permalink to this headline">¶</a></h2>
+<h2>8.3. Input Data<a class="headerlink" href="#input-data" title="Permalink to this headline">¶</a></h2>
 <p>Input data needed to run the use case should be provided. The data should go in the METplus Data directory with sub-directories matching the directory structure of the use cases, i.e. input data for use cases in parm/use_cases/model_applications/medium_range should go in (/d1/METplus_Data)/model_applications/medium_range</p>
 </div>
 <div class="section" id="use-case-rules">
-<h2><span class="section-number">8.4. </span>Use Case Rules<a class="headerlink" href="#use-case-rules" title="Permalink to this headline">¶</a></h2>
+<h2>8.4. Use Case Rules<a class="headerlink" href="#use-case-rules" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>A limited number of run times should be processed so that they use case runs in a reasonable amount of time.  They are designed to demonstrate the functionality but not necessarily processed all of the data that would be processed for analysis. Users can take an example and modify the run times to produce more output as desired.</p></li>
 <li><p>No errors should result from running the use case.</p></li>
@@ -232,7 +240,9 @@
 
 
            </div>
-           
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
@@ -241,7 +251,7 @@
         <a href="documentation.html" class="btn btn-neutral float-right" title="9. Documentation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="testing.html" class="btn btn-neutral float-left" title="7. Testing" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="testing.html" class="btn btn-neutral" title="7. Testing" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -250,11 +260,14 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019, NCAR
+        &copy; Copyright 2019, NCAR.
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+     
+<script>var version_json_loc = "../../versions.json";</script>
+
 
 </footer>
 
@@ -267,15 +280,39 @@
   
 
 
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script>
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'3.0',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/language_data.js"></script>
+      <script type="text/javascript" src="../_static/pop_ver.js"></script>
+
+  
 
   
   
-    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
    
 
 </body>

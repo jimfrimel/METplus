@@ -1,15 +1,15 @@
 """
-RegridDataPlane: Basic Use Case
-=============================================================================
+RegridDataPlane
+===============
 
-RegridDataPlane.conf
+This use case will run the MET RegridDataPlane tool to regrid observation data in GRIB format.
 
 """
 ##############################################################################
 # Scientific Objective
 # --------------------
 #
-# Simply regridding data to match a desired grid domain for comparisons.
+# None. Simply regridding data to match a desired grid domain for comparisons.
 
 ##############################################################################
 # Datasets
@@ -17,7 +17,7 @@ RegridDataPlane.conf
 #
 # | **Observations:** Stage 2 NetCDF 1-hour Precipitation Accumulation
 #
-# | **Location:** All of the input data required for this use case can be found in the met_test sample data tarball. Click here to the METplus releases page and download sample data for the appropriate release: https://github.com/NCAR/METplus/releases
+# | **Location:** All of the input data required for this use case can be found in the sample data tarball. Click here to the METplus releases page and download sample data for the appropriate release: https://github.com/NCAR/METplus/releases
 # | This tarball should be unpacked into the directory that you will set the value of INPUT_BASE. See 'Running METplus' section for more information.
 
 ##############################################################################
@@ -107,7 +107,4 @@ RegridDataPlane.conf
 # Keywords
 # --------
 #
-# .. note::
-#  `RegridDataPlaneToolUseCase <https://ncar.github.io/METplus/search.html?q=RegridDataPlaneToolUseCase&check_keywords=yes&area=default>`_
-#
-# sphinx_gallery_thumbnail_path = '_static/met_tool_wrapper-RegridDataPlane.png'
+# .. note:: `RegridDataPlaneToolUseCase <https://ncar.github.io/METplus/search.html?q=RegridDataPlaneToolUseCase&check_keywords=yes&area=default>`_

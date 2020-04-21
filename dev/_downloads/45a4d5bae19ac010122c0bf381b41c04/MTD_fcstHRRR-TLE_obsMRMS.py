@@ -1,27 +1,25 @@
 """
-MTD: 6hr QPF Use Case
+HRRR-TLE MODE Time Domain Use Case
 ==================================
 
-MTD_fcstHRRR-TLE
-_obsMRMS.conf
+This use case processes precipitation accumulation data over time.
 
 """
 ##############################################################################
 # Scientific Objective
 # --------------------
 #
-# This use case demonstrates the evaluation of an ensemble mean field from a
-# prototype ensemble post-processing technique for time-lagged ensembles
-# (HRRR-TLE). MTD is used to provide useful object attributes and diagnostics on
-# aggregated over a time series. This non-traditional
-# approach provides alternative information and diagnostics to inform model development.
+# To provide useful statistical information on aggregated object-based information
+# over a time series. This non-standard approach (i.e. a holistic approach to weather
+# systems over grid or point assessments) provides alternative views to numerical model
+# accuracy and offers new solutions to model adjustments.
 
 ##############################################################################
 # Datasets
 # --------
 #
 #  * Forecast dataset: HRRR-TLE forecasts in GRIB2
-#  * Observation dataset: Multi Radar Multi Sensor (MRMS)
+#  * Observation dataset: MRMS
 #  * Sources of data (links, contacts, etc...)
 #
 
@@ -123,16 +121,6 @@ _obsMRMS.conf
 # Keywords
 # --------
 #
-# .. note::
-#  `MTDToolUseCase <https://ncar.github.io/METplus/search.html?q=MTDToolUseCase&check_keywords=yes&area=default>`_,
-#  `PrecipitationAppUseCase <https://ncar.github.io/METplus/search.html?q=PrecipitationAppUseCase&check_keywords=yes&area=default>`_,
-#  `GRIB2FileUseCase <https://ncar.github.io/METplus/search.html?q=GRIB2FileUseCase&check_keywords=yes&area=default>`_,
-#  `NetCDFFileUseCase <https://ncar.github.io/METplus/search.html?q=NetCDFFileUseCase&check_keywords=yes&area=default>`_,
-#  `NOAAWPCOrgUseCase  <https://ncar.github.io/METplus/search.html?q=NOAAWPCOrgUseCase&check_keywords=yes&area=default>`_,
-#  `NOAAHMTOrgUseCase  <https://ncar.github.io/METplus/search.html?q=NOAAHMTOrgUseCase&check_keywords=yes&area=default>`_,
-#  `NOAAHWTOrgUseCase  <https://ncar.github.io/METplus/search.html?q=NOAAHWTOrgUseCase&check_keywords=yes&area=default>`_,
-#  `ConvectionAllowingModelsAppUseCase <https://ncar.github.io/METplus/search.html?q=ConvectionAllowingModelsAppUseCase&check_keywords=yes&area=default>`_,
-#  `ProbabilityVerificationUseCase  <https://ncar.github.io/METplus/search.html?q=ProbabilityVerificationUseCase&check_keywords=yes&area=default>`_,
-#  `DiagnosticsUseCase <https://ncar.github.io/METplus/search.html?q=DiagnosticsUseCase&check_keywords=yes&area=default>`_
-#
 # sphinx_gallery_thumbnail_path = '_static/precipitation-MTD_fcstHRRR-TLE_obsMRMS.png'
+#
+# .. note:: `MTDToolUseCase <https://ncar.github.io/METplus/search.html?q=MTDToolUseCase&check_keywords=yes&area=default>`_, `PrecipitationAppUseCase <https://ncar.github.io/METplus/search.html?q=PrecipitationAppUseCase&check_keywords=yes&area=default>`_, `GRIB2FileUseCase <https://ncar.github.io/METplus/search.html?q=GRIB2FileUseCase&check_keywords=yes&area=default>`_, `NetCDFFileUseCase <https://ncar.github.io/METplus/search.html?q=NetCDFFileUseCase&check_keywords=yes&area=default>`_

@@ -2,7 +2,7 @@
 MTD using Python Embedding
 ==========================
 
-MTD_python_embedding.conf
+This use case will run the MET MTD (MODE Time Domain) tool to compare gridded forecast data to gridded observation data over time. The input data is read in via Python Embedding.
 
 """
 ##############################################################################
@@ -117,21 +117,11 @@ MTD_python_embedding.conf
 # Refer to the value set for **OUTPUT_BASE** to find where the output data was generated.
 # Output for this use case will be found in met_tool_wrapper/MTD/mtd_python_embedding (relative to **OUTPUT_BASE**)
 # and will contain the following files:
-#
-# * mtd_PYTHON_20050807_120000V_2d.txt
-# * mtd_PYTHON_20050807_120000V_3d_pair_cluster.txt
-# * mtd_PYTHON_20050807_120000V_3d_pair_simple.txt
-# * mtd_PYTHON_20050807_120000V_3d_single_cluster.txt
-# * mtd_PYTHON_20050807_120000V_3d_single_simple.txt
-# * mtd_PYTHON_20050807_120000V_obj.nc
+
+# * out.nc
 
 ##############################################################################
 # Keywords
 # --------
 #
-# .. note::
-#  `MTDToolUseCase <https://ncar.github.io/METplus/search.html?q=MTDToolUseCase&check_keywords=yes&area=default>`_,
-#  `PythonEmbeddingFileUseCase <https://ncar.github.io/METplus/search.html?q=PythonEmbeddingFileUseCase&check_keywords=yes&area=default>`_
-#  `DiagnosticsUseCase <https://ncar.github.io/METplus/search.html?q=DiagnosticsUseCase&check_keywords=yes&area=default>`_
-#
-# sphinx_gallery_thumbnail_path = '_static/met_tool_wrapper-MTD.png'
+# .. note:: `MTDToolUseCase <https://ncar.github.io/METplus/search.html?q=MTDToolUseCase&check_keywords=yes&area=default>`_, `PythonEmbeddingFileUseCase <https://ncar.github.io/METplus/search.html?q=PythonEmbeddingFileUseCase&check_keywords=yes&area=default>`_

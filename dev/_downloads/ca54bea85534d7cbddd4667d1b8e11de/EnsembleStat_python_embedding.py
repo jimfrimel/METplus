@@ -1,13 +1,13 @@
 """
-EnsembleStat: Using Python Embedding
-=============================================================================
+EnsembleStat using Python Embedding
+===================================
 
-EnsembleStat_python
-_embedding.conf
+This use case will run the MET EnsembleStat tool to compare gridded ensemble
+forecast data to gridded AND point observation data. The input data is read in via Python Embedding.
 
 """
 
-############################################################################
+###########################################
 # Scientific Objective
 # --------------------
 #
@@ -130,10 +130,4 @@ _embedding.conf
 # Keywords
 # --------
 #
-# .. note::
-#  `EnsembleStatToolUseCase <https://ncar.github.io/METplus/search.html?q=EnsembleStatToolUseCase&check_keywords=yes&area=default>`_,
-#  `PythonEmbeddingFileUseCase <https://ncar.github.io/METplus/search.html?q=PythonEmbeddingFileUseCase&check_keywords=yes&area=default>`_,
-#  `EnsembleAppUseCase <https://ncar.github.io/METplus/search.html?q=EnsembleAppUseCase&check_keywords=yes&area=default>`_,
-#  `ProbabilityGenerationAppUseCase <https://ncar.github.io/METplus/search.html?q=ProbabilityGenerationAppUseCase&check_keywords=yes&area=default>`_
-#
-# sphinx_gallery_thumbnail_path = '_static/met_tool_wrapper-EnsembleStat.png'
+# .. note:: `EnsembleStatToolUseCase <https://ncar.github.io/METplus/search.html?q=EnsembleStatToolUseCase&check_keywords=yes&area=default>`_, `PythonEmbeddingFileUseCase <https://ncar.github.io/METplus/search.html?q=PythonEmbeddingFileUseCase&check_keywords=yes&area=default>`_
