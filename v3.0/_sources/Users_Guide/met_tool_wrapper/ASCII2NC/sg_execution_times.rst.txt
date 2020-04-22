@@ -1,0 +1,12 @@
+
+:orphan:
+
+.. _sphx_glr_Users_Guide_met_tool_wrapper_ASCII2NC_sg_execution_times:
+
+Computation times
+=================
+**00:00.080** total execution time for **Users_Guide_met_tool_wrapper_ASCII2NC** files:
+
+- **00:00.027**: :ref:`sphx_glr_Users_Guide_met_tool_wrapper_ASCII2NC_ASCII2NC_python_embedding.py` (``ASCII2NC_python_embedding.py``)
+- **00:00.026**: :ref:`sphx_glr_Users_Guide_met_tool_wrapper_ASCII2NC_ASCII2NC_python_embedding_user_py.py` (``ASCII2NC_python_embedding_user_py.py``)
+- **00:00.026**: :ref:`sphx_glr_Users_Guide_met_tool_wrapper_ASCII2NC_ASCII2NC.py` (``ASCII2NC.py``)

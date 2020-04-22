@@ -1,0 +1,415 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>3. How to Create Your Own Wrapper &mdash; METplus 3.dev</title>
+  
+
+  
+  
+  
+  
+    <link rel="canonical" href="https://ncar.github.io/METplus/latest/Contributors_Guide/create_wrapper.html"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../_static/theme_override.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="METplus 3.dev" href="../index.html"/>
+        <link rel="up" title="Contributor’s Guide" href="index.html"/>
+        <link rel="next" title="4. Instructions for the Conda Environment" href="conda_env.html"/>
+        <link rel="prev" title="2. Basic Components of METplus Python Wrappers" href="basic_components.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> METplus
+          
+
+          
+            
+            <img src="../_static/METplus_logo.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                
+                  <div class="version-dropdown">
+                    <select class="version-list" id="version-list">
+                      <option value=''>3.dev</option>
+                      
+                        
+                          <option value="../latest">latest</option>
+                        
+                      
+                        
+                          <option value="../dev">dev</option>
+                        
+                      
+                    </select>
+                  </div>
+                
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">METplus Wrappers Guides</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Users_Guide/index.html">User’s Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Contributor’s Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="coding_standards.html">1. Coding Standards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basic_components.html">2. Basic Components of METplus Python Wrappers</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">3. How to Create Your Own Wrapper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conda_env.html">4. Instructions for the Conda Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deprecation.html">5. Deprecating an Old Config Variable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="github_workflow.html">6. GitHub Workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html">7. Testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="add_use_case.html">8. Adding Use Cases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="documentation.html">9. Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#indices-and-tables">Indices and tables</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">METplus</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Contributor’s Guide</a> &raquo;</li>
+        
+      <li>3. How to Create Your Own Wrapper</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/Contributors_Guide/create_wrapper.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="how-to-create-your-own-wrapper">
+<h1>3. How to Create Your Own Wrapper<a class="headerlink" href="#how-to-create-your-own-wrapper" title="Permalink to this headline">¶</a></h1>
+<ul>
+<li><p>Create the new wrapper in the METplus/ush directory and name it to reflect the wrapper’s function,
+e.g.: new_tool_wrapper.py
+You can copy example_wrapper.py or ascii2nc_wrapper.py to start.</p></li>
+<li><p>Open the file for editing and change the name of the class to reflect the wrapper’s function (in camel case). If the new tool falls under one of the existing tool categories, currently CompareGridded (which applies to non-gridded comparisons as well, should be renamed) and ReformatGridded, then you can make the tool a subclass of one of those classes. If not, then use CommandBuilder. Following the example above, you would rename your class:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">NewToolWrapper</span><span class="p">(</span><span class="n">CommandBuilder</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p>Modify the init function to initialize NewExample from its base class (CommandBuilder), and to set the name and path to the MET application you are wrapping:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">config</span><span class="p">,</span> <span class="n">logger</span><span class="p">):</span>
+    <span class="nb">super</span><span class="p">(</span><span class="n">NewToolWrapper</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">config</span><span class="p">,</span> <span class="n">logger</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">app_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">p</span><span class="o">.</span><span class="n">getdir</span><span class="p">(</span><span class="s1">&#39;MET_INSTALL_DIR&#39;</span><span class="p">),</span> <span class="s1">&#39;bin/new_tool&#39;</span><span class="p">)</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">app_name</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">app_path</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<p><strong>NOTE</strong>: ‘bin/new_tool’ is the path to the MET tool being wrapped</p>
+<ul>
+<li><p>Override the run_at_time method if the wrapper will be called once for each run time specified in the configuration file. If the wrapper will loop over each forecast lead (LEAD_SEQ in the METplus config file) and process once for each, then override run_at_time with the following method and put the logic to build the MET command for each run in a run_at_time_once method:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">run_at_time</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">input_dict</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;! Runs the MET application for a given run time. This function</span>
+<span class="sd">    loops over the list of forecast leads and runs the application for</span>
+<span class="sd">    each.</span>
+<span class="sd">    Args:</span>
+<span class="sd">      @param input_dict dictionary containing timing information</span>
+<span class="sd">      @returns None</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">lead_seq</span> <span class="o">=</span> <span class="n">util</span><span class="o">.</span><span class="n">get_lead_sequence</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">config</span><span class="p">,</span> <span class="n">input_dict</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">lead</span> <span class="ow">in</span> <span class="n">lead_seq</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+        <span class="n">input_dict</span><span class="p">[</span><span class="s1">&#39;lead&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">lead</span>
+
+        <span class="n">time_info</span> <span class="o">=</span> <span class="n">time_util</span><span class="o">.</span><span class="n">ti_calculate</span><span class="p">(</span><span class="n">input_dict</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">custom_string</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">c_dict</span><span class="p">[</span><span class="s1">&#39;CUSTOM_LOOP_LIST&#39;</span><span class="p">]:</span>
+            <span class="k">if</span> <span class="n">custom_string</span><span class="p">:</span>
+                <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;Processing custom string: </span><span class="si">{custom_string}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+            <span class="n">time_info</span><span class="p">[</span><span class="s1">&#39;custom&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">custom_string</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">run_at_time_once</span><span class="p">(</span><span class="n">time_info</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">run_at_time_once</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">time_info</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;! Process runtime and try to build command to run ascii2nc</span>
+<span class="sd">         Args:</span>
+<span class="sd">            @param time_info dictionary containing timing information</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># get input files</span>
+    <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">find_input_files</span><span class="p">(</span><span class="n">time_info</span><span class="p">)</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span>
+
+    <span class="c1"># get output path</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">find_and_check_output_file</span><span class="p">(</span><span class="n">time_info</span><span class="p">):</span>
+        <span class="k">return</span>
+
+    <span class="c1"># get other configurations for command</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">set_command_line_arguments</span><span class="p">(</span><span class="n">time_info</span><span class="p">)</span>
+
+    <span class="c1"># set environment variables if using config file</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">set_environment_variables</span><span class="p">(</span><span class="n">time_info</span><span class="p">)</span>
+
+    <span class="c1"># build command and run</span>
+    <span class="bp">self</span><span class="o">.</span><span class="n">build_and_run_command</span><span class="p">()</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<p>If the wrapper will not loop and process for each forecast lead, put the logic to build the command in the run_at_time method.</p>
+<ul>
+<li><p>It is recommended to divide up the logic into components, as illustrated above, the make the code more readable and easier to test.</p></li>
+<li><p>The function self.set_environment_variables should be called by all wrappers even if the MET tool does not have a config file. This is done to set environment variables that MET expects to be set when running, such as MET_TMP_DIR and MET_PYTHON_EXE.</p></li>
+<li><p>Once you have provided all the necessary information to create the MET command, call self.build_and_run_command(). This calls self.get_command() to assemble the command and verify that the command your wrapper generated contains all of the required arguments.  You may need to override get_command() in your wrapper if your MET application is different from the example.  For instance, some MET tools require flags such as -f to precede the input filename.  You can override get_command in the wrapper to prepend the required flag to the filename in your constructed MET command.</p></li>
+<li><p>Call self.clear() at the beginning of each loop iteration to prevent inadvertently reusing/re-running commands that were previously created.</p></li>
+<li><p>Update the METplus/ush/master_metplus.py file to recognize your wrapper by adding an import statement:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">new_tool_wrapper</span> <span class="k">import</span> <span class="n">NewToolWrapper</span>
+</pre></div>
+</div>
+</li>
+<li><p>To allow your use case to use your wrapper, assign the wrapper name to PROCESS_LIST:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">config</span><span class="p">]</span>
+<span class="n">PROCESS_LIST</span> <span class="o">=</span> <span class="n">NewExample</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Do not include the text “Wrapper” at the end of your wrapper name.
+The PROCESS_LIST is located under the [config] section header in your use case and/or example configuration file.</p>
+</div>
+<ul>
+<li><p>In met_util.py, add entries to the LOWER_TO_WRAPPER_NAME dictionary so that the wrapper can be found in the PROCESS_LIST even if it is formatted differently:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">LOWER_TO_WRAPPER_NAME</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;ascii2nc&#39;</span><span class="p">:</span> <span class="s1">&#39;ASCII2NC&#39;</span><span class="p">,</span>
+                     <span class="s1">&#39;cycloneplotter&#39;</span><span class="p">:</span> <span class="s1">&#39;CyclonePlotter&#39;</span><span class="p">,</span>
+                     <span class="s1">&#39;ensemblestat&#39;</span><span class="p">:</span> <span class="s1">&#39;EnsembleStat&#39;</span><span class="p">,</span>
+                     <span class="s1">&#39;example&#39;</span><span class="p">:</span> <span class="s1">&#39;Example&#39;</span><span class="p">,</span>
+                     <span class="s1">&#39;extracttiles&#39;</span><span class="p">:</span> <span class="s1">&#39;ExtractTiles&#39;</span><span class="p">,</span>
+                     <span class="s1">&#39;gempaktocf&#39;</span><span class="p">:</span> <span class="s1">&#39;GempakToCF&#39;</span><span class="p">,</span>
+                     <span class="s1">&#39;genvxmask&#39;</span><span class="p">:</span> <span class="s1">&#39;GenVxMask&#39;</span><span class="p">,</span>
+                     <span class="s1">&#39;gridstat&#39;</span><span class="p">:</span> <span class="s1">&#39;GridStat&#39;</span><span class="p">,</span>
+                     <span class="s1">&#39;makeplots&#39;</span><span class="p">:</span> <span class="s1">&#39;MakePlots&#39;</span><span class="p">,</span>
+                     <span class="s1">&#39;mode&#39;</span><span class="p">:</span> <span class="s1">&#39;MODE&#39;</span><span class="p">,</span>
+                     <span class="s1">&#39;mtd&#39;</span><span class="p">:</span> <span class="s1">&#39;MTD&#39;</span><span class="p">,</span>
+                     <span class="s1">&#39;modetimedomain&#39;</span><span class="p">:</span> <span class="s1">&#39;MTD&#39;</span><span class="p">,</span>
+                     <span class="s1">&#39;pb2nc&#39;</span><span class="p">:</span> <span class="s1">&#39;PB2NC&#39;</span><span class="p">,</span>
+                     <span class="s1">&#39;pcpcombine&#39;</span><span class="p">:</span> <span class="s1">&#39;PCPCombine&#39;</span><span class="p">,</span>
+                     <span class="s1">&#39;pointstat&#39;</span><span class="p">:</span> <span class="s1">&#39;PointStat&#39;</span><span class="p">,</span>
+                     <span class="s1">&#39;pyembedingest&#39;</span><span class="p">:</span> <span class="s1">&#39;PyEmbedIngest&#39;</span><span class="p">,</span>
+                     <span class="s1">&#39;regriddataplane&#39;</span><span class="p">:</span> <span class="s1">&#39;RegridDataPlane&#39;</span><span class="p">,</span>
+                     <span class="s1">&#39;seriesanalysis&#39;</span><span class="p">:</span> <span class="s1">&#39;SeriesAnalysis&#39;</span><span class="p">,</span>
+                     <span class="s1">&#39;seriesbyinit&#39;</span><span class="p">:</span> <span class="s1">&#39;SeriesByInit&#39;</span><span class="p">,</span>
+                     <span class="s1">&#39;seriesbylead&#39;</span><span class="p">:</span> <span class="s1">&#39;SeriesByLead&#39;</span><span class="p">,</span>
+                     <span class="s1">&#39;statanalysis&#39;</span><span class="p">:</span> <span class="s1">&#39;StatAnalysis&#39;</span><span class="p">,</span>
+                     <span class="s1">&#39;tcpairs&#39;</span><span class="p">:</span> <span class="s1">&#39;TCPairs&#39;</span><span class="p">,</span>
+                     <span class="s1">&#39;tcstat&#39;</span><span class="p">:</span> <span class="s1">&#39;TCStat&#39;</span><span class="p">,</span>
+                     <span class="s1">&#39;tcmprplotter&#39;</span><span class="p">:</span> <span class="s1">&#39;TCMPRPlotter&#39;</span><span class="p">,</span>
+                     <span class="s1">&#39;usage&#39;</span><span class="p">:</span> <span class="s1">&#39;Usage&#39;</span><span class="p">,</span>
+                     <span class="p">}</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<p>The name of a tool can be formatted in different ways depending on the context. For example, the MET tool PCPCombine is written as Pcp-Combine in the MET documentation, the actual application that is run is called pcp_combine, and the wrapper was previously named PcpCombine (different capitalization) in earlier versions of METplus. To make things easier for the user, METplus reads in the values listed in PROCESS_LIST, removes all underscores, dashes, and capital letters, then uses the entries in this dictionary to determine the actual wrapper name.</p>
+<p>Some wrappers require multiple entries to cover all of the bases. For example, users may attempt to spell out MODE Time Domain instead of using MTD or accidentally write PointToGrid instead of Point2Grid. Additional entries will not hurt anything as long as they do not cause any conflicts.</p>
+<ul class="simple">
+<li><p>Add a section to the Python Wrappers page of the documentation with information about the new tool including a list of all METplus configuration variables that can be used.</p></li>
+<li><p>Add an entry for each METplus configuration variable added to the wrapper to the METplus Configuration Glossary.</p></li>
+<li><p>Create a directory named after the new wrapper to hold the use case configuration files in the met_tool_wrapper directory that users can run to try out the new wrapper. Be sure to include a corresponding .py file that contains the documentation for that use case and a README file to create a header for the documentation page.</p></li>
+</ul>
+<p>Your use case/example configuration file is located in a directory structure like the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">METplus</span><span class="o">/</span><span class="n">parm</span><span class="o">/</span><span class="n">use_cases</span><span class="o">/</span><span class="n">met_tool_wrapper</span><span class="o">/</span><span class="n">NewTool</span><span class="o">/</span><span class="n">NewTool</span><span class="o">.</span><span class="n">conf</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="conda_env.html" class="btn btn-neutral float-right" title="4. Instructions for the Conda Environment" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="basic_components.html" class="btn btn-neutral" title="2. Basic Components of METplus Python Wrappers" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, NCAR.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+     
+<script>var version_json_loc = "../../versions.json";</script>
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'3.dev',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/language_data.js"></script>
+      <script type="text/javascript" src="../_static/pop_ver.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

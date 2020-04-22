@@ -1,0 +1,10 @@
+
+:orphan:
+
+.. _sphx_glr_Users_Guide_template_sg_execution_times:
+
+Computation times
+=================
+**00:00.028** total execution time for **Users_Guide_template** files:
+
+- **00:00.028**: :ref:`sphx_glr_Users_Guide_template_use-case-application.py` (``use-case-application.py``)

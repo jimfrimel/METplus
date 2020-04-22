@@ -1,0 +1,625 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>6. GitHub Workflow &mdash; METplus 3.dev</title>
+  
+
+  
+  
+  
+  
+    <link rel="canonical" href="https://ncar.github.io/METplus/latest/Contributors_Guide/github_workflow.html"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../_static/theme_override.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="METplus 3.dev" href="../index.html"/>
+        <link rel="up" title="Contributor’s Guide" href="index.html"/>
+        <link rel="next" title="7. Testing" href="testing.html"/>
+        <link rel="prev" title="5. Deprecating an Old Config Variable" href="deprecation.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> METplus
+          
+
+          
+            
+            <img src="../_static/METplus_logo.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                
+                  <div class="version-dropdown">
+                    <select class="version-list" id="version-list">
+                      <option value=''>3.dev</option>
+                      
+                        
+                          <option value="../latest">latest</option>
+                        
+                      
+                        
+                          <option value="../dev">dev</option>
+                        
+                      
+                    </select>
+                  </div>
+                
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">METplus Wrappers Guides</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Users_Guide/index.html">User’s Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Contributor’s Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="coding_standards.html">1. Coding Standards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basic_components.html">2. Basic Components of METplus Python Wrappers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="create_wrapper.html">3. How to Create Your Own Wrapper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conda_env.html">4. Instructions for the Conda Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deprecation.html">5. Deprecating an Old Config Variable</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">6. GitHub Workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html">7. Testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="add_use_case.html">8. Adding Use Cases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="documentation.html">9. Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#indices-and-tables">Indices and tables</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">METplus</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Contributor’s Guide</a> &raquo;</li>
+        
+      <li>6. GitHub Workflow</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/Contributors_Guide/github_workflow.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="github-workflow">
+<h1>6. GitHub Workflow<a class="headerlink" href="#github-workflow" title="Permalink to this headline">¶</a></h1>
+<p><strong>How METplus releases are created</strong></p>
+<div class="line-block">
+<div class="line">The branching model employed by the METplus GitHub repository is similar to that</div>
+<div class="line">described in the following document:</div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://nvie.com/posts/a-successful-git-branching-model/">https://nvie.com/posts/a-successful-git-branching-model/</a></div>
+<div class="line"><br /></div>
+</div>
+<div class="line">where new or updated code is created on a ‘feature’ branch that is based on the NCAR/METplus GitHub ‘develop’ branch.</div>
+<div class="line">The feature branch is named after the corresponding GitHub issue:</div>
+<div class="line-block">
+<div class="line"><em>feature_&lt;Github Issue number&gt;_&lt;brief_description&gt;</em></div>
+<div class="line"><br /></div>
+</div>
+<div class="line">When work is complete, the code in the feature branch is merged into the develop branch.  When a release candidate</div>
+<div class="line">for METplus has been determined, then the develop branch is used to create a master_vx.y release of</div>
+<div class="line">METplus, which includes data tarballs for use in running use cases.</div>
+</div>
+<p><strong>Sequence of Events - Contributing Code</strong></p>
+<p><em>Pre-requisite:</em></p>
+<div class="line-block">
+<div class="line">Set up a GitHub repository account if you do not already have one, and log into your account.  For</div>
+<div class="line">more information about GitHub accounts, please refer to the following</div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://help.github.com/en/github/getting-started-with-github/signing-up-for-a-new-github-account">https://help.github.com/en/github/getting-started-with-github/signing-up-for-a-new-github-account</a></div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line">Workflow Overview:</div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">A contributor to METplus will do the following:</div>
+<div class="line-block">
+<div class="line-block">
+<div class="line">1.  Create a GitHub Issue to track the new contribution</div>
+<div class="line">2.  Fork the NCAR/METplus repository</div>
+<div class="line">3.  Clone the fork to local repository</div>
+<div class="line">4.  Set upstream remote (to assist in keeping upstream and local repositories synchronized)</div>
+<div class="line">5.  Generate a feature branch from the ‘develop’ branch where new development will take place</div>
+<div class="line">6.  Make changes to code in the feature branch</div>
+<div class="line">7.  Commit changes to feature branch (limit one change per commit)</div>
+<div class="line">8.  Push feature branch to GitHub</div>
+<div class="line">9.  Open a pull request from feature branch to original repo (from which you forked, in step 2 above)</div>
+</div>
+<div class="line">10.  Clean up after pull request has been merged by METplus core team member/approval committee</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="line">1. Create a GitHub Issue that reflects what needs to be done</div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">* Go to <a class="reference external" href="https://github.com/NCAR/METplus">https://github.com/NCAR/METplus</a>  and click on the <strong>Issues</strong> link, to the right of the <strong>Code</strong> tab</div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">* Click on the green <strong>New issue</strong> button</div>
+<div class="line"><br /></div>
+<div class="line">* Write a description of the task and attach appropriate values to Assignee, Labels, and Milestone links</div>
+<div class="line">located on the right hand side of the page</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="line">2.  Fork the NCAR/METplus repository</div>
+<div class="line-block">
+<div class="line">Retrieve a copy of the source code by forking the NCAR/METplus repository into your own GitHub repository. Click</div>
+<div class="line">on the ‘Fork’ button in the upper right hand side of the web page at <a class="reference external" href="https://github.com/NCAR/METplus">https://github.com/NCAR/METplus</a>.</div>
+<div class="line">Click on the appropriate GitHub account when presented with the pop-up window with the question</div>
+<div class="line-block">
+<div class="line">‘Where should we fork METplus?’</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">Your web page will refresh to your GitHub repository at <a class="reference external" href="https://github.com">https://github.com</a>/&lt;your-github-user&gt;/METplus</div>
+<div class="line">You now have an entire copy of the NCAR/METplus Github repository.</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<div class="line">3. Clone the fork to a local repository, ie. copy the source code to the directory where you will be doing your</div>
+<div class="line-block">
+<div class="line">work.</div>
+<div class="line-block">
+<div class="line">‘cd’ to the directory where you wish to do your work. From the command line, enter the following:</div>
+<div class="line-block">
+<div class="line"><em>git clone https://github.com/&lt;your-github-account&gt;/METplus</em></div>
+<div class="line"><br /></div>
+</div>
+<div class="line">‘cd’ to the METplus directory.  Now you are working in your local METplus repository.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="line">4. Add a remote named origin to the clone of your local Git repository.  Thie is how you will push changes to the</div>
+<div class="line-block">
+<div class="line">repository you forked in step 1:</div>
+<div class="line-block">
+<div class="line"><em>git remote add upstream https://github.com/NCAR/METplus</em></div>
+<div class="line"><br /></div>
+</div>
+<div class="line">To verify that the upstream and origin are correct, at the command line enter:</div>
+<div class="line-block">
+<div class="line"><em>git remote -v</em></div>
+<div class="line"><br /></div>
+</div>
+<div class="line">You should see something like the following:</div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">origin        <a class="reference external" href="https://github.com">https://github.com</a>/&lt;github-username&gt;/METplus (fetch)</div>
+<div class="line">origin        <a class="reference external" href="https://github.com">https://github.com</a>/&lt;github-username&gt;/METplus (push)</div>
+<div class="line">upstream      <a class="reference external" href="https://github.com/NCAR/METplus">https://github.com/NCAR/METplus</a> (fetch)</div>
+<div class="line">upstream      <a class="reference external" href="https://github.com/NCAR/METplus">https://github.com/NCAR/METplus</a> (push)</div>
+<div class="line"><br /></div>
+<div class="line">where &lt;github-username&gt; is your GitHub user account name</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="line">5. Create a feature branch in the NCAR/METplus GitHub repository following this naming convention:</div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line"><em>feature_&lt;Github Issue number&gt;_&lt;brief_description&gt;</em></div>
+<div class="line"><br /></div>
+<div class="line">So for example, for GitHub issue #777 that creates new wrapper xyz, the feature branch would be named:</div>
+<div class="line-block">
+<div class="line"><em>feature_777_wrapper_xyz</em></div>
+<div class="line"><br /></div>
+</div>
+<div class="line">Create your feature branch based off the develop branch:</div>
+<div class="line-block">
+<div class="line"><em>git checkout develop</em></div>
+<div class="line"><br /></div>
+</div>
+<div class="line">Verify that you are currently working in the develop branch by entering the following:</div>
+<div class="line-block">
+<div class="line"><em>git branch</em></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">You should see something like the following:</div>
+<div class="line-block">
+<div class="line">* develop</div>
+<div class="line-block">
+<div class="line">master_v2.2</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="line">The asterisk, * indicates the currently active branch.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="line">At the command line, create and checkout the feature branch:</div>
+<div class="line-block">
+<div class="line"><em>git checkout -b feature_777_wrapper_xyz</em></div>
+<div class="line"><br /></div>
+</div>
+<div class="line">except replace <em>feature_777_wrapper_xyz</em> with your feature branch name.</div>
+<div class="line"><br /></div>
+<div class="line">Verify that you are working in the correct branch by entering:</div>
+<div class="line-block">
+<div class="line"><em>git branch</em></div>
+<div class="line"><br /></div>
+</div>
+<div class="line">You should see something like the following:</div>
+<div class="line-block">
+<div class="line">develop</div>
+<div class="line">master_v2.2</div>
+<div class="line">* feature_777_wrapper_xyz</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">where the asterisk, * indicates which branch is currently in use/checked out.</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<div class="line">6.  Make changes to your feature branch and commit changes to your local repository (i.e. where you are doing</div>
+<div class="line-block">
+<div class="line">your work/local computer)</div>
+<div class="line"><br /></div>
+<div class="line">Create your code following the coding standards in the Coding Standards section of the Contributor’s Guide.</div>
+<div class="line">In addition, please provide some tests for your code using the pytest framework and provide user documentation</div>
+<div class="line">describing what your code does and provide any necessary data.</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line">Keep your fork in sync:</div>
+<div class="line-block">
+<div class="line">While you are working, it is highly likely that changes are occurring to the original repository.  This</div>
+<div class="line">may impact your work.  Periodically/regularly use these commands to keep your fork in sync with the</div>
+<div class="line">original repository:</div>
+<div class="line-block">
+<div class="line"><em>git pull upstream develop</em></div>
+<div class="line"><br /></div>
+<div class="line"><em>git push origin develop</em></div>
+<div class="line"><br /></div>
+<div class="line">The first command pulls changes from the original repository.</div>
+<div class="line">i.e. the <a class="reference external" href="https://github.com/NCAR/METplus">https://github.com/NCAR/METplus</a></div>
+<div class="line">repository that you see when you perform <em>git remote -v</em> and that you set to upstream in</div>
+<div class="line">step #4 above.  The second command pushes those changes to your forked repository.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="line">Commit any new files:</div>
+<div class="line-block">
+<div class="line"><em>git add &lt;filename&gt;</em></div>
+<div class="line-block">
+<div class="line">Perform this step only if this file is newly created and does not yet exist in your repository.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line"><em>git commit &lt;filename&gt;</em></div>
+<div class="line-block">
+<div class="line">A popup window will appear, where you will enter a description of this commit, using the editor you selected</div>
+<div class="line">when you set up your Git account.  Please refer to the following on configuring your</div>
+<div class="line">Git account: <a class="reference external" href="https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup">https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup</a></div>
+<div class="line"><br /></div>
+<div class="line">For the first line of your commit comment, enter a brief description, such as the GitHub Issue number</div>
+<div class="line">and a brief description.  On the second and subsequent lines, provide a detailed description of the</div>
+<div class="line">changes/additions you made.</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<div class="line"><strong>Note</strong>: It is a best practice to commit one change per commit, rather than wait</div>
+<div class="line-block">
+<div class="line">until you have multiple changes to include in one commit.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+</div>
+<div class="line">7.  Push your changes to GitHub</div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line"><em>git push origin &lt;your feature&gt;</em></div>
+<div class="line-block">
+<div class="line">to push your changes to the origin (i.e. to your <a class="reference external" href="https://github.com">https://github.com</a>/&lt;github-username&gt;/METplus repository)</div>
+<div class="line"><br /></div>
+<div class="line">Replace &lt;your feature&gt; with the name of your feature branch, e.g.:</div>
+<div class="line-block">
+<div class="line"><em>git push origin feature_777_wrapper_xyz</em></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div>
+</div>
+<div class="line">8.  Open a pull request using your browser</div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">To request to have your changes be incorporated into the remote repository</div>
+<div class="line">(i.e. <a class="reference external" href="https://github.com/NCAR/METplus">https://github.com/NCAR/METplus</a> repository).</div>
+<div class="line"><br /></div>
+<div class="line">The METplus maintainers will need to approve the request and then merge your files into the main</div>
+<div class="line">repository’s develop branch.  The develop branch will then be used to create a release candidate.</div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">* In your browser, navigate to <a class="reference external" href="https://github.com">https://github.com</a>/&lt;github-username&gt;/METplus</div>
+<div class="line"><br /></div>
+<div class="line">* Click on the green ‘Compare &amp; pull request’ button</div>
+<div class="line"><br /></div>
+<div class="line">* A web page appears with four grey buttons:</div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">* On the left-most button (for setting the base repository), make sure you have selected</div>
+<div class="line-block">
+<div class="line">‘base repository:NCAR/METplus’</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">* For the base button, make sure you have selected ‘base:develop’</div>
+<div class="line"><br /></div>
+<div class="line">* For the head repository button, make sure you have selected ‘head repository:&lt;github_username&gt;/METplus’</div>
+<div class="line-block">
+<div class="line">where &lt;github_username&gt; is your GitHub account name.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">* For the compare button, make sure you have selected ‘compare:&lt;your_feature_branch&gt;’</div>
+<div class="line-block">
+<div class="line">where &lt;your_feature_branch&gt; corresponds to the feature branch where you have been making your</div>
+<div class="line">changes (e.g. feature_777_wrapper_xyz).</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">* In the ‘write’ window, add any additional comments/details.  In this window are the comments you</div>
+<div class="line-block">
+<div class="line">created when you committed your changes in step 6 above.</div>
+<div class="line"><br /></div>
+<div class="line">*  You can scroll down to see what changes were made to the file you committed.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">* When everything looks satisfactory, click on the green ‘Create pull request’ button.</div>
+<div class="line"><br /></div>
+<div class="line">* Someone from the METplus maintainer group will accept the pull request (if everything meets acceptance criteria)</div>
+<div class="line-block">
+<div class="line">and merge your code into the remote repository’s develop branch.</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div>
+</div>
+</div>
+<div class="line">9.  Clean up after a successful merged pull request</div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">After the METplus maintainers have accepted your changes and have merged them into the main repository, update</div>
+<div class="line">your local clone by pulling changes from the original repository’s (i.e. the <a class="reference external" href="https://github.com/NCAR/METplus">https://github.com/NCAR/METplus</a> repository)</div>
+<div class="line">develop branch:</div>
+<div class="line"><br /></div>
+<div class="line">Checkout your develop branch:</div>
+<div class="line-block">
+<div class="line"><em>git checkout develop</em></div>
+<div class="line"><br /></div>
+</div>
+<div class="line">Verify that you are now working from the develop branch:</div>
+<div class="line-block">
+<div class="line"><em>git branch</em></div>
+<div class="line"><br /></div>
+</div>
+<div class="line">Merge changes from the upstream develop branch with your local develop branch:</div>
+<div class="line-block">
+<div class="line"><em>git pull upstream develop</em></div>
+<div class="line"><br /></div>
+</div>
+<div class="line">Your local cloned repository should now have all the latest changes from the original repository’s develop branch.</div>
+<div class="line"><br /></div>
+<div class="line">Now you can delete your feature branch:</div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line"><em>git branch -D &lt;branch name&gt;</em></div>
+<div class="line"><em>git push –delete origin &lt;branch name&gt;</em></div>
+<div class="line"><br /></div>
+</div>
+<div class="line">where &lt;branch name&gt; is your feature branch name, e.g. feature_777_wrapper_xyz</div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">e.g. git push –delete origin feature_777_wrapper_xyz</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">You can verify that your feature branch has been successfully removed/deleted via your web browser.</div>
+<div class="line">Navigate to <a class="reference external" href="https://github.com">https://github.com</a>/&lt;github-username&gt;/METplus and under the ‘Branch’ pulldown menu, you</div>
+<div class="line">should no longer find your feature branch as a selection.</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<div class="line"><em>Re-cap</em>:</div>
+<div class="line-block">
+<div class="line">You’ve created a feature branch, made changes, committed those changes to the repository, pushed them to GitHub,</div>
+<div class="line">opened a pull request,had your changes merged by the repository maintainers, and finally performed some clean-up.</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="testing.html" class="btn btn-neutral float-right" title="7. Testing" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="deprecation.html" class="btn btn-neutral" title="5. Deprecating an Old Config Variable" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, NCAR.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+     
+<script>var version_json_loc = "../../versions.json";</script>
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'3.dev',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/language_data.js"></script>
+      <script type="text/javascript" src="../_static/pop_ver.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

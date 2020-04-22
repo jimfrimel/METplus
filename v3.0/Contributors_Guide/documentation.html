@@ -1,0 +1,563 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>9. Documentation &mdash; METplus 3.0</title>
+  
+
+  
+  
+  
+  
+    <link rel="canonical" href="https://ncar.github.io/METplus/latest/Contributors_Guide/documentation.html"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../_static/theme_override.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="METplus 3.0" href="../index.html"/>
+        <link rel="up" title="Contributor’s Guide" href="index.html"/>
+        <link rel="prev" title="8. Adding Use Cases" href="add_use_case.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> METplus
+          
+
+          
+            
+            <img src="../_static/METplus_logo.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                
+                  <div class="version-dropdown">
+                    <select class="version-list" id="version-list">
+                      <option value=''>3.0</option>
+                      
+                        
+                          <option value="../latest">latest</option>
+                        
+                      
+                        
+                          <option value="../dev">dev</option>
+                        
+                      
+                    </select>
+                  </div>
+                
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">METplus Wrappers Guides</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Users_Guide/index.html">User’s Guide</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Contributor’s Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="coding_standards.html">1. Coding Standards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basic_components.html">2. Basic Components of METplus Python Wrappers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="create_wrapper.html">3. How to Create Your Own Wrapper</a></li>
+<li class="toctree-l2"><a class="reference internal" href="conda_env.html">4. Instructions for the Conda Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deprecation.html">5. Deprecating an Old Config Variable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="github_workflow.html">6. GitHub Workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testing.html">7. Testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="add_use_case.html">8. Adding Use Cases</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">9. Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#indices-and-tables">Indices and tables</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">METplus</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">Contributor’s Guide</a> &raquo;</li>
+        
+      <li>9. Documentation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/Contributors_Guide/documentation.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="documentation">
+<h1>9. Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h1>
+<div class="line-block">
+<div class="line"><strong>Viewing METplus documentation</strong></div>
+<div class="line"><br /></div>
+<div class="line">The METplus documentation (beginning with version 3.0) is available</div>
+<div class="line">online at the following URL:</div>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://ncar.github.io/METplus">https://ncar.github.io/METplus</a></div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Doxygen Source Code Documentation</strong></div>
+<div class="line"><br /></div>
+<div class="line">The source code documentation is found here:</div>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://ncar.github.io/METplus/doxygen">https://ncar.github.io/METplus/doxygen</a></div>
+</div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Documentation Overview</strong></div>
+<div class="line"><br /></div>
+<div class="line">The majority of the documentation is created using the Sphinx documentation generator</div>
+<div class="line">tool, which was originally created for Python documentation.</div>
+<div class="line">The documentation is created using reStructuredText (rst):</div>
+<div class="line-block">
+<div class="line"><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html">https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html</a></div>
+<div class="line"><br /></div>
+</div>
+<div class="line">The following Sphinx modules are required to generate the necessary</div>
+<div class="line">documentation:</div>
+<div class="line-block">
+<div class="line">* sphinx-2.2.0</div>
+<div class="line">* sphinx-gallery-0.40</div>
+<div class="line">* sphinx_rtd_theme-0.4.3</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">You can see which versions are used by the current METplus release</div>
+<div class="line">by looking at either environment.yml or requirements.txt, both of which</div>
+<div class="line">are found in the METplus/ directory.  If you wish to replicate all the</div>
+<div class="line">packages employed by METplus, please refer to the “Instructions for the</div>
+<div class="line">Conda Environment” section of the Contributor’s Guide.</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><strong>Description of Documentation Directories</strong></div>
+<div class="line"><br /></div>
+<div class="line">Core documentation is divided into two sections: the User’s Guide and</div>
+<div class="line">Contributor’s Guide, both of which reside under the METplus/docs</div>
+<div class="line">directory, with files ending in .rst.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line">Documentation for the use cases is found in the following directories:</div>
+<div class="line-block">
+<div class="line">* METplus/parm/met_tools</div>
+<div class="line-block">
+<div class="line">* This directory contains documentation pertaining to use cases that</div>
+<div class="line-block">
+<div class="line">use one MET tool/METplus wrapper</div>
+</div>
+</div>
+<div class="line">* METplus/parm/model_applications</div>
+<div class="line-block">
+<div class="line">* This directory contains documentation pertaining to use cases that</div>
+<div class="line-block">
+<div class="line">are based on model data, and utilize more than one</div>
+<div class="line">MET tool/METplus wrapper.| The corresponding METplus</div>
+<div class="line">configuration files to these use cases have the same name</div>
+<div class="line">as the .py files, with a .conf file extension</div>
+<div class="line"><br /></div>
+</div>
+</div>
+</div>
+<div class="line">Documentation files end with a .py extension and these files generate the clickable graphics in the gallery.</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><strong>Adding New Documentation</strong></div>
+<div class="line">Determine where you should add documentation:</div>
+<div class="line-block">
+<div class="line">* Use cases that involve a single MET tool/METplus wrapper will reside in the</div>
+<div class="line-block">
+<div class="line">METplus/parm/use_cases/met_tool_wrapper directory</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">* Use cases that involv multiple MET tools/METplus wrappers will reside</div>
+<div class="line-block">
+<div class="line">in the METplus/parm/use_cases/model_applications directory, under</div>
+<div class="line">a subdirectory that corresponds to a specific category</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">* The User’s Guide for any instructions or details that will enable a user</div>
+<div class="line-block">
+<div class="line">to run/use your use case and/or new code.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">* The Contributor’s Guide for any instructions for instructions on</div>
+<div class="line-block">
+<div class="line">creating/constructing your new code.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+</div>
+<div class="line-block">
+<div class="line-block">
+<div class="line"><strong>Use cases that have only one MET tool/METplus wrapper</strong>:</div>
+<div class="line-block">
+<div class="line">* create a new subdirectory, based on the name of the MET tool:</div>
+<div class="line-block">
+<div class="line">e.g. METplus/parm/use_cases/met_tool_wrapper/ASCII2NC</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">* create a new Python file with the .py extension</div>
+<div class="line-block">
+<div class="line">* for a use case document in the METplus/parm/use_cases/met_tools</div>
+<div class="line-block">
+<div class="line">directory, follow this pattern:</div>
+<div class="line-block">
+<div class="line">&lt;MET tool name&gt;.py</div>
+</div>
+<div class="line">where the MET tool name follows PascalCase, e.g. GridStat.py or</div>
+<div class="line">ASCII2NC.py.  This file is a hybrid RST and Python file.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="line">* add a METplus configuration file for this use case, using the same name as the .py file</div>
+<div class="line-block">
+<div class="line">above, except replace the .py extension with .conf.  The contents</div>
+<div class="line">of this file will be pulled into the .py file you created.</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="line"><strong>Use cases that use more than one MET tool/METplus wrapper</strong>:</div>
+<div class="line-block">
+<div class="line">* the model_applications directory contains subdirectories that</div>
+<div class="line-block">
+<div class="line">are based on the following categories:</div>
+<div class="line-block">
+<div class="line">* convection_allowing_models</div>
+<div class="line">* medium_range</div>
+<div class="line">* precipitation</div>
+<div class="line">* s2s (sub-seasonal to seasonal)</div>
+<div class="line">* tc_and_extra_tc</div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">* for documenting a use case that spans more than one MET tool/</div>
+<div class="line-block">
+<div class="line-block">
+<div class="line">METplus wrapper, determine which category to place your</div>
+</div>
+<div class="line">documentation</div>
+<div class="line-block">
+<div class="line">* if no category exists, create a new subdirectory with the</div>
+<div class="line-block">
+<div class="line">name of the new category</div>
+</div>
+<div class="line">* create a new Python (.py) file with a descriptive name, following</div>
+<div class="line-block">
+<div class="line">the convention:</div>
+<div class="line">&lt;descriptive name&gt;.py</div>
+<div class="line"><br /></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="line"><strong>User’s Guide</strong>:</div>
+<div class="line-block">
+<div class="line">* to add/modify any content that affects METplus users</div>
+<div class="line">* modify any of the affected sections from the METplus/docs/Users_Guide directory:</div>
+<div class="line-block">
+<div class="line">* glossary.rst (Glossary)</div>
+<div class="line">* references.rst (Reference)</div>
+<div class="line">* systemconfiguration.rst (System Configuration)</div>
+<div class="line">* usecases.rst (Use cases)</div>
+<div class="line">* wrappers.rst (METplus wrappers)</div>
+<div class="line"><br /></div>
+</div>
+</div>
+<div class="line"><strong>Contributor’s Guide</strong>:</div>
+<div class="line-block">
+<div class="line">* to add/modify any content that affects METplus contributors</div>
+<div class="line">* modify any of the affected sections from the METplus/docs/Contributors_Guide directory:</div>
+<div class="line-block">
+<div class="line">* add_use_case.rst (How to add new use cases)</div>
+<div class="line">* basic_components.rst (The basic components of a METplus wrapper)</div>
+<div class="line">* coding_standards.rst (The coding standards currently in use)</div>
+<div class="line">* conda_env.rst  (How to set up your conda environment for running METplus)</div>
+<div class="line">* create_wrapper.rst (How to create a new METplus wrapper)</div>
+<div class="line">* deprecation.rst (What to do to deprecate a variable)</div>
+<div class="line">* documentation.rst (This document.  Describing the documentation process and files)</div>
+<div class="line">* github_workflow.rst (A description of how releases are made, how to to obtain source code from the GitHub repository)</div>
+<div class="line">* index.rst (The page that shows all the ‘chapters/sections’ of the Contributor’s Guide)</div>
+<div class="line">* testing.rst (A description of how to set up testing your wrapper code)</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div>
+</div>
+</div>
+<div class="line"><strong>Building Sphinx Documentation</strong></div>
+<div class="line"><br /></div>
+<div class="line">** NOTE**:  It is assumed that your web browser application and your METplus</div>
+<div class="line">source code are located on the same computer/host.</div>
+<div class="line"><br /></div>
+<div class="line">All the sphinx modules (listed earlier) need to be present in order to</div>
+<div class="line">generate the HTML content that comprises the documentation.</div>
+<div class="line">From the command line, change to the METplus/docs directory and</div>
+<div class="line">enter the following:</div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line"><em>make clean</em></div>
+<div class="line"><br /></div>
+<div class="line"><em>make html</em></div>
+<div class="line"><br /></div>
+</div>
+<div class="line">The first command cleans up any previously created documentation and the</div>
+<div class="line">second command creates new documentation based on the current</div>
+<div class="line">.py and .rst files in the METplus/docs and METplus/parm</div>
+<div class="line">directories.</div>
+<div class="line"><br /></div>
+<div class="line">The html files that are created can be found in the METplus/docs/_build/html</div>
+<div class="line">directory.  You can point your web browser to this directory by entering</div>
+<div class="line">the following in your web browser’s navigation bar:</div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line"><em>file:///&lt;path-to&gt;/METplus/docs/_build/html/index.html</em></div>
+<div class="line"><br /></div>
+</div>
+<div class="line">where &lt;path-to&gt; is the full file path leading to your METplus</div>
+<div class="line">source code. This will direct you to the home page of the</div>
+<div class="line">documentation, where you can click on the “User’s Guide”</div>
+<div class="line">link (which takes you to the user documentation and the use cases)</div>
+<div class="line">or the “Contributor’s Guide” link (which is relevant if you intend to</div>
+<div class="line">contribute code and/or new use cases).</div>
+<div class="line"><br /></div>
+</div>
+<div class="line-block">
+<div class="line"><strong>Relevant Documentation for Contributors</strong></div>
+</div>
+<div class="line-block">
+<div class="line">The Doxygen tool is employed to create documentation from the source code.  This documentation</div>
+<div class="line">is useful in generating details about the METplus wrapper API (Application Programming Interface).</div>
+<div class="line">This is a useful reference for contributors to peruse prior to creating new METplus wrappers.</div>
+<div class="line">The Doxygen files located in the /path/to/METplus/docs/doxygen directory do <strong>NOT</strong> need to be</div>
+<div class="line">modified and should not be modified.</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+<div class="line">For more information about Doxygen, please refer to the following:</div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line"><a class="reference external" href="http://doxygen.nl/">http://doxygen.nl/</a></div>
+<div class="line"><br /></div>
+</div>
+<div class="line">You will need to download and install Doxygen to create this documentation:</div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line"><a class="reference external" href="http://doxygen.nl/download.html">http://doxygen.nl/download.html</a></div>
+<div class="line"><br /></div>
+<div class="line"><em>Note</em>: Doxygen version 1.8.9.1 or higher is required to create the documentation for the METplus wrappers.</div>
+<div class="line"><br /></div>
+</div>
+<div class="line">Create the Doxygen documentation by performing the following:</div>
+<div class="line"><br /></div>
+<div class="line-block">
+<div class="line">* ensure that you are working with Python 3.6 (minimum)</div>
+<div class="line">* cd to the /path/to/METplus/sorc directory, where /path/to is the file path where you installed</div>
+<div class="line-block">
+<div class="line">your METplus source code</div>
+</div>
+<div class="line">* at the command line, enter the following:</div>
+<div class="line-block">
+<div class="line"><em>make clean</em></div>
+<div class="line"><em>make doc</em></div>
+</div>
+<div class="line">The first command cleans up any existing documentation, and the second generates new documentation based on the current source code.</div>
+<div class="line">The HTML files are generated in the /path/to/METplus/docs/doxygen/html directory, which can be viewed in your local browser. The file corresponding to the home page is /path/to/METplus/docs/doxygen/html/index.html</div>
+<div class="line"><br /></div>
+<div class="line">Useful information can be found under the <em>Packages</em>, <em>Classes</em>, and <em>Python Files</em> tabs located at the top of the home page.</div>
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="add_use_case.html" class="btn btn-neutral" title="8. Adding Use Cases" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, NCAR.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+     
+<script>var version_json_loc = "../../versions.json";</script>
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'3.0',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+      <script type="text/javascript" src="../_static/language_data.js"></script>
+      <script type="text/javascript" src="../_static/pop_ver.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

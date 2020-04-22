@@ -1,0 +1,11 @@
+
+:orphan:
+
+.. _sphx_glr_Users_Guide_met_tool_wrapper_SeriesAnalysis_sg_execution_times:
+
+Computation times
+=================
+**00:00.053** total execution time for **Users_Guide_met_tool_wrapper_SeriesAnalysis** files:
+
+- **00:00.026**: :ref:`sphx_glr_Users_Guide_met_tool_wrapper_SeriesAnalysis_SeriesAnalysis.py` (``SeriesAnalysis.py``)
+- **00:00.026**: :ref:`sphx_glr_Users_Guide_met_tool_wrapper_SeriesAnalysis_SeriesAnalysis_python_embedding.py` (``SeriesAnalysis_python_embedding.py``)

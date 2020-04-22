@@ -1,0 +1,601 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>5.1. MET tools &mdash; METplus 3.dev</title>
+  
+
+  
+  
+  
+  
+    <link rel="canonical" href="https://ncar.github.io/METplus/latest/Users_Guide/met_tool_wrapper/index.html"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/gallery.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../../_static/theme_override.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+    <link rel="top" title="METplus 3.dev" href="../../index.html"/>
+        <link rel="up" title="5. METplus Use Cases" href="../usecases.html"/>
+        <link rel="next" title="5.1.1.1. ASCII2NC: Using Python Embedding with MET_PYTHON_EXE" href="ASCII2NC/ASCII2NC_python_embedding_user_py.html"/>
+        <link rel="prev" title="5. METplus Use Cases" href="../usecases.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> METplus
+          
+
+          
+            
+            <img src="../../_static/METplus_logo.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                
+                  <div class="version-dropdown">
+                    <select class="version-list" id="version-list">
+                      <option value=''>3.dev</option>
+                      
+                        
+                          <option value="../latest">latest</option>
+                        
+                      
+                        
+                          <option value="../dev">dev</option>
+                        
+                      
+                    </select>
+                  </div>
+                
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">METplus Wrappers Guides</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">User’s Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../overview.html">1. Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html">2. Software Installation/Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../systemconfiguration.html">3. System Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../wrappers.html">4. Python Wrappers</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../usecases.html">5. METplus Use Cases</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">5.1. MET tools</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#ascii2nc">5.1.1. ASCII2NC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cyclone-plotter">5.1.2. Cyclone Plotter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ensemblestat">5.1.3. EnsembleStat</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#example">5.1.4. Example</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gempaktocf">5.1.5. GempakToCF</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#genvxmask">5.1.6. GenVxMask</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gridstat">5.1.7. GridStat</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mode">5.1.8. MODE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mtd">5.1.9. MTD</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pb2nc">5.1.10. PB2NC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pcpcombine">5.1.11. PCPCombine</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pointstat">5.1.12. PointStat</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#pyembedingest">5.1.13. PyEmbedIngest</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#regriddataplane">5.1.14. RegridDataPlane</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#seriesanalysis">5.1.15. SeriesAnalysis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#statanalysis">5.1.16. StatAnalysis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tcmprplotter">5.1.17. TCMPRPlotter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tcpairs">5.1.18. TCPairs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tcstat">5.1.19. TCStat</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../model_applications/index.html">5.2. Model Applications</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../references.html">6. References</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quicksearch.html">7. METplus Quick Search for Use Cases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../glossary.html">8. METplus Configuration Glossary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#indices-and-tables">Indices and tables</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../Contributors_Guide/index.html">Contributor’s Guide</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">METplus</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">User’s Guide</a> &raquo;</li>
+        
+          <li><a href="../usecases.html">5. METplus Use Cases</a> &raquo;</li>
+        
+      <li>5.1. MET tools</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/Users_Guide/met_tool_wrapper/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="met-tools">
+<span id="met-tool-wrapper-index"></span><span id="sphx-glr-users-guide-met-tool-wrapper"></span><h1>5.1. MET tools<a class="headerlink" href="#met-tools" title="Permalink to this headline">¶</a></h1>
+<div style='clear:both'></div><div class="section" id="ascii2nc">
+<span id="sphx-glr-users-guide-met-tool-wrapper-ascii2nc"></span><h2>5.1.1. ASCII2NC<a class="headerlink" href="#ascii2nc" title="Permalink to this headline">¶</a></h2>
+<div class="sphx-glr-thumbcontainer" tooltip="ASCII2NC_python_embedding _user_py.conf"><div class="figure align-default" id="id1">
+<img alt="../../_images/sphx_glr_ASCII2NC_python_embedding_user_py_thumb.png" src="../../_images/sphx_glr_ASCII2NC_python_embedding_user_py_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="ASCII2NC/ASCII2NC_python_embedding_user_py.html#sphx-glr-users-guide-met-tool-wrapper-ascii2nc-ascii2nc-python-embedding-user-py-py"><span class="std std-ref">ASCII2NC: Using Python Embedding with MET_PYTHON_EXE</span></a></span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div class="sphx-glr-thumbcontainer" tooltip="ASCII2NC.conf"><div class="figure align-default" id="id2">
+<img alt="../../_images/sphx_glr_ASCII2NC_thumb.png" src="../../_images/sphx_glr_ASCII2NC_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="ASCII2NC/ASCII2NC.html#sphx-glr-users-guide-met-tool-wrapper-ascii2nc-ascii2nc-py"><span class="std std-ref">ASCII2NC:Basic Use Case</span></a></span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div class="sphx-glr-thumbcontainer" tooltip="ASCII2NC_python _embedding.conf"><div class="figure align-default" id="id3">
+<img alt="../../_images/sphx_glr_ASCII2NC_python_embedding_thumb.png" src="../../_images/sphx_glr_ASCII2NC_python_embedding_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="ASCII2NC/ASCII2NC_python_embedding.html#sphx-glr-users-guide-met-tool-wrapper-ascii2nc-ascii2nc-python-embedding-py"><span class="std std-ref">ASCII2NC: Using Python Embedding</span></a></span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div style='clear:both'></div></div>
+<div class="section" id="cyclone-plotter">
+<span id="sphx-glr-users-guide-met-tool-wrapper-cycloneplotter"></span><h2>5.1.2. Cyclone Plotter<a class="headerlink" href="#cyclone-plotter" title="Permalink to this headline">¶</a></h2>
+<div class="sphx-glr-thumbcontainer" tooltip="CyclonePlotter.conf"><div class="figure align-default" id="id4">
+<img alt="../../_images/sphx_glr_CyclonePlotter_thumb.png" src="../../_images/sphx_glr_CyclonePlotter_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="CyclonePlotter/CyclonePlotter.html#sphx-glr-users-guide-met-tool-wrapper-cycloneplotter-cycloneplotter-py"><span class="std std-ref">CyclonePlotter: Basic Use Case</span></a></span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div style='clear:both'></div></div>
+<div class="section" id="ensemblestat">
+<span id="sphx-glr-users-guide-met-tool-wrapper-ensemblestat"></span><h2>5.1.3. EnsembleStat<a class="headerlink" href="#ensemblestat" title="Permalink to this headline">¶</a></h2>
+<div class="sphx-glr-thumbcontainer" tooltip="EnsembleStat.conf"><div class="figure align-default" id="id5">
+<img alt="../../_images/sphx_glr_EnsembleStat_thumb.png" src="../../_images/sphx_glr_EnsembleStat_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="EnsembleStat/EnsembleStat.html#sphx-glr-users-guide-met-tool-wrapper-ensemblestat-ensemblestat-py"><span class="std std-ref">EnsembleStat: Basic Use Case</span></a></span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div class="sphx-glr-thumbcontainer" tooltip="EnsembleStat_python _embedding.conf"><div class="figure align-default" id="id6">
+<img alt="../../_images/sphx_glr_EnsembleStat_python_embedding_thumb.png" src="../../_images/sphx_glr_EnsembleStat_python_embedding_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="EnsembleStat/EnsembleStat_python_embedding.html#sphx-glr-users-guide-met-tool-wrapper-ensemblestat-ensemblestat-python-embedding-py"><span class="std std-ref">EnsembleStat: Using Python Embedding</span></a></span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div style='clear:both'></div></div>
+<div class="section" id="example">
+<span id="sphx-glr-users-guide-met-tool-wrapper-example"></span><h2>5.1.4. Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<div class="sphx-glr-thumbcontainer" tooltip="Example.conf"><div class="figure align-default" id="id7">
+<img alt="../../_images/sphx_glr_Example_thumb.png" src="../../_images/sphx_glr_Example_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="Example/Example.html#sphx-glr-users-guide-met-tool-wrapper-example-example-py"><span class="std std-ref">Example: Introductory Use Case</span></a></span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div style='clear:both'></div></div>
+<div class="section" id="gempaktocf">
+<span id="sphx-glr-users-guide-met-tool-wrapper-gempaktocf"></span><h2>5.1.5. GempakToCF<a class="headerlink" href="#gempaktocf" title="Permalink to this headline">¶</a></h2>
+<div class="sphx-glr-thumbcontainer" tooltip="GempakToCF.conf"><div class="figure align-default" id="id8">
+<img alt="../../_images/sphx_glr_GempakToCF_thumb.png" src="../../_images/sphx_glr_GempakToCF_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="GempakToCF/GempakToCF.html#sphx-glr-users-guide-met-tool-wrapper-gempaktocf-gempaktocf-py"><span class="std std-ref">GempakToCF: Basic Use Case</span></a></span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div style='clear:both'></div></div>
+<div class="section" id="genvxmask">
+<span id="sphx-glr-users-guide-met-tool-wrapper-genvxmask"></span><h2>5.1.6. GenVxMask<a class="headerlink" href="#genvxmask" title="Permalink to this headline">¶</a></h2>
+<div class="sphx-glr-thumbcontainer" tooltip="GenVxMask_with_arguments.conf"><div class="figure align-default" id="id9">
+<img alt="../../_images/sphx_glr_GenVxMask_with_arguments_thumb.png" src="../../_images/sphx_glr_GenVxMask_with_arguments_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="GenVxMask/GenVxMask_with_arguments.html#sphx-glr-users-guide-met-tool-wrapper-genvxmask-genvxmask-with-arguments-py"><span class="std std-ref">GenVxMask: Using Arguments</span></a></span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div class="sphx-glr-thumbcontainer" tooltip="GenVxMask_multiple.conf"><div class="figure align-default" id="id10">
+<img alt="../../_images/sphx_glr_GenVxMask_multiple_thumb.png" src="../../_images/sphx_glr_GenVxMask_multiple_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="GenVxMask/GenVxMask_multiple.html#sphx-glr-users-guide-met-tool-wrapper-genvxmask-genvxmask-multiple-py"><span class="std std-ref">GenVxMask: Multiple Masks</span></a></span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div class="sphx-glr-thumbcontainer" tooltip="GenVxMask.conf"><div class="figure align-default" id="id11">
+<img alt="../../_images/sphx_glr_GenVxMask_thumb.png" src="../../_images/sphx_glr_GenVxMask_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="GenVxMask/GenVxMask.html#sphx-glr-users-guide-met-tool-wrapper-genvxmask-genvxmask-py"><span class="std std-ref">GenVxMask: Basic Use Case</span></a></span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div style='clear:both'></div></div>
+<div class="section" id="gridstat">
+<span id="sphx-glr-users-guide-met-tool-wrapper-gridstat"></span><h2>5.1.7. GridStat<a class="headerlink" href="#gridstat" title="Permalink to this headline">¶</a></h2>
+<div class="sphx-glr-thumbcontainer" tooltip="GridStat_multiple _config_files.conf"><div class="figure align-default" id="id12">
+<img alt="../../_images/sphx_glr_GridStat_multiple_config_files_thumb.png" src="../../_images/sphx_glr_GridStat_multiple_config_files_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="GridStat/GridStat_multiple_config_files.html#sphx-glr-users-guide-met-tool-wrapper-gridstat-gridstat-multiple-config-files-py"><span class="std std-ref">GridStat: Multiple Config Files Use Case</span></a></span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div class="sphx-glr-thumbcontainer" tooltip="GridStat.conf"><div class="figure align-default" id="id13">
+<img alt="../../_images/sphx_glr_GridStat_thumb.png" src="../../_images/sphx_glr_GridStat_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="GridStat/GridStat.html#sphx-glr-users-guide-met-tool-wrapper-gridstat-gridstat-py"><span class="std std-ref">GridStat: Basic Use Case</span></a></span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div style='clear:both'></div></div>
+<div class="section" id="mode">
+<span id="sphx-glr-users-guide-met-tool-wrapper-mode"></span><h2>5.1.8. MODE<a class="headerlink" href="#mode" title="Permalink to this headline">¶</a></h2>
+<div class="sphx-glr-thumbcontainer" tooltip="MODE.conf"><div class="figure align-default" id="id14">
+<img alt="../../_images/sphx_glr_MODE_thumb.png" src="../../_images/sphx_glr_MODE_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="MODE/MODE.html#sphx-glr-users-guide-met-tool-wrapper-mode-mode-py"><span class="std std-ref">MODE: Basic Use Case</span></a></span><a class="headerlink" href="#id14" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div style='clear:both'></div></div>
+<div class="section" id="mtd">
+<span id="sphx-glr-users-guide-met-tool-wrapper-mtd"></span><h2>5.1.9. MTD<a class="headerlink" href="#mtd" title="Permalink to this headline">¶</a></h2>
+<div class="sphx-glr-thumbcontainer" tooltip="MTD_python_embedding.conf"><div class="figure align-default" id="id15">
+<img alt="../../_images/sphx_glr_MTD_python_embedding_thumb.png" src="../../_images/sphx_glr_MTD_python_embedding_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="MTD/MTD_python_embedding.html#sphx-glr-users-guide-met-tool-wrapper-mtd-mtd-python-embedding-py"><span class="std std-ref">MTD using Python Embedding</span></a></span><a class="headerlink" href="#id15" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div class="sphx-glr-thumbcontainer" tooltip="MTD.conf"><div class="figure align-default" id="id16">
+<img alt="../../_images/sphx_glr_MTD_thumb.png" src="../../_images/sphx_glr_MTD_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="MTD/MTD.html#sphx-glr-users-guide-met-tool-wrapper-mtd-mtd-py"><span class="std std-ref">Basic MTD Use Case</span></a></span><a class="headerlink" href="#id16" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div style='clear:both'></div></div>
+<div class="section" id="pb2nc">
+<span id="sphx-glr-users-guide-met-tool-wrapper-pb2nc"></span><h2>5.1.10. PB2NC<a class="headerlink" href="#pb2nc" title="Permalink to this headline">¶</a></h2>
+<div class="sphx-glr-thumbcontainer" tooltip="PB2NC.conf"><div class="figure align-default" id="id17">
+<img alt="../../_images/sphx_glr_PB2NC_thumb.png" src="../../_images/sphx_glr_PB2NC_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="PB2NC/PB2NC.html#sphx-glr-users-guide-met-tool-wrapper-pb2nc-pb2nc-py"><span class="std std-ref">PB2NC: Basic Use Case</span></a></span><a class="headerlink" href="#id17" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div style='clear:both'></div></div>
+<div class="section" id="pcpcombine">
+<span id="sphx-glr-users-guide-met-tool-wrapper-pcpcombine"></span><h2>5.1.11. PCPCombine<a class="headerlink" href="#pcpcombine" title="Permalink to this headline">¶</a></h2>
+<div class="sphx-glr-thumbcontainer" tooltip="PCPCombine_sum.conf"><div class="figure align-default" id="id18">
+<img alt="../../_images/sphx_glr_PCPCombine_sum_thumb.png" src="../../_images/sphx_glr_PCPCombine_sum_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="PCPCombine/PCPCombine_sum.html#sphx-glr-users-guide-met-tool-wrapper-pcpcombine-pcpcombine-sum-py"><span class="std std-ref">PCPCombine: SUM Use Case</span></a></span><a class="headerlink" href="#id18" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div class="sphx-glr-thumbcontainer" tooltip="PCPCombine_bucket.conf"><div class="figure align-default" id="id19">
+<img alt="../../_images/sphx_glr_PCPCombine_bucket_thumb.png" src="../../_images/sphx_glr_PCPCombine_bucket_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="PCPCombine/PCPCombine_bucket.html#sphx-glr-users-guide-met-tool-wrapper-pcpcombine-pcpcombine-bucket-py"><span class="std std-ref">PCPCombine: Bucket Interval Use Case</span></a></span><a class="headerlink" href="#id19" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div class="sphx-glr-thumbcontainer" tooltip="PCPCombine_add.conf"><div class="figure align-default" id="id20">
+<img alt="../../_images/sphx_glr_PCPCombine_add_thumb.png" src="../../_images/sphx_glr_PCPCombine_add_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="PCPCombine/PCPCombine_add.html#sphx-glr-users-guide-met-tool-wrapper-pcpcombine-pcpcombine-add-py"><span class="std std-ref">PCPCombine: ADD Use Case</span></a></span><a class="headerlink" href="#id20" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div class="sphx-glr-thumbcontainer" tooltip="PCPCombine_python _embedding.conf"><div class="figure align-default" id="id21">
+<img alt="../../_images/sphx_glr_PCPCombine_python_embedding_thumb.png" src="../../_images/sphx_glr_PCPCombine_python_embedding_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="PCPCombine/PCPCombine_python_embedding.html#sphx-glr-users-guide-met-tool-wrapper-pcpcombine-pcpcombine-python-embedding-py"><span class="std std-ref">PCPCombine: Python Embedding Use Case</span></a></span><a class="headerlink" href="#id21" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div class="sphx-glr-thumbcontainer" tooltip="PCPCombine_loop _custom.conf"><div class="figure align-default" id="id22">
+<img alt="../../_images/sphx_glr_PCPCombine_loop_custom_thumb.png" src="../../_images/sphx_glr_PCPCombine_loop_custom_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="PCPCombine/PCPCombine_loop_custom.html#sphx-glr-users-guide-met-tool-wrapper-pcpcombine-pcpcombine-loop-custom-py"><span class="std std-ref">PCPCombine: Custom String Looping Use Case</span></a></span><a class="headerlink" href="#id22" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div class="sphx-glr-thumbcontainer" tooltip="PCPCombine_user_defined.conf"><div class="figure align-default" id="id23">
+<img alt="../../_images/sphx_glr_PCPCombine_user_defined_thumb.png" src="../../_images/sphx_glr_PCPCombine_user_defined_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="PCPCombine/PCPCombine_user_defined.html#sphx-glr-users-guide-met-tool-wrapper-pcpcombine-pcpcombine-user-defined-py"><span class="std std-ref">PCPCombine: User-defined Command Use Case</span></a></span><a class="headerlink" href="#id23" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div class="sphx-glr-thumbcontainer" tooltip="PCPCombine_derive.conf"><div class="figure align-default" id="id24">
+<img alt="../../_images/sphx_glr_PCPCombine_derive_thumb.png" src="../../_images/sphx_glr_PCPCombine_derive_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="PCPCombine/PCPCombine_derive.html#sphx-glr-users-guide-met-tool-wrapper-pcpcombine-pcpcombine-derive-py"><span class="std std-ref">PCPCombine: DERIVE Use Case</span></a></span><a class="headerlink" href="#id24" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div class="sphx-glr-thumbcontainer" tooltip="PCPCombine_subtract.conf"><div class="figure align-default" id="id25">
+<img alt="../../_images/sphx_glr_PCPCombine_subtract_thumb.png" src="../../_images/sphx_glr_PCPCombine_subtract_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="PCPCombine/PCPCombine_subtract.html#sphx-glr-users-guide-met-tool-wrapper-pcpcombine-pcpcombine-subtract-py"><span class="std std-ref">PCPCombine: SUBTRACT Use Case</span></a></span><a class="headerlink" href="#id25" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div style='clear:both'></div></div>
+<div class="section" id="pointstat">
+<span id="sphx-glr-users-guide-met-tool-wrapper-pointstat"></span><h2>5.1.12. PointStat<a class="headerlink" href="#pointstat" title="Permalink to this headline">¶</a></h2>
+<div class="sphx-glr-thumbcontainer" tooltip="PointStat.conf"><div class="figure align-default" id="id26">
+<img alt="../../_images/sphx_glr_PointStat_thumb.png" src="../../_images/sphx_glr_PointStat_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="PointStat/PointStat.html#sphx-glr-users-guide-met-tool-wrapper-pointstat-pointstat-py"><span class="std std-ref">PointStat: Basic Use Case</span></a></span><a class="headerlink" href="#id26" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div style='clear:both'></div></div>
+<div class="section" id="pyembedingest">
+<span id="sphx-glr-users-guide-met-tool-wrapper-pyembedingest"></span><h2>5.1.13. PyEmbedIngest<a class="headerlink" href="#pyembedingest" title="Permalink to this headline">¶</a></h2>
+<div class="sphx-glr-thumbcontainer" tooltip="PyEmbedIngest.conf"><div class="figure align-default" id="id27">
+<img alt="../../_images/sphx_glr_PyEmbedIngest_thumb.png" src="../../_images/sphx_glr_PyEmbedIngest_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="PyEmbedIngest/PyEmbedIngest.html#sphx-glr-users-guide-met-tool-wrapper-pyembedingest-pyembedingest-py"><span class="std std-ref">PyEmbedIngest: Basic Use Case</span></a></span><a class="headerlink" href="#id27" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div style='clear:both'></div></div>
+<div class="section" id="regriddataplane">
+<span id="sphx-glr-users-guide-met-tool-wrapper-regriddataplane"></span><h2>5.1.14. RegridDataPlane<a class="headerlink" href="#regriddataplane" title="Permalink to this headline">¶</a></h2>
+<div class="sphx-glr-thumbcontainer" tooltip="met_tool_wrapper/RegridDataPlane/RegridDataPlane_multi_field_one_file.conf"><div class="figure align-default" id="id28">
+<img alt="../../_images/sphx_glr_RegridDataPlane_multi_field_one_file_thumb.png" src="../../_images/sphx_glr_RegridDataPlane_multi_field_one_file_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="RegridDataPlane/RegridDataPlane_multi_field_one_file.html#sphx-glr-users-guide-met-tool-wrapper-regriddataplane-regriddataplane-multi-field-one-file-py"><span class="std std-ref">RegridDataPlane: Process all fields</span></a></span><a class="headerlink" href="#id28" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div class="sphx-glr-thumbcontainer" tooltip="met_tool_wrapper/RegridDataPlane/RegridDataPlane_multi_field_multi_file.conf"><div class="figure align-default" id="id29">
+<img alt="../../_images/sphx_glr_RegridDataPlane_multi_field_multi_file_thumb.png" src="../../_images/sphx_glr_RegridDataPlane_multi_field_multi_file_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="RegridDataPlane/RegridDataPlane_multi_field_multi_file.html#sphx-glr-users-guide-met-tool-wrapper-regriddataplane-regriddataplane-multi-field-multi-file-py"><span class="std std-ref">RegridDataPlane: Run once per field</span></a></span><a class="headerlink" href="#id29" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div class="sphx-glr-thumbcontainer" tooltip="RegridDataPlane_python _embedding.conf"><div class="figure align-default" id="id30">
+<img alt="../../_images/sphx_glr_RegridDataPlane_python_embedding_thumb.png" src="../../_images/sphx_glr_RegridDataPlane_python_embedding_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="RegridDataPlane/RegridDataPlane_python_embedding.html#sphx-glr-users-guide-met-tool-wrapper-regriddataplane-regriddataplane-python-embedding-py"><span class="std std-ref">RegridDataPlane: Using Python Embedding</span></a></span><a class="headerlink" href="#id30" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div class="sphx-glr-thumbcontainer" tooltip="RegridDataPlane.conf"><div class="figure align-default" id="id31">
+<img alt="../../_images/sphx_glr_RegridDataPlane_thumb.png" src="../../_images/sphx_glr_RegridDataPlane_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="RegridDataPlane/RegridDataPlane.html#sphx-glr-users-guide-met-tool-wrapper-regriddataplane-regriddataplane-py"><span class="std std-ref">RegridDataPlane: Basic Use Case</span></a></span><a class="headerlink" href="#id31" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div style='clear:both'></div></div>
+<div class="section" id="seriesanalysis">
+<span id="sphx-glr-users-guide-met-tool-wrapper-seriesanalysis"></span><h2>5.1.15. SeriesAnalysis<a class="headerlink" href="#seriesanalysis" title="Permalink to this headline">¶</a></h2>
+<div class="sphx-glr-thumbcontainer" tooltip="SeriesAnalysis_python _embedding.conf"><div class="figure align-default" id="id32">
+<img alt="../../_images/sphx_glr_SeriesAnalysis_python_embedding_thumb.png" src="../../_images/sphx_glr_SeriesAnalysis_python_embedding_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="SeriesAnalysis/SeriesAnalysis_python_embedding.html#sphx-glr-users-guide-met-tool-wrapper-seriesanalysis-seriesanalysis-python-embedding-py"><span class="std std-ref">SeriesAnalysis: Using Python Embedding</span></a></span><a class="headerlink" href="#id32" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div class="sphx-glr-thumbcontainer" tooltip="SeriesAnalysis.conf"><div class="figure align-default" id="id33">
+<img alt="../../_images/sphx_glr_SeriesAnalysis_thumb.png" src="../../_images/sphx_glr_SeriesAnalysis_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="SeriesAnalysis/SeriesAnalysis.html#sphx-glr-users-guide-met-tool-wrapper-seriesanalysis-seriesanalysis-py"><span class="std std-ref">SeriesAnalysis: Basic Use Case</span></a></span><a class="headerlink" href="#id33" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div style='clear:both'></div></div>
+<div class="section" id="statanalysis">
+<span id="sphx-glr-users-guide-met-tool-wrapper-statanalysis"></span><h2>5.1.16. StatAnalysis<a class="headerlink" href="#statanalysis" title="Permalink to this headline">¶</a></h2>
+<div class="sphx-glr-thumbcontainer" tooltip="StatAnalysis.conf"><div class="figure align-default" id="id34">
+<img alt="../../_images/sphx_glr_StatAnalysis_thumb.png" src="../../_images/sphx_glr_StatAnalysis_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="StatAnalysis/StatAnalysis.html#sphx-glr-users-guide-met-tool-wrapper-statanalysis-statanalysis-py"><span class="std std-ref">StatAnalysis: Basic Use Case</span></a></span><a class="headerlink" href="#id34" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div style='clear:both'></div></div>
+<div class="section" id="tcmprplotter">
+<span id="sphx-glr-users-guide-met-tool-wrapper-tcmprplotter"></span><h2>5.1.17. TCMPRPlotter<a class="headerlink" href="#tcmprplotter" title="Permalink to this headline">¶</a></h2>
+<div class="sphx-glr-thumbcontainer" tooltip="TCMPRPlotter.conf"><div class="figure align-default" id="id35">
+<img alt="../../_images/sphx_glr_TCMPRPlotter_thumb.png" src="../../_images/sphx_glr_TCMPRPlotter_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="TCMPRPlotter/TCMPRPlotter.html#sphx-glr-users-guide-met-tool-wrapper-tcmprplotter-tcmprplotter-py"><span class="std std-ref">TCMPRPlotter: Basic Use Case</span></a></span><a class="headerlink" href="#id35" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div style='clear:both'></div></div>
+<div class="section" id="tcpairs">
+<span id="sphx-glr-users-guide-met-tool-wrapper-tcpairs"></span><h2>5.1.18. TCPairs<a class="headerlink" href="#tcpairs" title="Permalink to this headline">¶</a></h2>
+<div class="sphx-glr-thumbcontainer" tooltip="TCPairs_extra _tropical.conf"><div class="figure align-default" id="id36">
+<img alt="../../_images/sphx_glr_TCPairs_extra_tropical_thumb.png" src="../../_images/sphx_glr_TCPairs_extra_tropical_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="TCPairs/TCPairs_extra_tropical.html#sphx-glr-users-guide-met-tool-wrapper-tcpairs-tcpairs-extra-tropical-py"><span class="std std-ref">TCPairs: Basic Use Case for Extra Tropical Cyclones</span></a></span><a class="headerlink" href="#id36" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div class="sphx-glr-thumbcontainer" tooltip="TCPairs_tropical.conf"><div class="figure align-default" id="id37">
+<img alt="../../_images/sphx_glr_TCPairs_tropical_thumb.png" src="../../_images/sphx_glr_TCPairs_tropical_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="TCPairs/TCPairs_tropical.html#sphx-glr-users-guide-met-tool-wrapper-tcpairs-tcpairs-tropical-py"><span class="std std-ref">TCPairs: Basic Use Case for Tropical Cyclones</span></a></span><a class="headerlink" href="#id37" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div style='clear:both'></div></div>
+<div class="section" id="tcstat">
+<span id="sphx-glr-users-guide-met-tool-wrapper-tcstat"></span><h2>5.1.19. TCStat<a class="headerlink" href="#tcstat" title="Permalink to this headline">¶</a></h2>
+<div class="sphx-glr-thumbcontainer" tooltip="TCStat.conf"><div class="figure align-default" id="id38">
+<img alt="../../_images/sphx_glr_TCStat_thumb.png" src="../../_images/sphx_glr_TCStat_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="TCStat/TCStat.html#sphx-glr-users-guide-met-tool-wrapper-tcstat-tcstat-py"><span class="std std-ref">TCStat: Basic Use Case</span></a></span><a class="headerlink" href="#id38" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div style='clear:both'></div><div class="sphx-glr-footer class sphx-glr-footer-gallery docutils container">
+<div class="sphx-glr-download docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/0c6e0fe7cb2d72dc8b83cef44caff603/met_tool_wrapper_python.zip"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">all</span> <span class="pre">examples</span> <span class="pre">in</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">met_tool_wrapper_python.zip</span></code></a></p>
+</div>
+<div class="sphx-glr-download docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/16ece17381184e0572e95f8cfdf01221/met_tool_wrapper_jupyter.zip"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">all</span> <span class="pre">examples</span> <span class="pre">in</span> <span class="pre">Jupyter</span> <span class="pre">notebooks:</span> <span class="pre">met_tool_wrapper_jupyter.zip</span></code></a></p>
+</div>
+</div>
+<p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ASCII2NC/ASCII2NC_python_embedding_user_py.html" class="btn btn-neutral float-right" title="5.1.1.1. ASCII2NC: Using Python Embedding with MET_PYTHON_EXE" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../usecases.html" class="btn btn-neutral" title="5. METplus Use Cases" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, NCAR.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+     
+<script>var version_json_loc = "../../../versions.json";</script>
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'3.dev',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../_static/pop_ver.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

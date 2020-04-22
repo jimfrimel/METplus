@@ -1,0 +1,17 @@
+
+:orphan:
+
+.. _sphx_glr_Users_Guide_met_tool_wrapper_PCPCombine_sg_execution_times:
+
+Computation times
+=================
+**00:00.210** total execution time for **Users_Guide_met_tool_wrapper_PCPCombine** files:
+
+- **00:00.026**: :ref:`sphx_glr_Users_Guide_met_tool_wrapper_PCPCombine_PCPCombine_user_defined.py` (``PCPCombine_user_defined.py``)
+- **00:00.026**: :ref:`sphx_glr_Users_Guide_met_tool_wrapper_PCPCombine_PCPCombine_subtract.py` (``PCPCombine_subtract.py``)
+- **00:00.026**: :ref:`sphx_glr_Users_Guide_met_tool_wrapper_PCPCombine_PCPCombine_sum.py` (``PCPCombine_sum.py``)
+- **00:00.026**: :ref:`sphx_glr_Users_Guide_met_tool_wrapper_PCPCombine_PCPCombine_bucket.py` (``PCPCombine_bucket.py``)
+- **00:00.026**: :ref:`sphx_glr_Users_Guide_met_tool_wrapper_PCPCombine_PCPCombine_loop_custom.py` (``PCPCombine_loop_custom.py``)
+- **00:00.026**: :ref:`sphx_glr_Users_Guide_met_tool_wrapper_PCPCombine_PCPCombine_python_embedding.py` (``PCPCombine_python_embedding.py``)
+- **00:00.026**: :ref:`sphx_glr_Users_Guide_met_tool_wrapper_PCPCombine_PCPCombine_derive.py` (``PCPCombine_derive.py``)
+- **00:00.026**: :ref:`sphx_glr_Users_Guide_met_tool_wrapper_PCPCombine_PCPCombine_add.py` (``PCPCombine_add.py``)

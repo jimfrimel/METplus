@@ -1,0 +1,10 @@
+
+:orphan:
+
+.. _sphx_glr_Users_Guide_met_tool_wrapper_Example_sg_execution_times:
+
+Computation times
+=================
+**00:00.027** total execution time for **Users_Guide_met_tool_wrapper_Example** files:
+
+- **00:00.027**: :ref:`sphx_glr_Users_Guide_met_tool_wrapper_Example_Example.py` (``Example.py``)

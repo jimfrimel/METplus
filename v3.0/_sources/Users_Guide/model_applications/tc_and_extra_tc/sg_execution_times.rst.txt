@@ -1,0 +1,11 @@
+
+:orphan:
+
+.. _sphx_glr_Users_Guide_model_applications_tc_and_extra_tc_sg_execution_times:
+
+Computation times
+=================
+**00:00.053** total execution time for **Users_Guide_model_applications_tc_and_extra_tc** files:
+
+- **00:00.027**: :ref:`sphx_glr_Users_Guide_model_applications_tc_and_extra_tc_Plotter_fcstGFS_obsGFS_RPlotting.py` (``Plotter_fcstGFS_obsGFS_RPlotting.py``)
+- **00:00.026**: :ref:`sphx_glr_Users_Guide_model_applications_tc_and_extra_tc_Plotter_fcstGFS_obsGFS_ExtraTC.py` (``Plotter_fcstGFS_obsGFS_ExtraTC.py``)

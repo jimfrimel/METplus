@@ -1,0 +1,451 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>5.2. Model Applications &mdash; METplus 3.dev</title>
+  
+
+  
+  
+  
+  
+    <link rel="canonical" href="https://ncar.github.io/METplus/latest/Users_Guide/model_applications/index.html"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/gallery.css" type="text/css" />
+  
+    <link rel="stylesheet" href="../../_static/theme_override.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+    <link rel="top" title="METplus 3.dev" href="../../index.html"/>
+        <link rel="up" title="5. METplus Use Cases" href="../usecases.html"/>
+        <link rel="next" title="5.2.1.1. MODE: Hail Verification" href="convection_allowing_models/MODE_fcstHRRR_obsMRMS_Hail_GRIB2.html"/>
+        <link rel="prev" title="5.1.19.1. TCStat: Basic Use Case" href="../met_tool_wrapper/TCStat/TCStat.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> METplus
+          
+
+          
+            
+            <img src="../../_static/METplus_logo.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                
+                  <div class="version-dropdown">
+                    <select class="version-list" id="version-list">
+                      <option value=''>3.dev</option>
+                      
+                        
+                          <option value="../latest">latest</option>
+                        
+                      
+                        
+                          <option value="../dev">dev</option>
+                        
+                      
+                    </select>
+                  </div>
+                
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">METplus Wrappers Guides</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">User’s Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../overview.html">1. Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html">2. Software Installation/Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../systemconfiguration.html">3. System Configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../wrappers.html">4. Python Wrappers</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../usecases.html">5. METplus Use Cases</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../met_tool_wrapper/index.html">5.1. MET tools</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">5.2. Model Applications</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#convection-allowing-models">5.2.1. Convection Allowing Models</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cryosphere">5.2.2. Cryosphere</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#medium-range">5.2.3. Medium Range</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#precipitation">5.2.4. Precipitation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#subseasonal-to-seasonal">5.2.5. Subseasonal to Seasonal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#space-weather">5.2.6. Space Weather</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tropical-cyclone-and-extra-tropical-cyclone">5.2.7. Tropical Cyclone and Extra Tropical Cyclone</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../references.html">6. References</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quicksearch.html">7. METplus Quick Search for Use Cases</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../glossary.html">8. METplus Configuration Glossary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#indices-and-tables">Indices and tables</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../Contributors_Guide/index.html">Contributor’s Guide</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">METplus</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../index.html">User’s Guide</a> &raquo;</li>
+        
+          <li><a href="../usecases.html">5. METplus Use Cases</a> &raquo;</li>
+        
+      <li>5.2. Model Applications</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/Users_Guide/model_applications/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="model-applications">
+<span id="model-applications-index"></span><span id="sphx-glr-users-guide-model-applications"></span><h1>5.2. Model Applications<a class="headerlink" href="#model-applications" title="Permalink to this headline">¶</a></h1>
+<div style='clear:both'></div><div class="section" id="convection-allowing-models">
+<span id="sphx-glr-users-guide-model-applications-convection-allowing-models"></span><h2>5.2.1. Convection Allowing Models<a class="headerlink" href="#convection-allowing-models" title="Permalink to this headline">¶</a></h2>
+<div class="sphx-glr-thumbcontainer" tooltip="MODE_fcstHRRR_obsMRMS _Hail_GRIB2.conf"><div class="figure align-default" id="id1">
+<img alt="../../_images/sphx_glr_MODE_fcstHRRR_obsMRMS_Hail_GRIB2_thumb.png" src="../../_images/sphx_glr_MODE_fcstHRRR_obsMRMS_Hail_GRIB2_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="convection_allowing_models/MODE_fcstHRRR_obsMRMS_Hail_GRIB2.html#sphx-glr-users-guide-model-applications-convection-allowing-models-mode-fcsthrrr-obsmrms-hail-grib2-py"><span class="std std-ref">MODE: Hail Verification</span></a></span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div class="sphx-glr-thumbcontainer" tooltip="MTD_fcstHREF_FcstOnly _Gempak.conf"><div class="figure align-default" id="id2">
+<img alt="../../_images/sphx_glr_MTD_fcstHREF_FcstOnly_Gempak_thumb.png" src="../../_images/sphx_glr_MTD_fcstHREF_FcstOnly_Gempak_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="convection_allowing_models/MTD_fcstHREF_FcstOnly_Gempak.html#sphx-glr-users-guide-model-applications-convection-allowing-models-mtd-fcsthref-fcstonly-gempak-py"><span class="std std-ref">MTD: Basic Object Tracking through Time</span></a></span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div class="sphx-glr-thumbcontainer" tooltip="EnsembleStat_fcstHRRRE _obsHRRRE_Sfc_MultiField.conf"><div class="figure align-default" id="id3">
+<img alt="../../_images/sphx_glr_EnsembleStat_fcstHRRRE_obsHRRRE_Sfc_MultiField_thumb.png" src="../../_images/sphx_glr_EnsembleStat_fcstHRRRE_obsHRRRE_Sfc_MultiField_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="convection_allowing_models/EnsembleStat_fcstHRRRE_obsHRRRE_Sfc_MultiField.html#sphx-glr-users-guide-model-applications-convection-allowing-models-ensemblestat-fcsthrrre-obshrrre-sfc-multifield-py"><span class="std std-ref">Ensemble-Stat: Ensemble Statistics using Obs Uncertainty</span></a></span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div style='clear:both'></div></div>
+<div class="section" id="cryosphere">
+<span id="sphx-glr-users-guide-model-applications-cryosphere"></span><h2>5.2.2. Cryosphere<a class="headerlink" href="#cryosphere" title="Permalink to this headline">¶</a></h2>
+<div class="sphx-glr-thumbcontainer" tooltip="GridStat_MODE_fcstIMS _obsNCEP_sea_ice.conf"><div class="figure align-default" id="id4">
+<img alt="../../_images/sphx_glr_GridStat_MODE_fcstIMS_obsNCEP_sea_ice_thumb.png" src="../../_images/sphx_glr_GridStat_MODE_fcstIMS_obsNCEP_sea_ice_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="cryosphere/GridStat_MODE_fcstIMS_obsNCEP_sea_ice.html#sphx-glr-users-guide-model-applications-cryosphere-gridstat-mode-fcstims-obsncep-sea-ice-py"><span class="std std-ref">Grid-Stat and MODE: Sea Ice Validation</span></a></span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div style='clear:both'></div></div>
+<div class="section" id="medium-range">
+<span id="sphx-glr-users-guide-model-applications-medium-range"></span><h2>5.2.3. Medium Range<a class="headerlink" href="#medium-range" title="Permalink to this headline">¶</a></h2>
+<div class="sphx-glr-thumbcontainer" tooltip="TCStat_SeriesAnalysis_fcstGFS _obsGFS_FeatureRelative _SeriesByLead.conf"><div class="figure align-default" id="id5">
+<img alt="../../_images/sphx_glr_TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByLead_thumb.png" src="../../_images/sphx_glr_TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByLead_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="medium_range/TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByLead.html#sphx-glr-users-guide-model-applications-medium-range-tcstat-seriesanalysis-fcstgfs-obsgfs-featurerelative-seriesbylead-py"><span class="std std-ref">Multi_Tool: Feature Relative by Lead (with lead groupings)</span></a></span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div class="sphx-glr-thumbcontainer" tooltip="TCStat_SeriesAnalysis_fcstGFS _obsGFS_FeatureRelative _SeriesByInit.conf"><div class="figure align-default" id="id6">
+<img alt="../../_images/sphx_glr_TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByInit_thumb.png" src="../../_images/sphx_glr_TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByInit_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="medium_range/TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByInit.html#sphx-glr-users-guide-model-applications-medium-range-tcstat-seriesanalysis-fcstgfs-obsgfs-featurerelative-seriesbyinit-py"><span class="std std-ref">Multi_Tool: Feature Relative by Init</span></a></span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div class="sphx-glr-thumbcontainer" tooltip="PointStat_fcstGFS_obsNAM_Sfc _MultiField_PrepBufr.conf"><div class="figure align-default" id="id7">
+<img alt="../../_images/sphx_glr_PointStat_fcstGFS_obsNAM_Sfc_MultiField_PrepBufr_thumb.png" src="../../_images/sphx_glr_PointStat_fcstGFS_obsNAM_Sfc_MultiField_PrepBufr_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="medium_range/PointStat_fcstGFS_obsNAM_Sfc_MultiField_PrepBufr.html#sphx-glr-users-guide-model-applications-medium-range-pointstat-fcstgfs-obsnam-sfc-multifield-prepbufr-py"><span class="std std-ref">Point-Stat: Standard Verification for CONUS Surface</span></a></span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div class="sphx-glr-thumbcontainer" tooltip="PointStat_fcstGFS_obsGDAS _UpperAir_MultiField _PrepBufr.conf"><div class="figure align-default" id="id8">
+<img alt="../../_images/sphx_glr_PointStat_fcstGFS_obsGDAS_UpperAir_MultiField_PrepBufr_thumb.png" src="../../_images/sphx_glr_PointStat_fcstGFS_obsGDAS_UpperAir_MultiField_PrepBufr_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="medium_range/PointStat_fcstGFS_obsGDAS_UpperAir_MultiField_PrepBufr.html#sphx-glr-users-guide-model-applications-medium-range-pointstat-fcstgfs-obsgdas-upperair-multifield-prepbufr-py"><span class="std std-ref">Point-Stat: Standard Verification of Global Upper Air</span></a></span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div class="sphx-glr-thumbcontainer" tooltip="GridStat_fcstGFS_obsGFS _climoNCEP_MultiField.conf"><div class="figure align-default" id="id9">
+<img alt="../../_images/sphx_glr_GridStat_fcstGFS_obsGFS_climoNCEP_MultiField_thumb.png" src="../../_images/sphx_glr_GridStat_fcstGFS_obsGFS_climoNCEP_MultiField_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="medium_range/GridStat_fcstGFS_obsGFS_climoNCEP_MultiField.html#sphx-glr-users-guide-model-applications-medium-range-gridstat-fcstgfs-obsgfs-climoncep-multifield-py"><span class="std std-ref">Grid-Stat: Compute Anomaly Correlation using Climatology</span></a></span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div class="sphx-glr-thumbcontainer" tooltip="GridStat_fcstGFS_obsGFS _Sfc_MultiField.conf"><div class="figure align-default" id="id10">
+<img alt="../../_images/sphx_glr_GridStat_fcstGFS_obsGFS_Sfc_MultiField_thumb.png" src="../../_images/sphx_glr_GridStat_fcstGFS_obsGFS_Sfc_MultiField_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="medium_range/GridStat_fcstGFS_obsGFS_Sfc_MultiField.html#sphx-glr-users-guide-model-applications-medium-range-gridstat-fcstgfs-obsgfs-sfc-multifield-py"><span class="std std-ref">Grid-Stat: Standard Verification of Surface Fields</span></a></span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div style='clear:both'></div></div>
+<div class="section" id="precipitation">
+<span id="sphx-glr-users-guide-model-applications-precipitation"></span><h2>5.2.4. Precipitation<a class="headerlink" href="#precipitation" title="Permalink to this headline">¶</a></h2>
+<div class="sphx-glr-thumbcontainer" tooltip="EnsembleStat_fcstHRRRE _FcstOnly_NetCDF.conf"><div class="figure align-default" id="id11">
+<img alt="../../_images/sphx_glr_EnsembleStat_fcstHRRRE_FcstOnly_NetCDF_thumb.png" src="../../_images/sphx_glr_EnsembleStat_fcstHRRRE_FcstOnly_NetCDF_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="precipitation/EnsembleStat_fcstHRRRE_FcstOnly_NetCDF.html#sphx-glr-users-guide-model-applications-precipitation-ensemblestat-fcsthrrre-fcstonly-netcdf-py"><span class="std std-ref">Ensemble-Stat: Basic Post-Processing only</span></a></span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div class="sphx-glr-thumbcontainer" tooltip="GridStat_fcstHREFmean _obsStgIV_Netcdf.conf"><div class="figure align-default" id="id12">
+<img alt="../../_images/sphx_glr_GridStat_fcstHREFmean_obsStgIV_NetCDF_thumb.png" src="../../_images/sphx_glr_GridStat_fcstHREFmean_obsStgIV_NetCDF_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="precipitation/GridStat_fcstHREFmean_obsStgIV_NetCDF.html#sphx-glr-users-guide-model-applications-precipitation-gridstat-fcsthrefmean-obsstgiv-netcdf-py"><span class="std std-ref">Grid-Stat: 6hr QPF in NetCDF format</span></a></span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div class="sphx-glr-thumbcontainer" tooltip="GridStat_fcstHREFmean _obsStgIV_Gempak.conf"><div class="figure align-default" id="id13">
+<img alt="../../_images/sphx_glr_GridStat_fcstHREFmean_obsStgIV_Gempak_thumb.png" src="../../_images/sphx_glr_GridStat_fcstHREFmean_obsStgIV_Gempak_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="precipitation/GridStat_fcstHREFmean_obsStgIV_Gempak.html#sphx-glr-users-guide-model-applications-precipitation-gridstat-fcsthrefmean-obsstgiv-gempak-py"><span class="std std-ref">Grid-Stat: 6hr QPF in GEMPAK format</span></a></span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div class="sphx-glr-thumbcontainer" tooltip="MTD_fcstHRRR-TLE_FcstOnly _RevisionSeries_GRIB.conf"><div class="figure align-default" id="id14">
+<img alt="../../_images/sphx_glr_MTD_fcstHRRR-TLE_FcstOnly_RevisionSeries_GRIB_thumb.png" src="../../_images/sphx_glr_MTD_fcstHRRR-TLE_FcstOnly_RevisionSeries_GRIB_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="precipitation/MTD_fcstHRRR-TLE_FcstOnly_RevisionSeries_GRIB.html#sphx-glr-users-guide-model-applications-precipitation-mtd-fcsthrrr-tle-fcstonly-revisionseries-grib-py"><span class="std std-ref">MTD: Build Revision Series to Evaluate Forecast Consistency</span></a></span><a class="headerlink" href="#id14" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div class="sphx-glr-thumbcontainer" tooltip="GridStat_fcstGFS _obsCCPA_Grib.conf"><div class="figure align-default" id="id15">
+<img alt="../../_images/sphx_glr_GridStat_fcstGFS_obsCCPA_GRIB_thumb.png" src="../../_images/sphx_glr_GridStat_fcstGFS_obsCCPA_GRIB_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="precipitation/GridStat_fcstGFS_obsCCPA_GRIB.html#sphx-glr-users-guide-model-applications-precipitation-gridstat-fcstgfs-obsccpa-grib-py"><span class="std std-ref">Grid-Stat: 24-hour QPF Use Case</span></a></span><a class="headerlink" href="#id15" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div class="sphx-glr-thumbcontainer" tooltip="MTD_fcstHRRR-TLE _obsMRMS.conf"><div class="figure align-default" id="id16">
+<img alt="../../_images/sphx_glr_MTD_fcstHRRR-TLE_obsMRMS_thumb.png" src="../../_images/sphx_glr_MTD_fcstHRRR-TLE_obsMRMS_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="precipitation/MTD_fcstHRRR-TLE_obsMRMS.html#sphx-glr-users-guide-model-applications-precipitation-mtd-fcsthrrr-tle-obsmrms-py"><span class="std std-ref">MTD: 6hr QPF Use Case</span></a></span><a class="headerlink" href="#id16" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div class="sphx-glr-thumbcontainer" tooltip="GridStat_fcstHRRR _obsStgIV_GRIB.conf"><div class="figure align-default" id="id17">
+<img alt="../../_images/sphx_glr_GridStat_fcstHRRR-TLE_obsStgIV_GRIB_thumb.png" src="../../_images/sphx_glr_GridStat_fcstHRRR-TLE_obsStgIV_GRIB_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="precipitation/GridStat_fcstHRRR-TLE_obsStgIV_GRIB.html#sphx-glr-users-guide-model-applications-precipitation-gridstat-fcsthrrr-tle-obsstgiv-grib-py"><span class="std std-ref">Grid-Stat: 6hr PQPF Probability Verification</span></a></span><a class="headerlink" href="#id17" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div style='clear:both'></div></div>
+<div class="section" id="subseasonal-to-seasonal">
+<span id="sphx-glr-users-guide-model-applications-s2s"></span><h2>5.2.5. Subseasonal to Seasonal<a class="headerlink" href="#subseasonal-to-seasonal" title="Permalink to this headline">¶</a></h2>
+<div class="sphx-glr-thumbcontainer" tooltip="GridStat_SeriesAnalysis _fcstNMME_obsCPC _seasonal_forecast.conf"><div class="figure align-default" id="id18">
+<img alt="../../_images/sphx_glr_GridStat_SeriesAnalysis_fcstNMME_obsCPC_seasonal_forecast_thumb.png" src="../../_images/sphx_glr_GridStat_SeriesAnalysis_fcstNMME_obsCPC_seasonal_forecast_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="s2s/GridStat_SeriesAnalysis_fcstNMME_obsCPC_seasonal_forecast.html#sphx-glr-users-guide-model-applications-s2s-gridstat-seriesanalysis-fcstnmme-obscpc-seasonal-forecast-py"><span class="std std-ref">Grid-Stat and Series-Analysis: BMKG APIK Seasonal Forecast</span></a></span><a class="headerlink" href="#id18" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div style='clear:both'></div></div>
+<div class="section" id="space-weather">
+<span id="sphx-glr-users-guide-model-applications-space-weather"></span><h2>5.2.6. Space Weather<a class="headerlink" href="#space-weather" title="Permalink to this headline">¶</a></h2>
+<div class="sphx-glr-thumbcontainer" tooltip="GridStat_fcstGloTEC _obsGloTEC_vx7.conf"><div class="figure align-default" id="id19">
+<img alt="../../_images/sphx_glr_GridStat_fcstGloTEC_obsGloTEC_vx7_thumb.png" src="../../_images/sphx_glr_GridStat_fcstGloTEC_obsGloTEC_vx7_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="space_weather/GridStat_fcstGloTEC_obsGloTEC_vx7.html#sphx-glr-users-guide-model-applications-space-weather-gridstat-fcstglotec-obsglotec-vx7-py"><span class="std std-ref">Grid-Stat: Analysis validation</span></a></span><a class="headerlink" href="#id19" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div style='clear:both'></div></div>
+<div class="section" id="tropical-cyclone-and-extra-tropical-cyclone">
+<span id="sphx-glr-users-guide-model-applications-tc-and-extra-tc"></span><h2>5.2.7. Tropical Cyclone and Extra Tropical Cyclone<a class="headerlink" href="#tropical-cyclone-and-extra-tropical-cyclone" title="Permalink to this headline">¶</a></h2>
+<div class="sphx-glr-thumbcontainer" tooltip="Plotter_fcstGFS _obsGFS_ExtraTC.conf "><div class="figure align-default" id="id20">
+<img alt="../../_images/sphx_glr_Plotter_fcstGFS_obsGFS_ExtraTC_thumb.png" src="../../_images/sphx_glr_Plotter_fcstGFS_obsGFS_ExtraTC_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="tc_and_extra_tc/Plotter_fcstGFS_obsGFS_ExtraTC.html#sphx-glr-users-guide-model-applications-tc-and-extra-tc-plotter-fcstgfs-obsgfs-extratc-py"><span class="std std-ref">Cyclone Plotter: From TC-Pairs Output</span></a></span><a class="headerlink" href="#id20" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div class="sphx-glr-thumbcontainer" tooltip="Plotter_fcstGFS _obsGFS_RPlotting.conf "><div class="figure align-default" id="id21">
+<img alt="../../_images/sphx_glr_Plotter_fcstGFS_obsGFS_RPlotting_thumb.png" src="../../_images/sphx_glr_Plotter_fcstGFS_obsGFS_RPlotting_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="tc_and_extra_tc/Plotter_fcstGFS_obsGFS_RPlotting.html#sphx-glr-users-guide-model-applications-tc-and-extra-tc-plotter-fcstgfs-obsgfs-rplotting-py"><span class="std std-ref">Track and Intensity Plotter: Generate mean, median and box plots</span></a></span><a class="headerlink" href="#id21" title="Permalink to this image">¶</a></p>
+</div>
+</div><div class="toctree-wrapper compound">
+</div>
+<div style='clear:both'></div><div class="sphx-glr-footer class sphx-glr-footer-gallery docutils container">
+<div class="sphx-glr-download docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/408c2a54db7cd351c47d8b893379b79b/model_applications_python.zip"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">all</span> <span class="pre">examples</span> <span class="pre">in</span> <span class="pre">Python</span> <span class="pre">source</span> <span class="pre">code:</span> <span class="pre">model_applications_python.zip</span></code></a></p>
+</div>
+<div class="sphx-glr-download docutils container">
+<p><a class="reference download internal" download="" href="../../_downloads/0e0c50d767ccd626e310e9a7fbdad214/model_applications_jupyter.zip"><code class="xref download docutils literal notranslate"><span class="pre">Download</span> <span class="pre">all</span> <span class="pre">examples</span> <span class="pre">in</span> <span class="pre">Jupyter</span> <span class="pre">notebooks:</span> <span class="pre">model_applications_jupyter.zip</span></code></a></p>
+</div>
+</div>
+<p class="sphx-glr-signature"><a class="reference external" href="https://sphinx-gallery.github.io">Gallery generated by Sphinx-Gallery</a></p>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="convection_allowing_models/MODE_fcstHRRR_obsMRMS_Hail_GRIB2.html" class="btn btn-neutral float-right" title="5.2.1.1. MODE: Hail Verification" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../met_tool_wrapper/TCStat/TCStat.html" class="btn btn-neutral" title="5.1.19.1. TCStat: Basic Use Case" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, NCAR.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+     
+<script>var version_json_loc = "../../../versions.json";</script>
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'3.dev',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../_static/language_data.js"></script>
+      <script type="text/javascript" src="../../_static/pop_ver.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+
+:orphan:
+
+.. _sphx_glr_Users_Guide_model_applications_medium_range_sg_execution_times:
+
+Computation times
+=================
+**00:00.159** total execution time for **Users_Guide_model_applications_medium_range** files:
+
+- **00:00.027**: :ref:`sphx_glr_Users_Guide_model_applications_medium_range_GridStat_fcstGFS_obsGFS_climoNCEP_MultiField.py` (``GridStat_fcstGFS_obsGFS_climoNCEP_MultiField.py``)
+- **00:00.027**: :ref:`sphx_glr_Users_Guide_model_applications_medium_range_TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByLead.py` (``TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByLead.py``)
+- **00:00.026**: :ref:`sphx_glr_Users_Guide_model_applications_medium_range_TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByInit.py` (``TCStat_SeriesAnalysis_fcstGFS_obsGFS_FeatureRelative_SeriesByInit.py``)
+- **00:00.026**: :ref:`sphx_glr_Users_Guide_model_applications_medium_range_PointStat_fcstGFS_obsGDAS_UpperAir_MultiField_PrepBufr.py` (``PointStat_fcstGFS_obsGDAS_UpperAir_MultiField_PrepBufr.py``)
+- **00:00.026**: :ref:`sphx_glr_Users_Guide_model_applications_medium_range_GridStat_fcstGFS_obsGFS_Sfc_MultiField.py` (``GridStat_fcstGFS_obsGFS_Sfc_MultiField.py``)
+- **00:00.026**: :ref:`sphx_glr_Users_Guide_model_applications_medium_range_PointStat_fcstGFS_obsNAM_Sfc_MultiField_PrepBufr.py` (``PointStat_fcstGFS_obsNAM_Sfc_MultiField_PrepBufr.py``)

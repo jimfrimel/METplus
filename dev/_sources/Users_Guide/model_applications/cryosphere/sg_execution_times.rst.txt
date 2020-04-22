@@ -1,0 +1,10 @@
+
+:orphan:
+
+.. _sphx_glr_Users_Guide_model_applications_cryosphere_sg_execution_times:
+
+Computation times
+=================
+**00:00.026** total execution time for **Users_Guide_model_applications_cryosphere** files:
+
+- **00:00.026**: :ref:`sphx_glr_Users_Guide_model_applications_cryosphere_GridStat_MODE_fcstIMS_obsNCEP_sea_ice.py` (``GridStat_MODE_fcstIMS_obsNCEP_sea_ice.py``)
