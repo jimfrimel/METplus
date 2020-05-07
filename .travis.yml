@@ -62,7 +62,7 @@ git:
 branches:
   only:
   - develop
-  - feature_mfo_travis_ci_testing
+  - /^feature_.*/
 
 cache:
   - pip
