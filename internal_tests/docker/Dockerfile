@@ -6,7 +6,7 @@ MAINTAINER Jim Frimel <james.t.frimel@noaa.gov>
 # 
 # This Dockerfile extends the MET image file to run METplus
 #
-ENV MY_CUSTOM_VAR 2020marMETplus
+ENV MY_CUSTOM_VAR 2020mar15METplus
 
 #
 # Set working directory
